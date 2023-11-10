@@ -1,0 +1,24 @@
+<DataSource name="DsBoBrick" backendSystem="sf" businessObjectClass="BoBrick" external="false" editableEntity="" schemaVersion="2.0">
+  <!-- For more information about the supported properties and nodes see corresponding DataSource.md file under ~Workspace/contractSnippets/YourModuel Section/DS/DS_DataSource -->
+  <Attributes>
+    <Attribute name="pkey" table="GCG_Bricks__c" column="id" />
+    <Attribute name="Ciudad" table="GCG_Bricks__c" column="GCG_Ciudad__c" />
+    <Attribute name="Colonia" table="GCG_Bricks__c" column="GCG_Colonia__c" />
+    <Attribute name="Codigo brick" table="GCG_Bricks__c" column="GCG_CodigoBrick__c" />
+    <Attribute name="codigo postal" table="GCG_Bricks__c" column="GCG_CodigoPostal__c" />
+    <Attribute name="Estado" table="GCG_Bricks__c" column="GCG_Estado__c" />
+    <Attribute name="Municipio" table="GCG_Bricks__c" column="GCG_Municipio__c" />
+    <Attribute name="Representante medico" table="GCG_Bricks__c" column="GCG_RepresentanteMedico__c" />
+    <Attribute name="Territorio" table="GCG_Bricks__c" column="GCG_Territorio__c" />
+    <Attribute name="Tipo" table="GCG_Bricks__c" column="GCG_Tipo__c" />
+    <Attribute name="Name" table="GCG_Bricks__c" column="Name" />
+  </Attributes>
+  <Entities>
+    <Entity name="GCG_Bricks__c" alias="" idAttribute="id" />
+  </Entities>
+  <QueryCondition /><![CDATA[
+   GCG_Bricks__c.Id = #pKey#
+          ]]>
+  <OrderCriteria />
+  <Parameters />
+</DataSource>
