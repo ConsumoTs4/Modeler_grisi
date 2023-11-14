@@ -204,6 +204,14 @@
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.name2" bindingMode="TWO_WAY" />
               </Bindings>
             </InputArea>
+            
+            <InputArea name="Nametest2">
+              <Bindings>
+                <Resource target="Label" type="Label" defaultLabel="Sergio Test 2" id="Sergioid2" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.nameSergio" bindingMode="TWO_WAY" />
+              </Bindings>
+            </InputArea>
+           
             <InputArea name="Matchcode">
               <Bindings>
                 <Resource target="Label" type="Label" defaultLabel="Matchcode" id="MatchcodeId" />
