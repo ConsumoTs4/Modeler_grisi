@@ -962,6 +962,9 @@
         <Label id="TimeFromTimeSlot" text="Start time" translationStatus="7" />
         <Label id="TimeSlotGroupId" text="Time Slot" translationStatus="7" />
         <Label id="TimeThruTimeSlot" text="End time" translationStatus="7" />
+        <!--Campos Custom -->
+        <Label id="cedulaProfesional" text="Cedula Profesional" translationStatus="7" />
+        
       </UserInterface>
       <UserInterface id="CustomerCreateCustomerWizardUI">
         <Label id="CreateCustomerTitleId" text="New Customer" translationStatus="7" />

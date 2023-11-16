@@ -29,6 +29,54 @@
     <SimpleProperty name="accountOi" type="DomBool" storable="true" id="false" dataSourceProperty="accountOi" />
     <SimpleProperty name="operatingHoursId" type="DomPKey" dataSourceProperty="operatingHoursId" />
     <SimpleProperty name="emailEditable" type="DomBool" storable="false" dataSourceProperty="emailEditable" />
+    <!--Objetos custom-->
+    <SimpleProperty name="cedulaProfesional" type="DomBpaName" storable="true" dataSourceProperty="cedulaProfesional" />
+    <SimpleProperty name="apellido_paterno" type="DomString" storable="true" dataSourceProperty="apellido_paterno" />
+    <SimpleProperty name="apellido_materno" type="DomString" storable="true" dataSourceProperty="apellido_materno" />
+    <SimpleProperty name="nombre" type="DomString" storable="true" dataSourceProperty="nombre" />
+    <SimpleProperty name="calle" type="DomString" storable="true" dataSourceProperty="calle" />
+    <SimpleProperty name="num_exterior" type="DomString" storable="true" dataSourceProperty="num_exterior" />
+    <SimpleProperty name="numero_interior" type="DomString" storable="true" dataSourceProperty="numero_interior" />
+    <SimpleProperty name="colonia" type="DomString" storable="true" dataSourceProperty="colonia" />
+    <SimpleProperty name="codigo_postal" type="DomString" storable="true" dataSourceProperty="codigo_postal" />
+    <SimpleProperty name="poblacion_municipio_delegación" type="DomString" storable="true" dataSourceProperty="poblacion_municipio_delegación" />
+    <SimpleProperty name="estado" type="DomString" storable="true" dataSourceProperty="estado" />
+    <SimpleProperty name="honorarios" type="DomString" storable="true" dataSourceProperty="honorarios" />
+    <SimpleProperty name="especialidad" type="DomString" storable="true" dataSourceProperty="especialidad" />
+    <SimpleProperty name="sub_especialidad" type="DomString" storable="true" dataSourceProperty="sub_especialidad" />
+    <SimpleProperty name="fecha_nacimiento" type="DomDate" storable="true" dataSourceProperty="fecha_nacimiento" />
+    <SimpleProperty name="sexo" type="DomString" storable="true" dataSourceProperty="sexo" />
+    <SimpleProperty name="pacientes_por_semana" type="DomString" storable="true" dataSourceProperty="pacientes_por_semana" />
+    <SimpleProperty name="tel_1" type="DomDial" storable="true" dataSourceProperty="tel_1" />
+    <SimpleProperty name="tel_2" type="DomDial" storable="true" dataSourceProperty="tel_2" />
+    <SimpleProperty name="celular" type="DomDial" storable="true" dataSourceProperty="celular" />
+    <SimpleProperty name="email" type="DomEmail" storable="true" dataSourceProperty="email" />
+    <SimpleProperty name="medico_Galeno" type="DomBool" storable="true" dataSourceProperty="medico_Galeno" />
+    <SimpleProperty name="requiere_factura" type="DomBool" storable="true" dataSourceProperty="requiere_factura" />
+    <SimpleProperty name="lider_de_opinion" type="DomBool" storable="true" dataSourceProperty="lider_de_opinion" />
+    <SimpleProperty name="nivel_de_influencia" type="DomString" storable="true" dataSourceProperty="nivel_de_influencia" />
+    <SimpleProperty name="uso_de_internet" type="DomString" storable="true" dataSourceProperty="uso_de_internet" />
+    <SimpleProperty name="portafolio" type="DomString" storable="true" dataSourceProperty="portafolio" />
+    <SimpleProperty name="adopcion" type="DomString" storable="true" dataSourceProperty="adopcion" />
+    <SimpleProperty name="accesibilidad" type="DomString" storable="true" dataSourceProperty="accesibilidad" />
+    <SimpleProperty name="bancos" type="DomString" storable="true" dataSourceProperty="bancos" />
+    <SimpleProperty name="quintil_del_medico" type="DomString" storable="true" dataSourceProperty="quintil_del_medico" />
+    <SimpleProperty name="razon_Social" type="DomString" storable="true" dataSourceProperty="razon_Social" />
+    <SimpleProperty name="rfc" type="DomString" storable="true" dataSourceProperty="rfc" />
+    <SimpleProperty name="tipo" type="DomString" storable="true" dataSourceProperty="tipo" />
+    <SimpleProperty name="subtipo" type="DomString" storable="true" dataSourceProperty="subtipo" />
+    <SimpleProperty name="formato_de_farmacia" type="DomString" storable="true" dataSourceProperty="formato_de_farmacia" />
+    <SimpleProperty name="account_name" type="DomString" storable="true" dataSourceProperty="account_name" />
+    <SimpleProperty name="folio_de_tienda" type="DomString" storable="true" dataSourceProperty="folio_de_tienda" />
+    <SimpleProperty name="territorio" type="DomString" storable="true" dataSourceProperty="territorio" />
+    <SimpleProperty name="motivo_de_baja" type="DomString" storable="true" dataSourceProperty="motivo_de_baja" />
+    <SimpleProperty name="zona" type="DomString" storable="true" dataSourceProperty="zona" />
+    <SimpleProperty name="cuenta_con_exhibición_adicional" type="DomBool" storable="true" dataSourceProperty="cuenta_con_exhibición_adicional" />
+    <SimpleProperty name="costo_renta_exhibicion_adicional"  storable="true" dataSourceProperty="costo_renta_exhibicion_adicional" />
+    <SimpleProperty name="sales_Org"  storable="true" dataSourceProperty="sales_Org" />
+    <SimpleProperty name="customer_Template"  storable="true" dataSourceProperty="customer_Template" />
+    <!--Fin de Objetos Custom-->
+
   </SimpleProperties>
   <ObjectLookups>
     <!-- luCustomerTradeOrg: load immediate -->
