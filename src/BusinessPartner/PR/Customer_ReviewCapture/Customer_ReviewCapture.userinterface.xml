@@ -343,12 +343,25 @@
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.fecha_nacimiento" bindingMode="TWO_WAY" />
               </Bindings>
             </InputArea>
-            <InputArea name="Sexo">
+            <!-- <InputArea name="Sexo">
               <Bindings>
                 <Resource target="Label" type="Label" defaultLabel="Sexo" id="ruta" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.sexo" bindingMode="TWO_WAY" />
               </Bindings>
-            </InputArea>
+            </InputArea> -->
+            <SelectionBox name="Sexo">
+              <Bindings>
+                <Resource target="Label" type="Label" id="Sexo" defaultLabel="Sexo" />
+                <Binding target="DataSource" toggleId="sexo" bindingMode="TWO_WAY" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.sexo" bindingMode="TWO_WAY" />
+              </Bindings>
+              <Items>
+                <Bindings>
+                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                </Bindings>
+              </Items>
+            </SelectionBox>
             <InputArea name="Categoria del medico">
               <Bindings>
                 <Resource target="Label" type="Label" defaultLabel="Categoria del medico" id="ruta" />
@@ -619,7 +632,7 @@
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.via_de_pago" bindingMode="TWO_WAY" />
               </Bindings>
             </InputArea>
-            
+
 
 
            <!-- Fin Objetos Custom-->
@@ -2042,7 +2055,7 @@
                 </Bindings>
               </InputArea>
             </Merger>
-            <!--Account Harmonization: changed to simple InputArea          
+            <!--Account Harmonization: changed to simple InputArea
             <SelectionBox name="CountryState">
               <Bindings>
                 <Resource target="Label" type="Label" id="CountryStateId" defaultLabel="State" />

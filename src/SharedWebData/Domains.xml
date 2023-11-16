@@ -116,6 +116,12 @@
       <Empty value="" />
     </Initializer>
   </Domain>
+  <Domain name="DomCustSex" baseType="Toggle" length="16">
+    <Initializer>
+      <Default value="'Femenino'" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
   <Domain name="DomAgrCollateralType" baseType="Toggle" length="10">
     <Initializer>
       <Default value="' '" />

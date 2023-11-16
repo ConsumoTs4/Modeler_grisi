@@ -45,7 +45,7 @@
     <SimpleProperty name="especialidad" type="DomString" storable="true" dataSourceProperty="especialidad" />
     <SimpleProperty name="sub_especialidad" type="DomString" storable="true" dataSourceProperty="sub_especialidad" />
     <SimpleProperty name="fecha_nacimiento" type="DomDate" storable="true" dataSourceProperty="fecha_nacimiento" />
-    <SimpleProperty name="sexo" type="DomString" storable="true" dataSourceProperty="sexo" />
+    <SimpleProperty name="sexo" type="DomCustSex" storable="true" dataSourceProperty="sexo" />
     <SimpleProperty name="pacientes_por_semana" type="DomString" storable="true" dataSourceProperty="pacientes_por_semana" />
     <SimpleProperty name="tel_1" type="DomDial" storable="true" dataSourceProperty="tel_1" />
     <SimpleProperty name="tel_2" type="DomDial" storable="true" dataSourceProperty="tel_2" />
