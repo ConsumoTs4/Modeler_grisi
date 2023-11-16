@@ -47,7 +47,7 @@ function setEARights(mode){
     //               Add your customizing javaScript code below.                                 //
     //                                                                                           //
     ///////////////////////////////////////////////////////////////////////////////////////////////
-    
+
 /* #########################################################
        NGM Customer Main - If the respective customer template is not Mobility Relevant, the user can not edit any customer data. Only display.
        ######################################################### */
@@ -68,6 +68,10 @@ if(me.getEmailEditable() === '0') {
 
 if(me.getDeleted() == "1") {
   acl.removeRight(AclObjectType.OBJECT, "BoCustomer", AclPermission.EDIT);
+}
+
+if(me.getBoBpaMeta().getId() == "Hospital") {
+  acl.removeRight(AclObjectType.PROPERTY, "name2", AclPermission.VISIBLE);
 }
 
 switch (mode) {
@@ -134,5 +138,5 @@ if (Utils.isSfBackend() && Utils.isDefined(me.getLoCustomerAddress()) && Utils.i
     //                                                                                           //
     ///////////////////////////////////////////////////////////////////////////////////////////////
 
-    
+
 }
