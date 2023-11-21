@@ -230,12 +230,6 @@
                 </Bindings>
               </Items>
             </SelectionBox>
-            <InputArea name="Tipo de Persona">
-              <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="Tipo de Persona" id="ruta" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.tipo_de_persona" bindingMode="TWO_WAY" />
-              </Bindings>
-            </InputArea>
             <SelectionBox name="Tipo de Persona">
               <Bindings>
                 <Resource target="Label" type="Label" id="Tipo_de_PersonaID" defaultLabel="Tipo de Persona" />
@@ -358,7 +352,7 @@
                   <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
                 </Bindings>
               </Items>
-            </SelectionBox>            
+            </SelectionBox>
             <SelectionBox name="Sub Especialidad">
               <Bindings>
                 <Resource target="Label" type="Label" id="subEspecialidadID" defaultLabel="Sub Especialidad" />
@@ -371,7 +365,7 @@
                   <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
                 </Bindings>
               </Items>
-            </SelectionBox>           
+            </SelectionBox>
             <InputArea name="Estatus">
               <Bindings>
                 <Resource target="Label" type="Label" defaultLabel="Estatus" id="ruta" />
