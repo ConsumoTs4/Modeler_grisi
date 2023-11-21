@@ -67,8 +67,8 @@
             var distributionIssue = "";
             var outOfStockIssue = "";
             var hasActivity = "";
-            var hasPromotion = ""; 
-            var currentLongitude = 0; 
+            var hasPromotion = "";
+            var currentLongitude = 0;
             var currentLatitude = 0;
 			var distance = 0;
 
@@ -115,7 +115,7 @@
 			if (Utils.isDefined(newParams.customerId)){
               customerId = Utils.convertForDBParam(newParams.customerId, "DomId");
               addCondSearch += " AND customers.customerId " + Utils.replaceOperator(newParams.customerIdComp) + "#customerId# ";
-			} 
+			}
 
 			/**  Customer Name  */
 			if (Utils.isDefined(newParams.name)){
@@ -170,13 +170,13 @@
               tradeOrgPKey = Utils.convertForDBParam(newParams.tradeOrgPKey, "DomPKey");
               addCondSearch += " AND customers.tradeOrgPKey " + Utils.replaceOperator(newParams.tradeOrgPKeyComp) + "#tradeOrgPKey# ";
 			}
-			
+
 			/**  overdue  */
 			if (Utils.isDefined(newParams.overdue)){
               overdue = Utils.convertForDBParam(newParams.overdue, "DomBool");
               addCondSearch += " AND customers.isOverdue " + Utils.replaceOperator(newParams.overdueComp) + "#overdue# ";
 			}
-            
+
             /**  distributionIssue  */
 			if (Utils.isDefined(newParams.distributionIssue)){
               distributionIssue = Utils.convertForDBParam(newParams.distributionIssue, "DomBool");
@@ -188,13 +188,13 @@
               outOfStockIssue = Utils.convertForDBParam(newParams.outOfStockIssue, "DomBool");
               addCondSearch += " AND customers.outOfStockIssue " + Utils.replaceOperator(newParams.outOfStockIssueComp) + "#outOfStockIssue# ";
 			}
-         
+
             /**  Activity  */
 			if (Utils.isDefined(newParams.hasActivity)){
               hasActivity = Utils.convertForDBParam(newParams.hasActivity, "DomBool");
               addCondSearch += " AND customers.hasActivity " + Utils.replaceOperator(newParams.hasActivityComp) + "#hasActivity# ";
 			}
-   
+
             /**  Promotion  */
 			if (Utils.isDefined(newParams.hasPromotion)){
               hasPromotion = Utils.convertForDBParam(newParams.hasPromotion, "DomBool");
@@ -245,7 +245,7 @@
 			sqlStmt1 +=          "Account.Id AS pKey, ";
 			sqlStmt1 +=          "Account.Name as name, ";
 			sqlStmt1 +=          "Account.Account_Number__c as customerId,";
-			sqlStmt1 +=          "#toggleMapping('Account_Extension__c', 'Priority__c')# as prio, ";
+			sqlStmt1 +=          "Account_Extension__c.Priority__c as prio, ";
 			sqlStmt1 +=          "Account_Extension__c.Class_Of_Trade__c as ClassOfTrade,   ";
 			sqlStmt1 +=          "Account.ShippingStreet || ', ' || Account.ShippingPostalCode || ' ' || Account.ShippingCity || ', ' || Account.ShippingState as mainAddress, ";
 			sqlStmt1 +=          "Account.ShippingStreet as Street, Account.ShippingPostalCode as ZipCode, Account.ShippingCity as City, Account.ShippingState as CountryState, ";
@@ -275,11 +275,11 @@
 			if(ordererCondition){
 				sqlStmt1 +=              "AND #compareAsDate('Account_Extension__c.Order_Role_Valid_From__c', 'Date','<=',#TodayAsDate#, 'Date')# ";
 				sqlStmt1 +=              "AND #compareAsDate('Account_Extension__c.Order_Role_Valid_Thru__c', 'Date','>=',#TodayAsDate#, 'Date')# ";
-			}  
+			}
 
 			sqlStmt1 +=      " LEFT OUTER JOIN ";
 			sqlStmt1 +=          " Account_Trade_Org_Hierarchy__c";
-			sqlStmt1 +=              " ON Account.Id = Account_Trade_Org_Hierarchy__c.Child_Account__c ";                    
+			sqlStmt1 +=              " ON Account.Id = Account_Trade_Org_Hierarchy__c.Child_Account__c ";
 			sqlStmt1 +=              "AND #compareAsDate('Account_Trade_Org_Hierarchy__c.Valid_From__c', 'Date','<=',#referenceDateThru#, 'Date')# ";
 			sqlStmt1 +=              "AND #compareAsDate('Account_Trade_Org_Hierarchy__c.Valid_Thru__c', 'Date','>=',#referenceDateFrom#, 'Date')# ";
 			sqlStmt1 +=      " LEFT OUTER JOIN ";
@@ -288,7 +288,7 @@
 			sqlStmt1 +=      " JOIN ";
 			sqlStmt1 +=          " User ";
 			sqlStmt1 +=              " ON (User.Id IN (";
-  
+
 			//userPKeys
 			var userPKeyObj = Utils.getListParams(userPKeys);
 
@@ -347,7 +347,7 @@
 			var sqlStmt1Result = Utils.replaceMacrosParam(sqlStmt1, sqlParams1);
 			var sqlStmt2Result = Utils.replaceMacrosParam(sqlStmt2, sqlParams2);
 
-		
+
 			var finalSql = sqlStmt1Result.sql + userPKeyObj.sql + sqlStmt2Result.sql;
             var finalParams = sqlStmt1Result.params.concat(userPKeyObj.params).concat(sqlStmt2Result.params);
 
