@@ -7857,6 +7857,112 @@
       <Empty value="" />
     </Initializer>
   </Domain>
-
-
+  <Domain name="DomCustTipoInstitucion" baseType="Toggle" length="30">
+    <Initializer>
+      <Default value="" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCustTipoPersona" baseType="Toggle" length="30">
+    <Initializer>
+      <Default value="" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCusHonorarios" baseType="Toggle" length="30">
+    <Initializer>
+      <Default value="" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCusEspecialidad" baseType="Toggle" length="30">
+    <Initializer>
+      <Default value="" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCusEspecialidad" baseType="Toggle" length="30">
+    <Initializer>
+      <Default value="" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCusSubEspecialidad" baseType="Toggle" length="30">
+    <Initializer>
+      <Default value="" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCusPacientesXsemana" baseType="Toggle" length="30">
+    <Initializer>
+      <Default value="" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCusNivelInfluencia" baseType="Toggle" length="30">
+    <Initializer>
+      <Default value="" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCusUsoInternet" baseType="Toggle" length="30">
+    <Initializer>
+      <Default value="" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCusPortafolio" baseType="Toggle" length="30">
+    <Initializer>
+      <Default value="" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCusAdopcion" baseType="Toggle" length="30">
+    <Initializer>
+      <Default value="" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCusAccesibilidad" baseType="Toggle" length="30">
+    <Initializer>
+      <Default value="" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCusBancos" baseType="Toggle" length="30">
+    <Initializer>
+      <Default value="" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCusQuintilMedico" baseType="Toggle" length="30">
+    <Initializer>
+      <Default value="" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCusSubtipo" baseType="Toggle" length="30">
+    <Initializer>
+      <Default value="" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+   <Domain name="DomCusFormatoFarmacia" baseType="Toggle" length="30">
+    <Initializer>
+      <Default value="" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCusTerritorio" baseType="Toggle" length="30">
+    <Initializer>
+      <Default value="" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>  <Domain name="DomCusMotivoBaja" baseType="Toggle" length="30">
+    <Initializer>
+      <Default value="" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  
 </DomainRepository>
