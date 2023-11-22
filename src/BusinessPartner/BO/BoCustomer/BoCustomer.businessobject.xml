@@ -30,7 +30,7 @@
     <SimpleProperty name="operatingHoursId" type="DomPKey" dataSourceProperty="operatingHoursId" />
     <SimpleProperty name="emailEditable" type="DomBool" storable="false" dataSourceProperty="emailEditable" />
     <!--Objetos custom-->
-    <SimpleProperty name="cedulaProfesional" type="DomBpaName" storable="true" dataSourceProperty="cedulaProfesional" />
+    <!-- <SimpleProperty name="cedulaProfesional" type="DomBpaName" storable="true" dataSourceProperty="cedulaProfesional" />
     <SimpleProperty name="apellido_paterno" type="DomString" storable="true" dataSourceProperty="apellido_paterno" />
     <SimpleProperty name="apellido_materno" type="DomString" storable="true" dataSourceProperty="apellido_materno" />
     <SimpleProperty name="nombre" type="DomString" storable="true" dataSourceProperty="nombre" />
@@ -74,7 +74,7 @@
     <SimpleProperty name="cuenta_con_exhibición_adicional" type="DomBool" storable="true" dataSourceProperty="cuenta_con_exhibición_adicional" />
     <SimpleProperty name="costo_renta_exhibicion_adicional"  storable="true" dataSourceProperty="costo_renta_exhibicion_adicional" />
     <SimpleProperty name="sales_Org"  storable="true" dataSourceProperty="sales_Org" />
-    <SimpleProperty name="customer_Template"  storable="true" dataSourceProperty="customer_Template" />
+    <SimpleProperty name="customer_Template"  storable="true" dataSourceProperty="customer_Template" /> -->
     <!--Fin de Objetos Custom-->
 
   </SimpleProperties>
