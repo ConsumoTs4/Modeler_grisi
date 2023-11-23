@@ -52,8 +52,9 @@
     <Attribute name="sub_especialidad" table="Account" column="GCG_SubEspecialidad__c " />
     <Attribute name="estatus" table="Account" column="GCG_Estatus__c " />
     <Attribute name="fecha_nacimiento" table="Account" column="GCG_FechaNacimiento__c " />
+    -->
     <Attribute name="sexo" table="Account" column="GCG_Sexo__c " />
-    <Attribute name="frecuencia_visita**" table="Account" column=" " />
+   <!--  <Attribute name="frecuencia_visita**" table="Account" column=" " />
     <Attribute name="categoria_del_medico" table="Account" column="GCG_CategoriaMedico__c " />
     <Attribute name="pacientes_por_semana" table="Account" column="GCG_PacientesSemana__c " />
     <Attribute name="edad" table="Account" column="GCG_Edad__c " />
