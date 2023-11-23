@@ -47,6 +47,8 @@
     <SimpleProperty name="fecha_nacimiento" type="DomDate" storable="true" dataSourceProperty="fecha_nacimiento" />
     -->
     <SimpleProperty name="sexo" type="DomCustSex" storable="true" dataSourceProperty="sexo" />
+    <SimpleProperty name="tipo_de_institucion" type="DomCustTipoInstitucion" storable="true" dataSourceProperty="tipo_de_institucion" />
+
     <!-- 
     <SimpleProperty name="pacientes_por_semana" type="DomString" storable="true" dataSourceProperty="pacientes_por_semana" />
     <SimpleProperty name="tel_1" type="DomDial" storable="true" dataSourceProperty="tel_1" />
@@ -77,7 +79,6 @@
     <SimpleProperty name="costo_renta_exhibicion_adicional"  storable="true" dataSourceProperty="costo_renta_exhibicion_adicional" />
     <SimpleProperty name="sales_Org"  storable="true" dataSourceProperty="sales_Org" />
     <SimpleProperty name="customer_Template"  storable="true" dataSourceProperty="customer_Template" />
-    <SimpleProperty name="tipo_de_institucion" type="DomCustTipoInstitucion" storable="true" dataSourceProperty="tipo_de_institucion" />
     <SimpleProperty name="tipo_de_persona" type="DomCustTipoPersona" storable="true" dataSourceProperty="tipo_de_persona" />
     <SimpleProperty name="honorarios" type="DomCusHonorarios" storable="true" dataSourceProperty="honorarios" />
     <SimpleProperty name="especialidad" type="DomCusEspecialidad" storable="true" dataSourceProperty="especialidad" />

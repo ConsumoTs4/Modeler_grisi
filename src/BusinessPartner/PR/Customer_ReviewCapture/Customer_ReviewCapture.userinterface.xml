@@ -217,6 +217,19 @@
                 </Bindings>
               </Items>
             </SelectionBox>
+            <SelectionBox name="Tipo de Institucion">
+              <Bindings>
+                <Resource target="Label" type="Label" id="Tipo_de_InstitucionID" defaultLabel="Tipo de Institucion" />
+                <Binding target="DataSource" toggleId="DomCustTipoInstitucion" bindingMode="TWO_WAY" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.tipo_de_institucion" bindingMode="TWO_WAY" />
+              </Bindings>
+              <Items>
+                <Bindings>
+                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                </Bindings>
+              </Items>
+            </SelectionBox>
             <InputArea name="Matchcode">
               <Bindings>
                 <Resource target="Label" type="Label" defaultLabel="Matchcode" id="MatchcodeId" />
