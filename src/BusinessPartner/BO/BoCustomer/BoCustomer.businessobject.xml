@@ -46,9 +46,26 @@
     <SimpleProperty name="sub_especialidad" type="DomString" storable="true" dataSourceProperty="sub_especialidad" />
     <SimpleProperty name="fecha_nacimiento" type="DomDate" storable="true" dataSourceProperty="fecha_nacimiento" />
     -->
+
     <SimpleProperty name="sexo" type="DomCustSex" storable="true" dataSourceProperty="sexo" />
     <SimpleProperty name="tipo_de_institucion" type="DomCustTipoInstitucion" storable="true" dataSourceProperty="tipo_de_institucion" />
-
+    <SimpleProperty name="tipo_de_persona" type="DomCustTipoPersona" storable="true" dataSourceProperty="tipo_de_persona" />
+    <SimpleProperty name="honorarios" type="DomCusHonorarios" storable="true" dataSourceProperty="honorarios" />
+    <SimpleProperty name="especialidad" type="DomCusEspecialidad" storable="true" dataSourceProperty="especialidad" />
+    <SimpleProperty name="pacientes_por_semana" type="DomCusPacientesXsemana" storable="true" dataSourceProperty="pacientes_por_semana" />
+    <SimpleProperty name="nivel_de_influencia" type="DomCusNivelInfluencia" storable="true" dataSourceProperty="nivel_de_influencia" />
+    <SimpleProperty name="uso_de_internet" type="DomCusUsoInternet" storable="true" dataSourceProperty="uso_de_internet" />
+    <SimpleProperty name="portafolio" type="DomCusPortafolio" storable="true" dataSourceProperty="portafolio" />
+    <SimpleProperty name="adopcion" type="DomCusAdopcion" storable="true" dataSourceProperty="adopcion" />
+    <SimpleProperty name="accesibilidad" type="DomCusAccesibilidad" storable="true" dataSourceProperty="accesibilidad" />
+    <SimpleProperty name="bancos" type="DomCusBancos" storable="true" dataSourceProperty="bancos" />
+    <SimpleProperty name="quintil_del_medico" type="DomCusQuintilMedico" storable="true" dataSourceProperty="quintil_del_medico" />
+    <SimpleProperty name="tipo" type="DomCusType" storable="true" dataSourceProperty="tipo" />
+    <SimpleProperty name="subtipo" type="DomCusSubtipo" storable="true" dataSourceProperty="subtipo" />
+    <SimpleProperty name="formato_de_farmacia" type="DomCusFormatoFarmacia" storable="true" dataSourceProperty="formato_de_farmacia" />
+    <SimpleProperty name="territorio" type="DomCusTerritorio" storable="true" dataSourceProperty="territorio" />
+    <SimpleProperty name="motivo_de_baja" type="DomCusMotivoBaja" storable="true" dataSourceProperty="motivo_de_baja" />
+    
     <!-- 
     <SimpleProperty name="pacientes_por_semana" type="DomString" storable="true" dataSourceProperty="pacientes_por_semana" />
     <SimpleProperty name="tel_1" type="DomDial" storable="true" dataSourceProperty="tel_1" />
@@ -79,19 +96,7 @@
     <SimpleProperty name="costo_renta_exhibicion_adicional"  storable="true" dataSourceProperty="costo_renta_exhibicion_adicional" />
     <SimpleProperty name="sales_Org"  storable="true" dataSourceProperty="sales_Org" />
     <SimpleProperty name="customer_Template"  storable="true" dataSourceProperty="customer_Template" />
-    <SimpleProperty name="tipo_de_persona" type="DomCustTipoPersona" storable="true" dataSourceProperty="tipo_de_persona" />
-    <SimpleProperty name="honorarios" type="DomCusHonorarios" storable="true" dataSourceProperty="honorarios" />
-    <SimpleProperty name="especialidad" type="DomCusEspecialidad" storable="true" dataSourceProperty="especialidad" />
-    <SimpleProperty name="sub_especialidad" type="DomCusSubEspecialidad" storable="true" dataSourceProperty="sub_especialidad" />
-    <SimpleProperty name="pacientes_por_semana" type="DomCusPacientesXsemana" storable="true" dataSourceProperty="pacientes_por_semana" />
-    <SimpleProperty name="nivel_de_influencia" type="DomCusNivelInfluencia" storable="true" dataSourceProperty="nivel_de_influencia" />
-    <SimpleProperty name="uso_de_internet" type="DomCusUsoInternet" storable="true" dataSourceProperty="uso_de_internet" />
-    <SimpleProperty name="portafolio" type="DomCusPortafolio" storable="true" dataSourceProperty="portafolio" />
-    <SimpleProperty name="adopcion" type="DomCusAdopcion" storable="true" dataSourceProperty="adopcion" />
-    <SimpleProperty name="accesibilidad" type="DomCusAccesibilidad" storable="true" dataSourceProperty="accesibilidad" />
-    <SimpleProperty name="bancos" type="DomCusBancos" storable="true" dataSourceProperty="bancos" />
-    <SimpleProperty name="quintil_del_medico" type="DomCusQuintilMedico" storable="true" dataSourceProperty="quintil_del_medico" />
-    <SimpleProperty name="subtipo" type="DomCusSubtipo" storable="true" dataSourceProperty="subtipo" />
+   <SimpleProperty name="subtipo" type="DomCusSubtipo" storable="true" dataSourceProperty="subtipo" />
     <SimpleProperty name="formato_de_farmacia" type="DomCusFormatoFarmacia" storable="true" dataSourceProperty="formato_de_farmacia" />
     <SimpleProperty name="territorio" type="DomCusTerritorio" storable="true" dataSourceProperty="territorio" />
     <SimpleProperty name="motivo_de_baja" type="DomCusMotivoBaja" storable="true" dataSourceProperty="motivo_de_baja" />

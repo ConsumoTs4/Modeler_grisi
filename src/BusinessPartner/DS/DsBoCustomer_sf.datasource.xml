@@ -54,6 +54,23 @@
     -->
     <Attribute name="sexo" table="Account" column="GCG_Sexo__c " />
     <Attribute name="tipo_de_institucion" table="Account" column="GCG_TipoInstitucion__c " />
+    <Attribute name="tipo_de_persona" table="Account" column="GCG_TipoPersona__c " />
+    <Attribute name="honorarios" table="Account" column="GCG_Honorarios__c " />
+    <Attribute name="especialidad" table="Account" column="GCG_Especialidad__c " />
+    <Attribute name="pacientes_por_semana" table="Account" column="GCG_PacientesSemana__c " />
+    <Attribute name="nivel_de_influencia" table="Account" column="GCG_NivelInfluencia__c " />
+    <Attribute name="uso_de_internet" table="Account" column="GCG_UsoInternet__c " />
+    <Attribute name="portafolio" table="Account" column="GCG_Portafolio__c " />
+    <Attribute name="adopcion" table="Account" column="GCG_Adopcion__c " />
+    <Attribute name="accesibilidad" table="Account" column="GCG_Accesibilidad__c " />
+    <Attribute name="bancos" table="Account" column="GCG_Bancos__c " />
+    <Attribute name="quintil_del_medico" table="Account" column="GCG_QuintilMedico__c " />
+    <Attribute name="tipo" table="Account" column="Type " />
+    <Attribute name="subtipo" table="Account" column="GCG_Subtipo__c " />
+    <Attribute name="formato_de_farmacia" table="Account" column="GCG_FormatoFarmacia__c " />
+    <Attribute name="territorio" table="Account" column="GCG_Territorio__c " />
+    <Attribute name="motivo_de_baja" table="Account" column="GCG_MotivoBaja__c " />
+
    <!--  <Attribute name="frecuencia_visita**" table="Account" column=" " />
     <Attribute name="categoria_del_medico" table="Account" column="GCG_CategoriaMedico__c " />
     <Attribute name="pacientes_por_semana" table="Account" column="GCG_PacientesSemana__c " />
@@ -79,13 +96,11 @@
     <Attribute name="razon_Social" table="Account" column="GCG_RazonSocial__c " />
     <Attribute name="id_SAP" table="Account" column="GCG_IdSap__c " />
     <Attribute name="rfc" table="Account" column="GCG_Rfc__c " />
-    <Attribute name="tipo" table="Account" column="Type " />
-    <Attribute name="subtipo" table="Account" column="GCG_Subtipo__c " />
-    <Attribute name="formato_de_farmacia" table="Account" column="GCG_FormatoFarmacia__c " />
+    
+   
     <Attribute name="account_name" table="Account" column="Name " />
     <Attribute name="folio_de_tienda" table="Account" column="GCG_FolioTienda__c " />
-    <Attribute name="territorio" table="Account" column="GCG_Territorio__c " />
-    <Attribute name="motivo_de_baja" table="Account" column="GCG_MotivoBaja__c " />
+    
     <Attribute name="zona" table="Account" column="GCG_Zone " />
     <Attribute name="cuenta_con_exhibición_adicional" table="Account" column="GCG_CuentaExhibicionAdicional__c " />
     <Attribute name="costo_renta_exhibicion_adicional" table="Account" column="GCG_CostoRentaExhibicionAdicional__c " />

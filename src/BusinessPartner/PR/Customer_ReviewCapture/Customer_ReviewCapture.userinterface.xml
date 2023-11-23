@@ -230,6 +230,221 @@
                 </Bindings>
               </Items>
             </SelectionBox>
+            <SelectionBox name="Tipo de Persona">
+              <Bindings>
+                <Resource target="Label" type="Label" id="Tipo_de_PersonaID" defaultLabel="Tipo de Persona" />
+                <Binding target="DataSource" toggleId="DomCustTipoPersona" bindingMode="TWO_WAY" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.tipo_de_persona" bindingMode="TWO_WAY" />
+              </Bindings>
+              <Items>
+                <Bindings>
+                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                </Bindings>
+              </Items>
+            </SelectionBox>
+            <SelectionBox name="Honorarios">
+              <Bindings>
+                <Resource target="Label" type="Label" id="HonorariosID" defaultLabel="Honorarios" />
+                <Binding target="DataSource" toggleId="DomCusHonorarios" bindingMode="TWO_WAY" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.honorarios" bindingMode="TWO_WAY" />
+              </Bindings>
+              <Items>
+                <Bindings>
+                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                </Bindings>
+              </Items>
+            </SelectionBox>
+            <SelectionBox name="Especialidad">
+              <Bindings>
+                <Resource target="Label" type="Label" id="EspecialidadID" defaultLabel="Especialidad" />
+                <Binding target="DataSource" toggleId="DomCusEspecialidad" bindingMode="TWO_WAY" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.especialidad" bindingMode="TWO_WAY" />
+              </Bindings>
+              <Items>
+                <Bindings>
+                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                </Bindings>
+              </Items>
+            </SelectionBox>
+            <SelectionBox name="Pacientes por semana">
+              <Bindings>
+                <Resource target="Label" type="Label" id="PacientesporsemanaID" defaultLabel="Pacientes por semana" />
+                <Binding target="DataSource" toggleId="DomCusPacientesXsemana" bindingMode="TWO_WAY" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.pacientes_por_semana" bindingMode="TWO_WAY" />
+              </Bindings>
+              <Items>
+                <Bindings>
+                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                </Bindings>
+              </Items>
+            </SelectionBox>
+
+            <SelectionBox name="Nivel de Influencia">
+              <Bindings>
+                <Resource target="Label" type="Label" id="NiveldeInfluenciaID" defaultLabel="Nivel de Influencia" />
+                <Binding target="DataSource" toggleId="DomCusNivelInfluencia" bindingMode="TWO_WAY" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.nivel_de_influencia" bindingMode="TWO_WAY" />
+              </Bindings>
+              <Items>
+                <Bindings>
+                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                </Bindings>
+              </Items>
+            </SelectionBox>
+
+            <SelectionBox name="Uso de internet">
+              <Bindings>
+                <Resource target="Label" type="Label" id="UsodeinternetID" defaultLabel="Uso de internet" />
+                <Binding target="DataSource" toggleId="DomCusUsoInternet" bindingMode="TWO_WAY" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.uso_de_internet" bindingMode="TWO_WAY" />
+              </Bindings>
+              <Items>
+                <Bindings>
+                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                </Bindings>
+              </Items>
+            </SelectionBox>
+
+            <SelectionBox name="Portafolio">
+              <Bindings>
+                <Resource target="Label" type="Label" id="portafolioID" defaultLabel="Portafolio" />
+                <Binding target="DataSource" toggleId="DomCusPortafolio" bindingMode="TWO_WAY" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.portafolio" bindingMode="TWO_WAY" />
+              </Bindings>
+              <Items>
+                <Bindings>
+                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                </Bindings>
+              </Items>
+            </SelectionBox>
+
+            <SelectionBox name="Adopcion">
+              <Bindings>
+                <Resource target="Label" type="Label" id="adopcionID" defaultLabel="Adopcion" />
+                <Binding target="DataSource" toggleId="DomCusAdopcion" bindingMode="TWO_WAY" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.adopcion" bindingMode="TWO_WAY" />
+              </Bindings>
+              <Items>
+                <Bindings>
+                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                </Bindings>
+              </Items>
+            </SelectionBox>
+
+            <SelectionBox name="Accesibilidad">
+              <Bindings>
+                <Resource target="Label" type="Label" id="accesibilidadID" defaultLabel="Accesibilidad" />
+                <Binding target="DataSource" toggleId="DomCusAccesibilidad" bindingMode="TWO_WAY" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.accesibilidad" bindingMode="TWO_WAY" />
+              </Bindings>
+              <Items>
+                <Bindings>
+                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                </Bindings>
+              </Items>
+            </SelectionBox>
+
+            <SelectionBox name="Bancos">
+              <Bindings>
+                <Resource target="Label" type="Label" id="bancosID" defaultLabel="Bancos" />
+                <Binding target="DataSource" toggleId="DomCusBancos" bindingMode="TWO_WAY" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.bancos" bindingMode="TWO_WAY" />
+              </Bindings>
+              <Items>
+                <Bindings>
+                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                </Bindings>
+              </Items>
+            </SelectionBox>
+
+            <SelectionBox name="Quintil del medico">
+              <Bindings>
+                <Resource target="Label" type="Label" id="quintil_del_medicoID" defaultLabel="Quintil del medico" />
+                <Binding target="DataSource" toggleId="DomCusQuintilMedico" bindingMode="TWO_WAY" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.quintil_del_medico" bindingMode="TWO_WAY" />
+              </Bindings>
+              <Items>
+                <Bindings>
+                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                </Bindings>
+              </Items>
+            </SelectionBox>
+            <SelectionBox name="Tipo">
+              <Bindings>
+                <Resource target="Label" type="Label" id="tipoID" defaultLabel="Tipo" />
+                <Binding target="DataSource" toggleId="DomCusType" bindingMode="TWO_WAY" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.tipo" bindingMode="TWO_WAY" />
+              </Bindings>
+              <Items>
+                <Bindings>
+                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                </Bindings>
+              </Items>
+            </SelectionBox>
+            <SelectionBox name="Subtipo">
+              <Bindings>
+                <Resource target="Label" type="Label" id="subtipoID" defaultLabel="Subtipo" />
+                <Binding target="DataSource" toggleId="DomCusSubtipo" bindingMode="TWO_WAY" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.subtipo" bindingMode="TWO_WAY" />
+              </Bindings>
+              <Items>
+                <Bindings>
+                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                </Bindings>
+              </Items>
+            </SelectionBox>
+            <SelectionBox name="Formato de farmacia">
+              <Bindings>
+                <Resource target="Label" type="Label" id="formato_de_farmaciaID" defaultLabel="Formato de farmacia" />
+                <Binding target="DataSource" toggleId="DomCusFormatoFarmacia" bindingMode="TWO_WAY" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.formato_de_farmacia" bindingMode="TWO_WAY" />
+              </Bindings>
+              <Items>
+                <Bindings>
+                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                </Bindings>
+              </Items>
+            </SelectionBox>
+            <SelectionBox name="Territorio">
+              <Bindings>
+                <Resource target="Label" type="Label" id="territorioID" defaultLabel="Territorio" />
+                <Binding target="DataSource" toggleId="DomCusTerritorio" bindingMode="TWO_WAY" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.territorio" bindingMode="TWO_WAY" />
+              </Bindings>
+              <Items>
+                <Bindings>
+                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                </Bindings>
+              </Items>
+            </SelectionBox>
+            <SelectionBox name="Motivo de baja">
+              <Bindings>
+                <Resource target="Label" type="Label" id="motivo_de_bajaID" defaultLabel="Motivo de baja" />
+                <Binding target="DataSource" toggleId="DomCusMotivoBaja" bindingMode="TWO_WAY" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.motivo_de_baja" bindingMode="TWO_WAY" />
+              </Bindings>
+              <Items>
+                <Bindings>
+                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                </Bindings>
+              </Items>
+            </SelectionBox>
             <InputArea name="Matchcode">
               <Bindings>
                 <Resource target="Label" type="Label" defaultLabel="Matchcode" id="MatchcodeId" />
