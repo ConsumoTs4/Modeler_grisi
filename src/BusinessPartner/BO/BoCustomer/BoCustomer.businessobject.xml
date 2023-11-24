@@ -53,18 +53,18 @@
      <SimpleProperty name="motivo_de_baja" type="DomCusMotivoBaja" storable="true" dataSourceProperty="motivo_de_baja" />
          <!-- fin Picklist -->
     <SimpleProperty name="cedulaProfesional" type="DomBpaName" storable="true" dataSourceProperty="cedulaProfesional" />
-    <SimpleProperty name="apellido_paterno" type="DomString" storable="true" dataSourceProperty="apellido_paterno" />
-    <SimpleProperty name="apellido_materno" type="DomString" storable="true" dataSourceProperty="apellido_materno" />
-    <SimpleProperty name="nombre" type="DomString" storable="true" dataSourceProperty="nombre" />
-    <SimpleProperty name="ruta" type="DomString" storable="true" dataSourceProperty="ruta" />
-    <SimpleProperty name="calle" type="DomString" storable="true" dataSourceProperty="calle" />
+    <SimpleProperty name="apellido_paterno" type="DomString" storable="true" dataSourceProperty="apellido_paterno"/>
+    <SimpleProperty name="apellido_materno" type="DomString" storable="true" dataSourceProperty="apellido_materno"/>
+    <SimpleProperty name="nombre" type="DomString" storable="true" dataSourceProperty="nombre"/>
+    <SimpleProperty name="ruta" type="DomString" storable="true" dataSourceProperty="ruta"/>
+    <SimpleProperty name="calle" type="DomString" storable="true" dataSourceProperty="calle"/>
     <SimpleProperty name="num_exterior" type="DomString" storable="true" dataSourceProperty="num_exterior" />
     <SimpleProperty name="numero_interior" type="DomString" storable="true" dataSourceProperty="numero_interior" />
     <SimpleProperty name="colonia" type="DomString" storable="true" dataSourceProperty="colonia" />
-    <SimpleProperty name="codigo_postal" type="DomString" storable="true" dataSourceProperty="codigo_postal" />
+    <SimpleProperty name="codigo_postal" type="DomString" storable="true" dataSourceProperty="codigo_postal"/>
    <!--<SimpleProperty name="brick" type="DomString" storable="true" dataSourceProperty="brick" /> --> 
     <SimpleProperty name="poblacion_municipio_delegación" type="DomString" storable="true" dataSourceProperty="poblacion_municipio_delegación" />
-    <SimpleProperty name="estado" type="DomString" storable="true" dataSourceProperty="estado" />
+    <SimpleProperty name="estado" type="DomString" storable="true" dataSourceProperty="estado"/>
     <SimpleProperty name="pais" type="DomString" storable="true" dataSourceProperty="pais" />
     <SimpleProperty name="latitud" type="DomString" storable="true" dataSourceProperty="latitud" />
     <SimpleProperty name="longitud" type="DomString" storable="true" dataSourceProperty="longitud" />
@@ -80,7 +80,7 @@
     <SimpleProperty name="lider_de_opinion" type="DomBool" storable="true" dataSourceProperty="lider_de_opinion" />
     <SimpleProperty name="razon_Social" type="DomString" storable="true" dataSourceProperty="razon_Social" />
     <SimpleProperty name="rfc" type="DomString" storable="true" dataSourceProperty="rfc" />
-    <SimpleProperty name="account_name" type="DomString" storable="true" dataSourceProperty="account_name" />
+    <SimpleProperty name="account_name" type="DomString" storable="true" dataSourceProperty="account_name"/>
     <SimpleProperty name="folio_de_tienda" type="DomString" storable="true" dataSourceProperty="folio_de_tienda" />
     <SimpleProperty name="cuenta_con_exhibición_adicional" type="DomBool" storable="true" dataSourceProperty="cuenta_con_exhibición_adicional" />
     <SimpleProperty name="costo_renta_exhibicion_adicional"  storable="true" dataSourceProperty="costo_renta_exhibicion_adicional" />
