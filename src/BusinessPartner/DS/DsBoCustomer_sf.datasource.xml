@@ -1,8 +1,9 @@
-<DataSource name="DsBoCustomer" backendSystem="sf" businessObjectClass="BoCustomer" external="false" editableEntity="Account" schemaVersion="2.0">
+<DataSource name="DsBoCustomer" backendSystem="sf" businessObjectClass="BoCustomer" external="false"
+  editableEntity="Account" schemaVersion="2.0">
   <Attributes>
     <Attribute name="pKey" table="Account" column="Id" />
     <Attribute name="name" table="Account" column="Name" />
-    <Attribute name="name2" table="Account" column="Name_2__c" />
+    <!-- <Attribute name="name2" table="Account" column="Name_2__c" /> -->
     <Attribute name="matchcode" table="Account_Extension__c" column="Match_Code__c" />
     <Attribute name="customerId" table="Account" column="Account_Number__c" />
     <Attribute name="phone1" table="Account" column="Phone" />
@@ -23,35 +24,15 @@
     <DerivedAttribute name="totalCredit" value="0" />
     <DerivedAttribute name="totalDebitCredit" value="0" />
     <Attribute name="considerModules" table="Account_Extension__c" column="Consider_Modules__c" />
-    <DerivedAttribute name="priorityImage" value="CASE Account_Extension__c.Priority__c WHEN 'A' THEN 'GoldMedal' WHEN 'B' THEN 'SilverMedal' ELSE 'BronzeMedal' END" />
+    <DerivedAttribute name="priorityImage"
+      value="CASE Account_Extension__c.Priority__c WHEN 'A' THEN 'GoldMedal' WHEN 'B' THEN 'SilverMedal' ELSE 'BronzeMedal' END" />
     <Attribute name="accountDi" table="Account_Extension__c" column="Distribution_Issue__c" />
     <Attribute name="accountOi" table="Account_Extension__c" column="OOS_Issue__c" />
     <Attribute name="operatingHoursId" table="Account" column="OperatingHoursId" />
     <DerivedAttribute name="emailEditable" value="'0'" />
-    <!--Objetos Custom-->
-    <!-- <Attribute name="cedulaProfesional" table="Account" column="GCG_CedulaProfesional__c" />
-    <Attribute name="ruta" table="Account" column="GCG_Ruta__c " />
-    <Attribute name="tipo_de_persona" table="Account" column="GCG_TipoPersona__c " />
-    <Attribute name="apellido_paterno" table="Account" column="GCG_ApellidoPaterno__c " />
-    <Attribute name="apellido_materno" table="Account" column="GCG_ApellidoMaterno__c " />
-    <Attribute name="nombre" table="Account" column="GCG_Nombre__c " />
-    <Attribute name="calle" table="Account" column="BillingStreet " />
-    <Attribute name="num_exterior" table="Account" column="BillingStreet " />
-    <Attribute name="numero_interior" table="Account" column="GCG_NumeroInterior__c " />
-    <Attribute name="colonia" table="Account" column="BillingStreet " />
-    <Attribute name="codigo_postal" table="Account" column="BillingPostalCode " />
-    <Attribute name="brick" table="Account" column="GCG_Brick__c " />
-    <Attribute name="poblacion_municipio_delegación" table="Account" column="BillingCity " />
-    <Attribute name="estado" table="Account" column="BillingState " />
-    <Attribute name="pais" table="Account" column="BillingCountry " />
-    <Attribute name="latitud" table="Account" column="BillingLatitude " />
-    <Attribute name="longitud" table="Account" column="BillingLongitude " />
-    <Attribute name="honorarios" table="Account" column="GCG_Honorarios__c " />
-    <Attribute name="especialidad" table="Account" column="GCG_Especialidad__c " />
-    <Attribute name="sub_especialidad" table="Account" column="GCG_SubEspecialidad__c " />
-    <Attribute name="estatus" table="Account" column="GCG_Estatus__c " />
-    <Attribute name="fecha_nacimiento" table="Account" column="GCG_FechaNacimiento__c " />
-    -->
+    <!--Objetos
+    Custom-->
+    <!-- Picklist-->
     <Attribute name="sexo" table="Account" column="GCG_Sexo__c " />
     <Attribute name="tipo_de_institucion" table="Account" column="GCG_TipoInstitucion__c " />
     <Attribute name="tipo_de_persona" table="Account" column="GCG_TipoPersona__c " />
@@ -70,59 +51,64 @@
     <Attribute name="formato_de_farmacia" table="Account" column="GCG_FormatoFarmacia__c " />
     <Attribute name="territorio" table="Account" column="GCG_Territorio__c " />
     <Attribute name="motivo_de_baja" table="Account" column="GCG_MotivoBaja__c " />
-
-   <!--  <Attribute name="frecuencia_visita**" table="Account" column=" " />
-    <Attribute name="categoria_del_medico" table="Account" column="GCG_CategoriaMedico__c " />
-    <Attribute name="pacientes_por_semana" table="Account" column="GCG_PacientesSemana__c " />
-    <Attribute name="edad" table="Account" column="GCG_Edad__c " />
+    <!-- fin Picklist-->
+    <Attribute name="cedulaProfesional" table="Account" column="GCG_CedulaProfesional__c" />
+    <Attribute name="apellido_paterno" table="Account" column="GCG_ApellidoPaterno__c " />
+    <Attribute name="apellido_materno" table="Account" column="GCG_ApellidoMaterno__c " />
+    <Attribute name="nombre" table="Account" column="GCG_Nombre__c " />
+    <Attribute name="ruta" table="Account" column="GCG_Ruta__c " />
+    <Attribute name="calle" table="Account" column="ShippingStreet " />
+    <Attribute name="num_exterior" table="Account" column="ShippingStreet " />
+    <Attribute name="numero_interior" table="Account" column="GCG_NumeroInterior__c " />
+    <Attribute name="colonia" table="Account" column="ShippingStreet " />
+    <Attribute name="codigo_postal" table="Account" column="ShippingPostalCode" />
+    <!--
+    <Attribute name="brick" table="Account" column="GCG_Brick__c " /> -->
+    <Attribute name="poblacion_municipio_delegación" table="Account" column="ShippingCity " />
+    <Attribute name="estado" table="Account" column="ShippingState " />
+    <Attribute name="pais" table="Account" column="ShippingCountry " />
+    <Attribute name="latitud" table="Account" column="BillingLatitude " />
+    <Attribute name="longitud" table="Account" column="BillingLongitude " />
+    <Attribute name="honorarios" table="Account" column="GCG_Honorarios__c " />
+    <Attribute name="especialidad" table="Account" column="GCG_Especialidad__c " />
+    <Attribute name="sub_especialidad" table="Account" column="GCG_SubEspecialidad__c " />
+    <Attribute name="estatus" table="Account" column="GCG_Estatus__c " />
+    <Attribute name="fecha_nacimiento" table="Account" column="GCG_FechaNacimiento__c " />
     <Attribute name="tel_1" table="Account" column="Phone " />
     <Attribute name="tel_2" table="Account" column="GCG_Telefono__c " />
     <Attribute name="celular" table="Account" column="GCG_Celular__c " />
-    <Attribute name="email" table="Account" column="cgcloud__Account_Email__c " />
+    <Attribute name="categoria_del_medico" table="Account" column="GCG_CategoriaMedico__c " />
     <Attribute name="medico_Galeno" table="Account" column="GCG_MedicoGaleno__c " />
     <Attribute name="requiere_factura" table="Account" column="GCG_RequiereFactura__c " />
-    <Attribute name="lider_de_opinion" table="Account" column="GCG_LiderOpinion__c " />
-    <Attribute name="nivel_de_influencia" table="Account" column="GCG_NivelInfluencia__c " />
-    <Attribute name="uso_de_internet" table="Account" column="GCG_UsoInternet__c " />
-    <Attribute name="portafolio" table="Account" column="GCG_Portafolio__c " />
-    <Attribute name="adopcion" table="Account" column="GCG_Adopcion__c " />
-    <Attribute name="accesibilidad" table="Account" column="GCG_Accesibilidad__c " />
-    <Attribute name="fecha_de_alta" table="Account" column="GCG_FechaAlta__c " />
-    <Attribute name="fecha_de_modificacion" table="Account" column="LastmodifyDate " />
-    <Attribute name="bancos" table="Account" column="GCG_Bancos__c " />
-    <Attribute name="quintil_del_medico" table="Account" column="GCG_QuintilMedico__c " />
-    <Attribute name="prescripcion_1" table="Account" column="GCG_Prescripcion1__c " />
-    <Attribute name="participacion_de_la_auditoria" table="Account" column="GCG_ParticipacionAuditoria__c " />
+    <Attribute name="lider_de_opinion" table="Account" column="GCG_LiderOpinion__c " /> 
     <Attribute name="razon_Social" table="Account" column="GCG_RazonSocial__c " />
-    <Attribute name="id_SAP" table="Account" column="GCG_IdSap__c " />
     <Attribute name="rfc" table="Account" column="GCG_Rfc__c " />
-    
-   
     <Attribute name="account_name" table="Account" column="Name " />
     <Attribute name="folio_de_tienda" table="Account" column="GCG_FolioTienda__c " />
-    
-    <Attribute name="zona" table="Account" column="GCG_Zone " />
     <Attribute name="cuenta_con_exhibición_adicional" table="Account" column="GCG_CuentaExhibicionAdicional__c " />
     <Attribute name="costo_renta_exhibicion_adicional" table="Account" column="GCG_CostoRentaExhibicionAdicional__c " />
-    <Attribute name="parent_Account" table="Account" column="AccountId " />
-    <Attribute name="sales_Org" table="Account" column="cgcloud__Sales_Org__c " />
-    <Attribute name="customer_Template" table="Account" column="cgcloud__Account_Template__c " />
-    <Attribute name="sociedad" table="Account" column="GCG_Sociedad__c " />
-    <Attribute name="canal_de_distribucion" table="Account" column="GCG_Canal__c " />
-    <Attribute name="organización_de_ventas" table="Account" column="GCG_OrgVentas__c " />
-    <Attribute name="sector" table="Account" column="GCG_Sector__c " />
-    <Attribute name="grupo_de_clientes" table="Account" column="GCG_GrupoClientes__c " />
-    <Attribute name="grupo_de_precios" table="Account" column="GCG_GrupoPrecios__c " />
-    <Attribute name="condicion_de_pago" table="Account" column="GCG_CondicionesPago__c " />
-    <Attribute name="via_de_pago" table="Account" column="GCG_ViaPago__c " /> -->
-    <!--Fin de Objetos Custom-->
+
+    <Attribute name="edad" table="Account" column="GCG_Edad__c " />
+    <Attribute name="fecha_de_alta" table="Account" column="GCG_FechaAlta__c " />
+    <Attribute name="prescripcion_1" table="Account" column="GCG_Prescripcion1__c " />
+    <Attribute name="participacion_de_la_auditoria" table="Account" column="GCG_ParticipacionAuditoria__c " />
+    <Attribute name="id_SAP" table="Account" column="GCG_IdSap__c " />
+    <!-- <Attribute name="parent_Account" table="Account" column="AccountId " /> -->
+
+    <!--  
+      <Attribute name="frecuencia_visita**" table="Account" column=" " />
+    
+     -->
+    <!--Fin
+    de Objetos Custom-->
   </Attributes>
   <Entities>
     <Entity name="Account" alias="" idAttribute="Id" />
     <Entity name="Account_Extension__c" alias="">
       <Join Type="inner">
         <SimpleJoin>
-          <Condition leftSideValue="Account_Extension__c.Account__c" comparator="eq" rightSideType="Attribute" rightSideValue="Account.Id" />
+          <Condition leftSideValue="Account_Extension__c.Account__c" comparator="eq"
+            rightSideType="Attribute" rightSideValue="Account.Id" />
         </SimpleJoin>
       </Join>
     </Entity>
