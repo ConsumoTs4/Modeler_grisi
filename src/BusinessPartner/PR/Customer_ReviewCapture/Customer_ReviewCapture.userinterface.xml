@@ -182,9 +182,9 @@
               </Events>
             </MenuItem>
           </MenuItems>
-          <GroupElement name="IdentificationGroup">
+          <GroupElement name="Informacion_General_Group">
             <Bindings>
-              <Resource target="Title" type="Label" id="IdentificationId" defaultLabel="Identification" />
+              <Resource target="Title" type="Label" id="Informacion_General_id" defaultLabel="Información General" />
             </Bindings>
             <InputArea name="Id" editable="false">
               <Bindings>
@@ -198,12 +198,14 @@
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.name" bindingMode="TWO_WAY" />
               </Bindings>
             </InputArea>
+          <!--
             <InputArea name="Nombre Medico">
               <Bindings>
                 <Resource target="Label" type="Label" defaultLabel="Nombre Medico" id="nombre" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.nombre" bindingMode="TWO_WAY" />
               </Bindings>
             </InputArea>
+           -->  
             <InputArea name="Apellido Paterno">
               <Bindings>
                 <Resource target="Label" type="Label" defaultLabel="Apellido Paterno" id="apellido_paterno" />
@@ -216,13 +218,12 @@
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.apellido_materno" bindingMode="TWO_WAY" />
               </Bindings>
             </InputArea>
-
-            <!-- <InputArea name="SecondName">
+            <InputArea name="Fecha Nacimiento">
               <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="Second Name" id="Name2Id" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.name2" bindingMode="TWO_WAY" />
+                <Resource target="Label" type="Label" defaultLabel="Fecha Nacimiento" id="ruta" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.fecha_nacimiento" bindingMode="TWO_WAY" />
               </Bindings>
-            </InputArea> -->
+            </InputArea>
             <SelectionBox name="Sexo">
               <Bindings>
                 <Resource target="Label" type="Label" id="SexoId" defaultLabel="Sexo" />
@@ -236,45 +237,12 @@
                 </Bindings>
               </Items>
             </SelectionBox>
-            <SelectionBox name="Tipo de Institucion">
+            <InputArea name="CedulaProfesional">
               <Bindings>
-                <Resource target="Label" type="Label" id="Tipo_de_InstitucionID" defaultLabel="Tipo de Institucion" />
-                <Binding target="DataSource" toggleId="DomCustTipoInstitucion" bindingMode="TWO_WAY" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.tipo_de_institucion" bindingMode="TWO_WAY" />
+                <Resource target="Label" type="Label" defaultLabel="Cedula Profesional" id="cedulaProfesional" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.cedulaProfesional" bindingMode="TWO_WAY" />
               </Bindings>
-              <Items>
-                <Bindings>
-                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
-                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
-                </Bindings>
-              </Items>
-            </SelectionBox>
-            <SelectionBox name="Tipo de Persona">
-              <Bindings>
-                <Resource target="Label" type="Label" id="Tipo_de_PersonaID" defaultLabel="Tipo de Persona" />
-                <Binding target="DataSource" toggleId="DomCustTipoPersona" bindingMode="TWO_WAY" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.tipo_de_persona" bindingMode="TWO_WAY" />
-              </Bindings>
-              <Items>
-                <Bindings>
-                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
-                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
-                </Bindings>
-              </Items>
-            </SelectionBox>
-            <SelectionBox name="Honorarios">
-              <Bindings>
-                <Resource target="Label" type="Label" id="HonorariosID" defaultLabel="Honorarios" />
-                <Binding target="DataSource" toggleId="DomCusHonorarios" bindingMode="TWO_WAY" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.honorarios" bindingMode="TWO_WAY" />
-              </Bindings>
-              <Items>
-                <Bindings>
-                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
-                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
-                </Bindings>
-              </Items>
-            </SelectionBox>
+            </InputArea>
             <SelectionBox name="Especialidad">
               <Bindings>
                 <Resource target="Label" type="Label" id="EspecialidadID" defaultLabel="Especialidad" />
@@ -301,6 +269,20 @@
                 </Bindings>
               </Items>
             </SelectionBox>
+            
+            <SelectionBox name="Tipo de Persona">
+              <Bindings>
+                <Resource target="Label" type="Label" id="Tipo_de_PersonaID" defaultLabel="Tipo de Persona" />
+                <Binding target="DataSource" toggleId="DomCustTipoPersona" bindingMode="TWO_WAY" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.tipo_de_persona" bindingMode="TWO_WAY" />
+              </Bindings>
+              <Items>
+                <Bindings>
+                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                </Bindings>
+              </Items>
+            </SelectionBox>
             <SelectionBox name="Pacientes por semana">
               <Bindings>
                 <Resource target="Label" type="Label" id="PacientesporsemanaID" defaultLabel="Pacientes por semana" />
@@ -314,7 +296,19 @@
                 </Bindings>
               </Items>
             </SelectionBox>
-
+            <SelectionBox name="Honorarios">
+              <Bindings>
+                <Resource target="Label" type="Label" id="HonorariosID" defaultLabel="Honorarios" />
+                <Binding target="DataSource" toggleId="DomCusHonorarios" bindingMode="TWO_WAY" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.honorarios" bindingMode="TWO_WAY" />
+              </Bindings>
+              <Items>
+                <Bindings>
+                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                </Bindings>
+              </Items>
+            </SelectionBox>
             <SelectionBox name="Nivel de Influencia">
               <Bindings>
                 <Resource target="Label" type="Label" id="NiveldeInfluenciaID" defaultLabel="Nivel de Influencia" />
@@ -328,21 +322,6 @@
                 </Bindings>
               </Items>
             </SelectionBox>
-
-            <SelectionBox name="Uso de internet">
-              <Bindings>
-                <Resource target="Label" type="Label" id="UsodeinternetID" defaultLabel="Uso de internet" />
-                <Binding target="DataSource" toggleId="DomCusUsoInternet" bindingMode="TWO_WAY" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.uso_de_internet" bindingMode="TWO_WAY" />
-              </Bindings>
-              <Items>
-                <Bindings>
-                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
-                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
-                </Bindings>
-              </Items>
-            </SelectionBox>
-
             <SelectionBox name="Portafolio">
               <Bindings>
                 <Resource target="Label" type="Label" id="portafolioID" defaultLabel="Portafolio" />
@@ -356,21 +335,6 @@
                 </Bindings>
               </Items>
             </SelectionBox>
-
-            <SelectionBox name="Adopcion">
-              <Bindings>
-                <Resource target="Label" type="Label" id="adopcionID" defaultLabel="Adopcion" />
-                <Binding target="DataSource" toggleId="DomCusAdopcion" bindingMode="TWO_WAY" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.adopcion" bindingMode="TWO_WAY" />
-              </Bindings>
-              <Items>
-                <Bindings>
-                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
-                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
-                </Bindings>
-              </Items>
-            </SelectionBox>
-
             <SelectionBox name="Accesibilidad">
               <Bindings>
                 <Resource target="Label" type="Label" id="accesibilidadID" defaultLabel="Accesibilidad" />
@@ -384,7 +348,38 @@
                 </Bindings>
               </Items>
             </SelectionBox>
-
+            <InputArea name="Lider de Opinion">
+              <Bindings>
+                <Resource target="Label" type="Label" defaultLabel="Lider de Opinion" id="lider_de_opinion" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.lider_de_opinion" bindingMode="TWO_WAY" />
+              </Bindings>
+            </InputArea>
+            <SelectionBox name="Uso de internet">
+              <Bindings>
+                <Resource target="Label" type="Label" id="UsodeinternetID" defaultLabel="Uso de internet" />
+                <Binding target="DataSource" toggleId="DomCusUsoInternet" bindingMode="TWO_WAY" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.uso_de_internet" bindingMode="TWO_WAY" />
+              </Bindings>
+              <Items>
+                <Bindings>
+                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                </Bindings>
+              </Items>
+            </SelectionBox>
+            <SelectionBox name="Adopcion">
+              <Bindings>
+                <Resource target="Label" type="Label" id="adopcionID" defaultLabel="Adopcion" />
+                <Binding target="DataSource" toggleId="DomCusAdopcion" bindingMode="TWO_WAY" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.adopcion" bindingMode="TWO_WAY" />
+              </Bindings>
+              <Items>
+                <Bindings>
+                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                </Bindings>
+              </Items>
+            </SelectionBox>
             <SelectionBox name="Bancos">
               <Bindings>
                 <Resource target="Label" type="Label" id="bancosID" defaultLabel="Bancos" />
@@ -398,20 +393,18 @@
                 </Bindings>
               </Items>
             </SelectionBox>
+          </GroupElement>
 
-            <SelectionBox name="Quintil del medico">
+          <GroupElement name="Informacion_Farmacia_Group">
+            <Bindings>
+              <Resource target="Title" type="Label" id="Informacion_Farmacia_id" defaultLabel="Información de farmacia" />
+            </Bindings>
+            <InputArea name="Grupo Cadena">
               <Bindings>
-                <Resource target="Label" type="Label" id="quintil_del_medicoID" defaultLabel="Quintil del medico" />
-                <Binding target="DataSource" toggleId="DomCusQuintilMedico" bindingMode="TWO_WAY" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.quintil_del_medico" bindingMode="TWO_WAY" />
+                <Resource target="Label" type="Label" defaultLabel="Grupo de cadena" id="grupo_Cadena" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.grupo_Cadena" bindingMode="TWO_WAY" />
               </Bindings>
-              <Items>
-                <Bindings>
-                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
-                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
-                </Bindings>
-              </Items>
-            </SelectionBox>
+            </InputArea>
             <SelectionBox name="Tipo">
               <Bindings>
                 <Resource target="Label" type="Label" id="tipoID" defaultLabel="Tipo" />
@@ -451,6 +444,122 @@
                 </Bindings>
               </Items>
             </SelectionBox>
+            <InputArea name="RFC">
+              <Bindings>
+                <Resource target="Label" type="Label" defaultLabel="RFC" id="rfc" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.rfc" bindingMode="TWO_WAY" />
+              </Bindings>
+            </InputArea>
+            <InputArea name="Cuenta con exhibición adicional">
+              <Bindings>
+                <Resource target="Label" type="Label" defaultLabel="Cuenta con exhibición adicional" id="cuenta_con_exhibición_adicional" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.cuenta_con_exhibición_adicional" bindingMode="TWO_WAY" />
+              </Bindings>
+            </InputArea>
+            <InputArea name="Costo renta exhibicion adicional">
+              <Bindings>
+                <Resource target="Label" type="Label" defaultLabel="Costo renta exhibicion adicional" id="costo_renta_exhibicion_adicional" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.costo_renta_exhibicion_adicional" bindingMode="TWO_WAY" />
+              </Bindings>
+            </InputArea>
+          </GroupElement>
+
+          <GroupElement name="DireccionGroup">
+            <Bindings>
+              <Resource target="Title" type="Label" id="DireccionId" defaultLabel="Direccion" />
+            </Bindings>
+            <InputArea name="Calle">
+              <Bindings>
+                <Resource target="Label" type="Label" defaultLabel="Calle" id="calle" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.calle" bindingMode="TWO_WAY" />
+              </Bindings>
+            </InputArea>
+            <InputArea name="Num Exterior">
+              <Bindings>
+                <Resource target="Label" type="Label" defaultLabel="Num Exterior" id="num_exterior" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.num_exterior" bindingMode="TWO_WAY" />
+              </Bindings>
+            </InputArea>
+            <InputArea name="Colonia">
+              <Bindings>
+                <Resource target="Label" type="Label" defaultLabel="Colonia" id="colonia" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.colonia" bindingMode="TWO_WAY" />
+              </Bindings>
+            </InputArea>
+            <InputArea name="Codigo Postal">
+              <Bindings>
+                <Resource target="Label" type="Label" defaultLabel="Codigo Postal" id="codigo_postal" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.codigo_postal" bindingMode="TWO_WAY" />
+              </Bindings>
+            </InputArea>
+            <InputArea name="Poblacion (Municipio/Delegación)">
+              <Bindings>
+                <Resource target="Label" type="Label" defaultLabel="Poblacion (Municipio/Delegación)" id="ruta" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.poblacion_municipio_delegación" bindingMode="TWO_WAY" />
+              </Bindings>
+            </InputArea>
+            <InputArea name="Estado">
+              <Bindings>
+                <Resource target="Label" type="Label" defaultLabel="Estado" id="ruta" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.estado" bindingMode="TWO_WAY" />
+              </Bindings>
+            </InputArea>
+            <InputArea name="Num Interior">
+              <Bindings>
+                <Resource target="Label" type="Label" defaultLabel="Num Interior" id="numero_interior" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.numero_interior" bindingMode="TWO_WAY" />
+              </Bindings>
+            </InputArea>
+          </GroupElement>
+
+          <GroupElement name="Info_Hospital_Group" >
+            <Bindings>
+              <Resource target="Title" type="Label" id="Info_HospitalId" defaultLabel="Información de Hospital" />
+            </Bindings>
+            <SelectionBox name="Tipo de Institucion">
+              <Bindings>
+                <Resource target="Label" type="Label" id="Tipo_de_InstitucionID" defaultLabel="Tipo de Institucion" />
+                <Binding target="DataSource" toggleId="DomCustTipoInstitucion" bindingMode="TWO_WAY" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.tipo_de_institucion" bindingMode="TWO_WAY" />
+              </Bindings>
+              <Items>
+                <Bindings>
+                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                </Bindings>
+              </Items>
+            </SelectionBox>
+            
+          </GroupElement>
+
+          <GroupElement name="IdentificationGroup">
+            <Bindings>
+              <Resource target="Title" type="Label" id="IdentificationId" defaultLabel="Identification" />
+           </Bindings>
+            
+
+            <!-- <InputArea name="SecondName">
+              <Bindings>
+                <Resource target="Label" type="Label" defaultLabel="Second Name" id="Name2Id" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.name2" bindingMode="TWO_WAY" />
+              </Bindings>
+            </InputArea> -->
+           
+
+            <SelectionBox name="Quintil del medico">
+              <Bindings>
+                <Resource target="Label" type="Label" id="quintil_del_medicoID" defaultLabel="Quintil del medico" />
+                <Binding target="DataSource" toggleId="DomCusQuintilMedico" bindingMode="TWO_WAY" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.quintil_del_medico" bindingMode="TWO_WAY" />
+              </Bindings>
+              <Items>
+                <Bindings>
+                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                </Bindings>
+              </Items>
+            </SelectionBox>
+            
             <SelectionBox name="Territorio">
               <Bindings>
                 <Resource target="Label" type="Label" id="territorioID" defaultLabel="Territorio" />
@@ -477,12 +586,7 @@
                 </Bindings>
               </Items>
             </SelectionBox>
-            <InputArea name="CedulaProfesional">
-              <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="Cedula Profesional" id="cedulaProfesional" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.cedulaProfesional" bindingMode="TWO_WAY" />
-              </Bindings>
-            </InputArea>
+            
             
            
             <InputArea name="Ruta">
@@ -491,36 +595,11 @@
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.ruta" bindingMode="TWO_WAY" />
               </Bindings>
             </InputArea>
-            <InputArea name="Calle">
-              <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="Calle" id="calle" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.calle" bindingMode="TWO_WAY" />
-              </Bindings>
-            </InputArea>
-            <InputArea name="Num Exterior">
-              <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="Num Exterior" id="num_exterior" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.num_exterior" bindingMode="TWO_WAY" />
-              </Bindings>
-            </InputArea>
-            <InputArea name="Num Interior">
-              <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="Num Interior" id="numero_interior" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.numero_interior" bindingMode="TWO_WAY" />
-              </Bindings>
-            </InputArea>
-            <InputArea name="Colonia">
-              <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="Colonia" id="colonia" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.colonia" bindingMode="TWO_WAY" />
-              </Bindings>
-            </InputArea>
-            <InputArea name="Codigo Postal">
-              <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="Codigo Postal" id="codigo_postal" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.codigo_postal" bindingMode="TWO_WAY" />
-              </Bindings>
-            </InputArea>
+            
+
+            
+            
+          
             <!--  <InputArea name="Brick">
                 <Bindings>
                   <Resource target="Label" type="Label" defaultLabel="Brick" id="brick" />
@@ -564,24 +643,14 @@
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.requiere_factura" bindingMode="TWO_WAY" />
               </Bindings>
             </InputArea>
-            <InputArea name="Lider de Opinion">
-              <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="Lider de Opinion" id="lider_de_opinion" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.lider_de_opinion" bindingMode="TWO_WAY" />
-              </Bindings>
-            </InputArea>
+            
             <InputArea name="Razon Social">
               <Bindings>
                 <Resource target="Label" type="Label" defaultLabel="Razon Social" id="razon_Social" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.razon_Social" bindingMode="TWO_WAY" />
               </Bindings>
             </InputArea>
-            <InputArea name="RFC">
-              <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="RFC" id="rfc" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.rfc" bindingMode="TWO_WAY" />
-              </Bindings>
-            </InputArea>
+            
             <InputArea name="Account Name">
               <Bindings>
                 <Resource target="Label" type="Label" defaultLabel="Account Name" id="account_name" />
@@ -594,39 +663,12 @@
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.folio_de_tienda" bindingMode="TWO_WAY" />
               </Bindings>
             </InputArea>
-            <InputArea name="Cuenta con exhibición adicional">
-              <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="Cuenta con exhibición adicional" id="cuenta_con_exhibición_adicional" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.cuenta_con_exhibición_adicional" bindingMode="TWO_WAY" />
-              </Bindings>
-            </InputArea>
-            <InputArea name="Costo renta exhibicion adicional">
-              <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="Costo renta exhibicion adicional" id="costo_renta_exhibicion_adicional" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.costo_renta_exhibicion_adicional" bindingMode="TWO_WAY" />
-              </Bindings>
-            </InputArea>
-            <InputArea name="Fecha Nacimiento">
-              <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="Fecha Nacimiento" id="ruta" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.fecha_nacimiento" bindingMode="TWO_WAY" />
-              </Bindings>
-            </InputArea>
+            
+           
           
  
 
-            <InputArea name="Poblacion (Municipio/Delegación)">
-              <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="Poblacion (Municipio/Delegación)" id="ruta" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.poblacion_municipio_delegación" bindingMode="TWO_WAY" />
-              </Bindings>
-            </InputArea>
-            <InputArea name="Estado">
-              <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="Estado" id="ruta" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.estado" bindingMode="TWO_WAY" />
-              </Bindings>
-            </InputArea>
+            
 
             <InputArea name="Edad">
               <Bindings>

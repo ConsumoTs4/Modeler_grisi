@@ -90,6 +90,8 @@
     <SimpleProperty name="prescripcion_1"  storable="true" dataSourceProperty="prescripcion_1" />
     <SimpleProperty name="participacion_de_la_auditoria"  storable="true" dataSourceProperty="participacion_de_la_auditoria" />
     <SimpleProperty name="id_SAP"  storable="true" dataSourceProperty="id_SAP" />
+    <SimpleProperty name="grupo_Cadena"  storable="true" dataSourceProperty="grupo_Cadena" />
+    
     <!-- <SimpleProperty name="parent_Account"  storable="true" dataSourceProperty="parent_Account" /> -->
 
 

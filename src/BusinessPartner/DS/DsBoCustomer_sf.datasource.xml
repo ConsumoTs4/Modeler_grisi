@@ -93,6 +93,9 @@
     <Attribute name="prescripcion_1" table="Account" column="GCG_Prescripcion1__c" />
     <Attribute name="participacion_de_la_auditoria" table="Account" column="GCG_ParticipacionAuditoria__c" />
     <Attribute name="id_SAP" table="Account" column="GCG_IdSap__c" />
+    <Attribute name="grupo_Cadena" table="Account" column="GCG_Grupo_de_cadena__c" />
+
+    
     <!-- <Attribute name="parent_Account" table="Account" column="AccountId " /> -->
 
     <!--  
