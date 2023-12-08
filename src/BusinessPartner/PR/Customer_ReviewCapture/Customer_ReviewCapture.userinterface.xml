@@ -204,6 +204,12 @@
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.name2" bindingMode="TWO_WAY" />
               </Bindings>
             </InputArea>
+            <InputArea name="Cedula">
+              <Bindings>
+                <Resource target="Label" type="Label" defaultLabel="Cedula Profecional" id="CedulaId" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.cedulaprof" bindingMode="TWO_WAY" />
+              </Bindings>
+            </InputArea>
             <InputArea name="Matchcode">
               <Bindings>
                 <Resource target="Label" type="Label" defaultLabel="Matchcode" id="MatchcodeId" />

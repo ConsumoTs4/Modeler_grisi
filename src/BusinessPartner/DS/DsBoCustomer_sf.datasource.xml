@@ -3,6 +3,7 @@
     <Attribute name="pKey" table="Account" column="Id" />
     <Attribute name="name" table="Account" column="Name" />
     <Attribute name="name2" table="Account" column="Name_2__c" />
+    <Attribute name="cedulaprof" table="Account" column="GCG_CedulaProfesional__c" />
     <Attribute name="matchcode" table="Account_Extension__c" column="Match_Code__c" />
     <Attribute name="customerId" table="Account" column="Account_Number__c" />
     <Attribute name="phone1" table="Account" column="Phone" />
