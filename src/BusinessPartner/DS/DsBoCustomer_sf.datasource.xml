@@ -28,6 +28,15 @@
     <Attribute name="accountDi" table="Account_Extension__c" column="Distribution_Issue__c" />
     <Attribute name="accountOi" table="Account_Extension__c" column="OOS_Issue__c" />
     <Attribute name="operatingHoursId" table="Account" column="OperatingHoursId" />
+
+    <Attribute name="cedulaProfesional" table="Account" column="GCG_CedulaProfesional__c" />
+    <Attribute name="apellido_paterno" table="Account" column="GCG_ApellidoPaterno__c" />
+    <Attribute name="apellido_materno" table="Account" column="GCG_ApellidoMaterno__c" />
+
+    <Attribute name="grupoCadena" table="Account" column="GCG_GrupoDeCadena__c" />
+    <Attribute name="sexo" table="Account" column="GCG_Sexo__c" />
+
+
     <DerivedAttribute name="emailEditable" value="'0'" />
   </Attributes>
   <Entities>

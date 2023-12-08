@@ -198,6 +198,58 @@
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.name" bindingMode="TWO_WAY" />
               </Bindings>
             </InputArea>
+
+            <InputArea name="Apellido Paterno">
+              <Bindings>
+                <Resource target="Label" type="Label" defaultLabel="Apellido Paterno" id="apellido_paterno" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.apellido_paterno" bindingMode="TWO_WAY" />
+              </Bindings>
+            </InputArea>
+
+            <InputArea name="Apellido Materno">
+              <Bindings>
+                <Resource target="Label" type="Label" defaultLabel="Apellido Materno" id="apellido_materno" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.apellido_materno" bindingMode="TWO_WAY" />
+              </Bindings>
+            </InputArea>
+
+            <InputArea name="CedulaProfesional">
+              <Bindings>
+                <Resource target="Label" type="Label" defaultLabel="Cedula Profesional" id="cedulaProfesional" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.cedulaProfesional" bindingMode="TWO_WAY" />
+              </Bindings>
+            </InputArea>
+
+            <SelectionBox name="Sexo">
+              <Bindings>
+                <Resource target="Label" type="Label" id="SexoId" defaultLabel="Sexo" />
+                <Binding target="DataSource" toggleId="DomCustSex" bindingMode="TWO_WAY" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.sexo" bindingMode="TWO_WAY" />
+              </Bindings>
+              <Items>
+                <Bindings>
+                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                </Bindings>
+              </Items>
+            </SelectionBox>
+           
+            <SelectionBox name="Grupo Cadena">
+              <Bindings>
+                <Resource target="Label" type="Label" id="grupo_Cadenaid" defaultLabel="Grupo de cadena" />
+                <Binding target="DataSource" toggleId="DomCustGrupoCadena" bindingMode="TWO_WAY" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.grupoCadena" bindingMode="TWO_WAY" />
+              </Bindings>
+              <Items>
+                <Bindings>
+                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                </Bindings>
+              </Items>
+            </SelectionBox>
+
+
+
             <InputArea name="SecondName">
               <Bindings>
                 <Resource target="Label" type="Label" defaultLabel="Second Name" id="Name2Id" />

@@ -30,6 +30,15 @@
     <SimpleProperty name="accountOi" type="DomBool" storable="true" id="false" dataSourceProperty="accountOi" />
     <SimpleProperty name="operatingHoursId" type="DomPKey" dataSourceProperty="operatingHoursId" />
     <SimpleProperty name="emailEditable" type="DomBool" storable="false" dataSourceProperty="emailEditable" />
+
+    <SimpleProperty name="cedulaProfesional" type="DomBpaName" storable="true" dataSourceProperty="cedulaProfesional" />
+    <SimpleProperty name="apellido_paterno" type="DomString" storable="true" dataSourceProperty="apellido_paterno"/>
+    <SimpleProperty name="apellido_materno" type="DomString" storable="true" dataSourceProperty="apellido_materno"/>
+    <SimpleProperty name="sexo" type="DomCustSex" storable="true" dataSourceProperty="sexo" />
+    <SimpleProperty name="grupoCadena" type="DomCustGrupoCadena" storable="true" dataSourceProperty="grupoCadena" />
+    
+
+
   </SimpleProperties>
   <ObjectLookups>
     <!-- luCustomerTradeOrg: load immediate -->
