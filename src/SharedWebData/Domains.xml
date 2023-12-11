@@ -7851,18 +7851,18 @@
     </Initializer>
   </Domain>
 
-  <Domain name="DomCustGrupoCadena" baseType="String" length="15">
+  <!-- <Domain name="DomCusGrupoCadena" baseType="String" length="15">
     <Initializer>
       <Default value="' '" />
       <Empty value="" />
     </Initializer>
   </Domain>
-  <Domain name="DomCustSex" baseType="String" length="15">
+  <Domain name="DomCusSex" baseType="String" length="15">
     <Initializer>
       <Default value="' '" />
       <Empty value="" />
     </Initializer>
-  </Domain>
+  </Domain> -->
 
 
 </DomainRepository>

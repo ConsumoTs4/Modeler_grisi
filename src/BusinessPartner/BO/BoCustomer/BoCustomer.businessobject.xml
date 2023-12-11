@@ -4,7 +4,7 @@
     <SimpleProperty id="true" name="pKey" type="DomPKey" storable="true" dataSourceProperty="pKey" />
     <SimpleProperty name="name" type="DomBpaName" storable="true" dataSourceProperty="name" />
     <SimpleProperty name="name2" type="DomBpaName" storable="true" dataSourceProperty="name2" />
-    <SimpleProperty name="cedulaprof" type="DomBpaName" storable="true" dataSourceProperty="cedulaprof" />
+    <!-- <SimpleProperty name="cedulaprof" type="DomBpaName" storable="true" dataSourceProperty="cedulaprof" /> -->
     <SimpleProperty name="matchcode" type="DomBpaName" storable="true" dataSourceProperty="matchcode" />
     <SimpleProperty name="customerId" type="DomId" storable="true" dataSourceProperty="customerId" />
     <SimpleProperty name="phone1" type="DomDial" storable="true" dataSourceProperty="phone1" />
@@ -31,12 +31,12 @@
     <SimpleProperty name="operatingHoursId" type="DomPKey" dataSourceProperty="operatingHoursId" />
     <SimpleProperty name="emailEditable" type="DomBool" storable="false" dataSourceProperty="emailEditable" />
 
-    <SimpleProperty name="cedulaProfesional" type="DomBpaName" storable="true" dataSourceProperty="cedulaProfesional" />
+    <!-- <SimpleProperty name="cedulaProfesional" type="DomBpaName" storable="true" dataSourceProperty="cedulaProfesional" />
     <SimpleProperty name="apellido_paterno" type="DomString" storable="true" dataSourceProperty="apellido_paterno"/>
     <SimpleProperty name="apellido_materno" type="DomString" storable="true" dataSourceProperty="apellido_materno"/>
-    <SimpleProperty name="sexo" type="DomCustSex" storable="true" dataSourceProperty="sexo" />
-    <SimpleProperty name="grupoCadena" type="DomCustGrupoCadena" storable="true" dataSourceProperty="grupoCadena" />
-    
+    <SimpleProperty name="sexo" type="DomCusSex" storable="true" dataSourceProperty="sexo" />
+    <SimpleProperty name="grupoCadena" type="DomCusGrupoCadena" storable="true" dataSourceProperty="grupoCadena" />
+     -->
 
 
   </SimpleProperties>

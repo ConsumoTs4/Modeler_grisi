@@ -3,7 +3,7 @@
     <Attribute name="pKey" table="Account" column="Id" />
     <Attribute name="name" table="Account" column="Name" />
     <Attribute name="name2" table="Account" column="Name_2__c" />
-    <Attribute name="cedulaprof" table="Account" column="GCG_CedulaProfesional__c" />
+    <!-- <Attribute name="cedulaprof" table="Account" column="GCG_CedulaProfesional__c" /> -->
     <Attribute name="matchcode" table="Account_Extension__c" column="Match_Code__c" />
     <Attribute name="customerId" table="Account" column="Account_Number__c" />
     <Attribute name="phone1" table="Account" column="Phone" />
@@ -29,12 +29,12 @@
     <Attribute name="accountOi" table="Account_Extension__c" column="OOS_Issue__c" />
     <Attribute name="operatingHoursId" table="Account" column="OperatingHoursId" />
 
-    <Attribute name="cedulaProfesional" table="Account" column="GCG_CedulaProfesional__c" />
+    <!-- <Attribute name="cedulaProfesional" table="Account" column="GCG_CedulaProfesional__c" />
     <Attribute name="apellido_paterno" table="Account" column="GCG_ApellidoPaterno__c" />
     <Attribute name="apellido_materno" table="Account" column="GCG_ApellidoMaterno__c" />
 
     <Attribute name="grupoCadena" table="Account" column="GCG_GrupoDeCadena__c" />
-    <Attribute name="sexo" table="Account" column="GCG_Sexo__c" />
+    <Attribute name="sexo" table="Account" column="GCG_Sexo__c" /> -->
 
 
     <DerivedAttribute name="emailEditable" value="'0'" />

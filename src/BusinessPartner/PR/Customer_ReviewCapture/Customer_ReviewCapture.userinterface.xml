@@ -199,7 +199,7 @@
               </Bindings>
             </InputArea>
 
-            <InputArea name="Apellido Paterno">
+            <!-- <InputArea name="Apellido Paterno">
               <Bindings>
                 <Resource target="Label" type="Label" defaultLabel="Apellido Paterno" id="apellido_paterno" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.apellido_paterno" bindingMode="TWO_WAY" />
@@ -223,7 +223,7 @@
             <SelectionBox name="Sexo">
               <Bindings>
                 <Resource target="Label" type="Label" id="SexoId" defaultLabel="Sexo" />
-                <Binding target="DataSource" toggleId="DomCustSex" bindingMode="TWO_WAY" />
+                <Binding target="DataSource" toggleId="DomCusSex" bindingMode="TWO_WAY" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.sexo" bindingMode="TWO_WAY" />
               </Bindings>
               <Items>
@@ -237,7 +237,7 @@
             <SelectionBox name="Grupo Cadena">
               <Bindings>
                 <Resource target="Label" type="Label" id="grupo_Cadenaid" defaultLabel="Grupo de cadena" />
-                <Binding target="DataSource" toggleId="DomCustGrupoCadena" bindingMode="TWO_WAY" />
+                <Binding target="DataSource" toggleId="DomCusGrupoCadena" bindingMode="TWO_WAY" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.grupoCadena" bindingMode="TWO_WAY" />
               </Bindings>
               <Items>
@@ -246,7 +246,7 @@
                   <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
                 </Bindings>
               </Items>
-            </SelectionBox>
+            </SelectionBox> -->
 
 
 
@@ -256,12 +256,12 @@
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.name2" bindingMode="TWO_WAY" />
               </Bindings>
             </InputArea>
-            <InputArea name="Cedula">
+            <!-- <InputArea name="Cedula">
               <Bindings>
                 <Resource target="Label" type="Label" defaultLabel="Cedula Profecional" id="CedulaId" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.cedulaprof" bindingMode="TWO_WAY" />
               </Bindings>
-            </InputArea>
+            </InputArea> -->
             <InputArea name="Matchcode">
               <Bindings>
                 <Resource target="Label" type="Label" defaultLabel="Matchcode" id="MatchcodeId" />
