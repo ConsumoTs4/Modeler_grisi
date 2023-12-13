@@ -195,14 +195,39 @@
             </InputArea>
             <InputArea name="Name">
               <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="Name" id="NameId" />
+                <Resource target="Label" type="Label" defaultLabel="Nombre" id="NameId" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.name" bindingMode="TWO_WAY" />
               </Bindings>
             </InputArea>
 
+            <InputArea name="CedulaProfesional">
+              <Bindings>
+                <Resource target="Label" type="Label" defaultLabel="Cedula Profesional" id="cedulaProfesional" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.cedulaProfesional" bindingMode="TWO_WAY" />
+              </Bindings>
+            </InputArea>
+
+
+            <SelectionBox name="Motivo de baja">
+              <Bindings>
+                <Resource target="Label" type="Label" id="motivo_de_bajaID" defaultLabel="Motivo de baja" />
+                <Binding target="DataSource" toggleId="DomCusMotivoBaja" bindingMode="TWO_WAY" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.motivo_de_baja" bindingMode="TWO_WAY" />
+              </Bindings>
+              <Items>
+                <Bindings>
+                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                </Bindings>
+              </Items>
+            </SelectionBox>
+
             </GroupElement>
           
           <GroupElement name="IdentificationGroup">
+            <Bindings>
+            <Resource target="Title" type="Label" id="IdentificationGroup" defaultLabel="IdentificationGroup" />
+          </Bindings>
             
             <!-- <InputArea name="Apellido Paterno">
               <Bindings>

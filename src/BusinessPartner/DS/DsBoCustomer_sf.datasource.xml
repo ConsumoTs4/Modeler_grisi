@@ -28,8 +28,43 @@
     <Attribute name="accountDi" table="Account_Extension__c" column="Distribution_Issue__c" />
     <Attribute name="accountOi" table="Account_Extension__c" column="OOS_Issue__c" />
     <Attribute name="operatingHoursId" table="Account" column="OperatingHoursId" />
+    <Attribute name="cedulaProfesional" table="Account" column="GCG_CedulaProfesional__c" />
+    <Attribute name="motivo_de_baja" table="Account" column="GCG_MotivoBaja__c" />
+    
+    <Attribute name="apellido_paterno" table="Account" column="GCG_ApellidoPaterno__c" />
+    <Attribute name="apellido_materno" table="Account" column="GCG_ApellidoMaterno__c" />
+    <Attribute name="nombre" table="Account" column="GCG_Nombre__c" />
+    <Attribute name="ruta" table="Account" column="GCG_Ruta__c" />
+    <Attribute name="calle" table="Account" column="ShippingStreet" />
+    <Attribute name="num_exterior" table="Account" column="ShippingStreet" />
+    <Attribute name="numero_interior" table="Account" column="GCG_NumeroInterior__c" />
+    <Attribute name="colonia" table="Account" column="ShippingStreet" />
+    <Attribute name="codigo_postal" table="Account" column="ShippingPostalCode" />
+    <Attribute name="poblacion_municipio_delegación" table="Account" column="ShippingCity" />
+    <Attribute name="estado" table="Account" column="ShippingState" />
+    <Attribute name="pais" table="Account" column="ShippingCountry" />
+    <Attribute name="latitud" table="Account" column="BillingLatitude" />
+    <Attribute name="longitud" table="Account" column="BillingLongitude" />
+    <Attribute name="honorarios" table="Account" column="GCG_Honorarios__c" />
+    <Attribute name="especialidad" table="Account" column="GCG_Especialidad__c" />
+    <Attribute name="sub_especialidad" table="Account" column="GCG_SubEspecialidad__c" />
+    <Attribute name="estatus" table="Account" column="GCG_Estatus__c" />
+    <Attribute name="fecha_nacimiento" table="Account" column="GCG_FechaNacimiento__c" />
+    <Attribute name="tel_1" table="Account" column="Phone" />
+    <Attribute name="tel_2" table="Account" column="GCG_Telefono__c" />
+    <Attribute name="celular" table="Account" column="GCG_Celular__c" />
+    <Attribute name="categoria_del_medico" table="Account" column="GCG_CategoriaMedico__c" />
+    <Attribute name="medico_Galeno" table="Account" column="GCG_MedicoGaleno__c" />
+    <Attribute name="requiere_factura" table="Account" column="GCG_RequiereFactura__c" />
+    <Attribute name="lider_de_opinion" table="Account" column="GCG_LiderOpinion__c" /> 
+    <Attribute name="razon_Social" table="Account" column="GCG_RazonSocial__c" />
+    <Attribute name="rfc" table="Account" column="GCG_Rfc__c" />
+    <Attribute name="account_name" table="Account" column="Name" />
+    <Attribute name="folio_de_tienda" table="Account" column="GCG_FolioTienda__c" />
+    <Attribute name="cuenta_con_exhibición_adicional" table="Account" column="GCG_CuentaExhibicionAdicional__c" />
+    <Attribute name="costo_renta_exhibicion_adicional" table="Account" column="GCG_CostoRentaExhibicionAdicional__c" />
 
-    <!-- <Attribute name="cedulaProfesional" table="Account" column="GCG_CedulaProfesional__c" />
+    <!-- 
     <Attribute name="apellido_paterno" table="Account" column="GCG_ApellidoPaterno__c" />
     <Attribute name="apellido_materno" table="Account" column="GCG_ApellidoMaterno__c" />
 
