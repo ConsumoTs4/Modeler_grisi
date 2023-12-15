@@ -427,7 +427,7 @@
             <SelectionBox name="Grupo Cadena">
               <Bindings>
                 <Resource target="Label" type="Label" id="grupo_CadenaID" defaultLabel="Grupo de Cadena*" />
-                <Binding target="DataSource" toggleId="DomCusType" bindingMode="TWO_WAY" />
+                <Binding target="DataSource" toggleId="DomCusGrupoCadena" bindingMode="TWO_WAY" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.grupo_Cadena" bindingMode="TWO_WAY" />
               </Bindings>
               <Items>
@@ -441,7 +441,7 @@
             <SelectionBox name="Territorio">
               <Bindings>
                 <Resource target="Label" type="Label" id="territorioID" defaultLabel="Territorio *" />
-                <Binding target="DataSource" toggleId="DomCusType" bindingMode="TWO_WAY" />
+                <Binding target="DataSource" toggleId="DomCusTerritorio" bindingMode="TWO_WAY" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.territorio" bindingMode="TWO_WAY" />
               </Bindings>
               <Items>
@@ -456,7 +456,7 @@
             <SelectionBox name="Tipo">
               <Bindings>
                 <Resource target="Label" type="Label" id="tipoID" defaultLabel="Tipo" />
-                <Binding target="DataSource" toggleId="DomCusType" bindingMode="TWO_WAY" />
+                <Binding target="DataSource" toggleId="DomBpaCompanyType" bindingMode="TWO_WAY" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.tipo" bindingMode="TWO_WAY" />
               </Bindings>
               <Items>
