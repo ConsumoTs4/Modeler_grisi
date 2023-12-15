@@ -7851,7 +7851,7 @@
     </Initializer>
   </Domain>
 
-  <!-- <Domain name="DomCusGrupoCadena" baseType="String" length="15">
+  <Domain name="DomCusGrupoCadena" baseType="String" length="15">
     <Initializer>
       <Default value="' '" />
       <Empty value="" />
@@ -7862,7 +7862,7 @@
       <Default value="' '" />
       <Empty value="" />
     </Initializer>
-  </Domain> -->
+  </Domain> 
 
 
 </DomainRepository>
