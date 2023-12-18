@@ -14,4 +14,5 @@
   <ValidationMessage name="CasBpaSplittingRuleHasToBeBlank" defaultMessage="The splitting rule should be blank." comment="The splitting rule must be blank." />
   <ValidationMessage name="CasBpaMainOpeningTimeFromOrTimeThruNotEmpty" defaultMessage="Please specify Time From and Time Thru for opening hours." comment="Time from and Time thru of opening hours cannot be blank." />
   <ValidationMessage name="CasBpaPOSHasReferencedAsset" defaultMessage="Deleting this POS is not allowed because there are assets relying on it." comment="A POS cannot be deleted if it has referenced assets." />
+  <ValidationMessage name="CasCustomerCamposRequeridos" defaultMessage="Campos requeridos faltantes (*)." comment="Campos requeridos faltantes (*)." />
 </ValidationMessages>
