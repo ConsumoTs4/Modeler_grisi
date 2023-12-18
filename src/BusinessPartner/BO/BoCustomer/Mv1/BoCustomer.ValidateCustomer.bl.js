@@ -75,11 +75,11 @@ if (me.getBoBpaMeta().getId() == "Médico" && (apellidoPaterno || nombre || espe
   });
 }
 
-var tipoH = me.getTipo_de_institucion() != undefined ? Utils.isEmptyString(me.getTipo_de_institucion().trim()) : true;
-var nombreH = me.getName() != undefined ? Utils.isEmptyString(me.getName().trim()) : true;
-var numExt = me.getNum_exterior() != undefined ? Utils.isEmptyString(me.getNum_exterior().trim()) : true;
-var codigoPostalH = me.getCodigo_postal() != undefined ? Utils.isEmptyString(me.getCodigo_postal().trim()) : true;
-var coloniaH = me.getColonia() != undefined ? Utils.isEmptyString(me.getColonia().trim()) : true;
+var tipoH = me.tipo_de_institucion != undefined ? Utils.isEmptyString(me.getTipo_de_institucion().trim()) : true;
+var nombreH = me.name != undefined ? Utils.isEmptyString(me.getName().trim()) : true;
+var numExt = me.num_exterior != undefined ? Utils.isEmptyString(me.getNum_exterior().trim()) : true;
+var codigoPostalH = me.codigo_postal != undefined ? Utils.isEmptyString(me.getCodigo_postal().trim()) : true;
+var coloniaH = me.colonia != undefined ? Utils.isEmptyString(me.getColonia().trim()) : true;
 
 if (me.getBoBpaMeta().getId() == "Hospitales" && (tipoH || nombreH || numExt || codigoPostalH || coloniaH))
 {
@@ -91,13 +91,13 @@ if (me.getBoBpaMeta().getId() == "Hospitales" && (tipoH || nombreH || numExt || 
   });
 }
 
-var numExtF = me.getNum_exterior() != undefined ? Utils.isEmptyString(me.getNum_exterior().trim()) : true;
-var calleF = me.getCalle() != undefined ? Utils.isEmptyString(me.getCalle().trim()) : true;
-var codigoPostalF = me.getCodigo_postal() != undefined ? Utils.isEmptyString(me.getCodigo_postal().trim()) : true;
-var coloniaF = me.getColonia() != undefined ? Utils.isEmptyString(me.getColonia().trim()) : true;
-var formato = me.getFormato_de_farmacia() != undefined ? Utils.isEmptyString(me.getFormato_de_farmacia().trim()) : true;
-var subtipo = me.getSubtipo() != undefined ? Utils.isEmptyString(me.getSubtipo().trim()) : true;
-var tipoF = me.getTipo() != undefined ? Utils.isEmptyString(me.getTipo().trim()) : true;
+var numExtF = me.num_exterior() != undefined ? Utils.isEmptyString(me.getNum_exterior().trim()) : true;
+var calleF = me.calle() != undefined ? Utils.isEmptyString(me.getCalle().trim()) : true;
+var codigoPostalF = me.codigo_postal() != undefined ? Utils.isEmptyString(me.getCodigo_postal().trim()) : true;
+var coloniaF = me.colonia() != undefined ? Utils.isEmptyString(me.getColonia().trim()) : true;
+var formato = me.formato_de_farmacia() != undefined ? Utils.isEmptyString(me.getFormato_de_farmacia().trim()) : true;
+var subtipo = me.subtipo() != undefined ? Utils.isEmptyString(me.getSubtipo().trim()) : true;
+var tipoF = me.tipo() != undefined ? Utils.isEmptyString(me.getTipo().trim()) : true;
 numExtF || calleF || codigoPostalF || coloniaF || formato || subtipo || tipoF
 if ((me.getBoBpaMeta().getId() == "Farmacia Indepentiente" || me.getBoBpaMeta().getId() == "Farmacia Farma" || me.getBoBpaMeta().getId() == "Farmacias Digrimex") && (numExtF || calleF || codigoPostalF || coloniaF || formato || subtipo || tipoF))
 {
