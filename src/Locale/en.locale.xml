@@ -827,7 +827,7 @@
         <Label id="UpdateGeoCoordinatesId" text="Update Location" translationStatus="7" />
         <Label id="IdentificationId" text="Identification" translationStatus="7" />
         <Label id="IdId" text="Id" translationStatus="7" />
-        <Label id="NameId" text="Name" translationStatus="7" />
+        <Label id="NameId" text="Name *" translationStatus="7" />
         <Label id="Name2Id" text="Second Name" translationStatus="7" />
         <Label id="MatchcodeId" text="Matchcode" translationStatus="7" />
         <Label id="StreetId" text="Street" translationStatus="7" />
@@ -993,7 +993,7 @@
         <Label id="UpdateGeoCoordinatesId" text="Update Location" translationStatus="7" />
         <Label id="IdentificationId" text="Identification" translationStatus="7" />
         <Label id="IdId" text="Id" translationStatus="7" />
-        <Label id="NameId" text="Name" translationStatus="7" />
+        <Label id="NameId" text="Name *" translationStatus="7" />
         <Label id="Name2Id" text="Second Name" translationStatus="7" />
         <Label id="MatchcodeId" text="Matchcode" translationStatus="7" />
         <Label id="StreetId" text="Street" translationStatus="7" />
@@ -3723,6 +3723,7 @@
         <Label id="CasBpaPOSHasReferencedAsset" text="Deleting this POS is not allowed because there are assets relying on it." translationStatus="7" />
         <Label id="CasBpaMainCustomerEmailInvalid" text="Please provide a valid email for the customer." translationStatus="7" />
         <Label id="CasBpaMainContactPartnerEmailInvalid" text="Please provide a valid email for the contact partner." translationStatus="7" />
+        <Label id="CasCustomerCamposRequeridos" text="Campos requeridos faltantes." translationStatus="7" />
       </BusinessObject>
       <BusinessObject id="BoCall">
         <Label id="CasClbRemainingOpenOrders" text="There are still open orders." translationStatus="7" />
