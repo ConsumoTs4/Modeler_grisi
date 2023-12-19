@@ -127,6 +127,7 @@ if(me.getBoBpaMeta().getId() == "Hospital") {
 
 
 }else if(me.getBoBpaMeta().getId() == "Médico") {
+  acl.removeRight(AclObjectType.PROPERTY, "grupo_Cadena", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "latitud", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "longitud", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "fecha_de_alta", AclPermission.VISIBLE);
@@ -142,7 +143,6 @@ if(me.getBoBpaMeta().getId() == "Hospital") {
   acl.removeRight(AclObjectType.PROPERTY, "costo_renta_exhibicion_adicional", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "parent_Account", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "brick", AclPermission.VISIBLE);
-
 
 }else if(me.getBoBpaMeta().getId() == "Farmacias Digrimex") {
   acl.removeRight(AclObjectType.PROPERTY, "tipo_de_institucion", AclPermission.VISIBLE);

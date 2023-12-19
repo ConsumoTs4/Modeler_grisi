@@ -77,7 +77,7 @@
     <SimpleProperty name="sexo" type="DomCusSex" storable="true" dataSourceProperty="sexo" />
     <SimpleProperty name="especialidad" type="DomCusEspecialidad" storable="true" dataSourceProperty="especialidad" />
     <SimpleProperty name="sub_especialidad" type="DomCusSubEspecialidad" storable="true" dataSourceProperty="sub_especialidad" />
-    <SimpleProperty name="tipo_de_persona" type="DomCustTipoPersona" storable="true" dataSourceProperty="tipo_de_persona" />
+    <SimpleProperty name="tipo_de_persona" type="DomCusTipoPersona" storable="true" dataSourceProperty="tipo_de_persona" />
     <SimpleProperty name="pacientes_por_semana" type="DomCusPacientesXsemana" storable="true" dataSourceProperty="pacientes_por_semana" />
     <SimpleProperty name="honorarios" type="DomCusHonorarios" storable="true" dataSourceProperty="honorarios" />
     <SimpleProperty name="nivel_de_influencia" type="DomCusNivelInfluencia" storable="true" dataSourceProperty="nivel_de_influencia" />
@@ -90,7 +90,7 @@
     <SimpleProperty name="tipo" type="DomBpaCompanyType" storable="true" dataSourceProperty="tipo" />
     <SimpleProperty name="subtipo" type="DomCusSubtipo" storable="true" dataSourceProperty="subtipo" />
     <SimpleProperty name="formato_de_farmacia" type="DomCusFormatoFarmacia" storable="true" dataSourceProperty="formato_de_farmacia" />
-    <SimpleProperty name="tipo_de_institucion" type="DomCustTipoInstitucion" storable="true" dataSourceProperty="tipo_de_institucion" />
+    <SimpleProperty name="tipo_de_institucion" type="DomCusTipoInstitucion" storable="true" dataSourceProperty="tipo_de_institucion" />
     <SimpleProperty name="quintil_del_medico" type="DomCusQuintilMedico" storable="true" dataSourceProperty="quintil_del_medico" />
     <SimpleProperty name="grupo_Cadena" type="DomCusGrupoCadena" storable="true" dataSourceProperty="grupo_Cadena" />
     <SimpleProperty name="territorio" type="DomCusTerritorio" storable="true" dataSourceProperty="territorio" />

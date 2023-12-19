@@ -275,7 +275,7 @@
             <SelectionBox name="Tipo de Institucion">
               <Bindings>
                 <Resource target="Label" type="Label" id="Tipo_de_InstitucionID" defaultLabel="Tipo de Institucion" />
-                <Binding target="DataSource" toggleId="DomCustTipoInstitucion" bindingMode="TWO_WAY" />
+                <Binding target="DataSource" toggleId="DomCusTipoInstitucion" bindingMode="TWO_WAY" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.tipo_de_institucion" bindingMode="TWO_WAY" />
               </Bindings>
               <Items>
@@ -296,7 +296,7 @@
             <SelectionBox name="Tipo de Persona">
               <Bindings>
                 <Resource target="Label" type="Label" id="Tipo_de_PersonaID" defaultLabel="Tipo de Persona" />
-                <Binding target="DataSource" toggleId="DomCustTipoPersona" bindingMode="TWO_WAY" />
+                <Binding target="DataSource" toggleId="DomCusTipoPersona" bindingMode="TWO_WAY" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.tipo_de_persona" bindingMode="TWO_WAY" />
               </Bindings>
               <Items>
