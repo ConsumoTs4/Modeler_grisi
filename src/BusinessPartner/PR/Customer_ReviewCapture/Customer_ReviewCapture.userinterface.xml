@@ -663,7 +663,7 @@
                 </Bindings>
               </Items>
             </SelectionBox> -->
-            <CheckBox name="IsDeleted" disabled="false">
+            <CheckBox name="medicoGaleno" disabled="false">
               <Bindings>
                 <Resource target="Label" type="Label" id="medicoGalenoID" defaultLabel="Medico Galeno" />
                 <Binding target="checkedValue" binding="ProcessContext::CustomerDetail.medicoGaleno" bindingMode="ONE_WAY" />
