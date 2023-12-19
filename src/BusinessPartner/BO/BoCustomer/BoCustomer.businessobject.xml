@@ -57,11 +57,11 @@
 
     <SimpleProperty name="celular"  storable="true" dataSourceProperty="celular" />
     <SimpleProperty name="telefono2"  storable="true" dataSourceProperty="telefono2" />
-    <SimpleProperty name="razonsocial"  storable="true" dataSourceProperty="razonsocial" /> 
+    <SimpleProperty name="razonsocial"  storable="true" dataSourceProperty="razonsocial" />
     <SimpleProperty name="brick" type="DomString" storable="true" dataSourceProperty="brick" />
 
 
-    
+
     <!-- <SimpleProperty name="estatus" type="DomString" storable="true" dataSourceProperty="estatus" />
     <SimpleProperty name="fecha_de_alta"  storable="true" dataSourceProperty="fecha_de_alta" />
     <SimpleProperty name="account_name" type="DomString" storable="true" dataSourceProperty="account_name"/>
@@ -95,7 +95,7 @@
     <SimpleProperty name="grupo_Cadena" type="DomCusGrupoCadena" storable="true" dataSourceProperty="grupo_Cadena" />
     <SimpleProperty name="territorio" type="DomCusTerritorio" storable="true" dataSourceProperty="territorio" />
 
-    <SimpleProperty name="medicoGaleno" type="DomCusMedicoGaleno" storable="true" dataSourceProperty="medicoGaleno" />
+    <SimpleProperty name="medicoGaleno" type="DomBool" storable="true" dataSourceProperty="medicoGaleno" />
     <SimpleProperty name="requiereFactura" type="DomCusRequiereFactura" storable="true" dataSourceProperty="requiereFactura" />
 
 
