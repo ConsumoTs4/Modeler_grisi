@@ -212,12 +212,18 @@
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.apellido_materno" bindingMode="TWO_WAY" />
               </Bindings>
             </InputArea>
-            <InputArea name="Fecha Nacimiento">
+            <!-- <InputArea name="Fecha Nacimiento">
               <Bindings>
                 <Resource target="Label" type="Label" defaultLabel="Fecha Nacimiento" id="fecha_nacimiento" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.fecha_nacimiento" bindingMode="TWO_WAY" />
               </Bindings>
-            </InputArea>
+            </InputArea> -->
+            <DatePickerField name="Fecha Nacimiento" dateVisible="true" timeVisible="false">
+              <Bindings>
+                <Resource target="Label" type="Label" defaultLabel="Fecha Nacimiento" id="fecha_nacimiento" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.fecha_nacimiento" bindingMode="ONE_WAY" />
+              </Bindings>
+            </DatePickerField>
             <SelectionBox name="Sexo">
               <Bindings>
                 <Resource target="Label" type="Label" id="SexoId" defaultLabel="Sexo" />
@@ -690,10 +696,10 @@
                 </Bindings>
               </Items>
             </SelectionBox>
-          
-          
+
+
             </GroupElement>
-          
+
 
 
         </Area>
