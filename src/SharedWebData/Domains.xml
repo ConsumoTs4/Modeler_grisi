@@ -7863,6 +7863,13 @@
       <Empty value="" />
     </Initializer>
   </Domain> 
+  <Domain name="DomCustTipoPersona" baseType="String" length="30">
+    <Initializer>
+      <Default value="' '" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  
 
 
 </DomainRepository>

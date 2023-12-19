@@ -77,7 +77,7 @@
     <SimpleProperty name="sexo" type="DomCusSex" storable="true" dataSourceProperty="sexo" />
     <SimpleProperty name="especialidad" type="DomCusEspecialidad" storable="true" dataSourceProperty="especialidad" />
     <SimpleProperty name="sub_especialidad" type="DomCusSubEspecialidad" storable="true" dataSourceProperty="sub_especialidad" />
-    <SimpleProperty name="tipo_de_persona" type="DomCusTipoPersona" storable="true" dataSourceProperty="tipo_de_persona" />
+    <SimpleProperty name="tipo_de_persona" type="DomCustTipoPersona" storable="true" dataSourceProperty="tipo_de_persona" />
     <SimpleProperty name="pacientes_por_semana" type="DomCusPacientesXsemana" storable="true" dataSourceProperty="pacientes_por_semana" />
     <SimpleProperty name="honorarios" type="DomCusHonorarios" storable="true" dataSourceProperty="honorarios" />
     <SimpleProperty name="nivel_de_influencia" type="DomCusNivelInfluencia" storable="true" dataSourceProperty="nivel_de_influencia" />

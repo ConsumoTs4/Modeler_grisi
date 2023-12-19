@@ -88,12 +88,12 @@
                 <Resource target="text" type="Label" id="MainId" defaultLabel="Main" bindingMode="ONE_TIME" />
               </Bindings>
             </Tab>
-            <Tab tabName="Map" backendSystem="both">
+            <!-- <Tab tabName="Map" backendSystem="both">
               <Bindings>
                 <Resource target="image" type="Image" id="MapGrey24" defaultImage="MapGrey24" bindingMode="ONE_TIME" />
                 <Resource target="text" type="Label" id="MapId" defaultLabel="Map" bindingMode="ONE_TIME" />
               </Bindings>
-            </Tab>
+            </Tab> -->
             <!--Account Harmonization: obsolete
             <Tab tabName="OpeningHours" backendSystem="both">
               <Bindings>
@@ -102,37 +102,37 @@
               </Bindings>
             </Tab>
             Account Harmonization: obsolete-->
-            <Tab tabName="OpenHours" backendSystem="both">
+            <!-- <Tab tabName="OpenHours" backendSystem="both">
               <Bindings>
                 <Resource target="image" type="Image" id="ClockGrey24" defaultImage="ClockGrey24" bindingMode="ONE_TIME" />
                 <Resource target="text" type="Label" id="OpenHoursId" defaultLabel="Open Hours" bindingMode="ONE_TIME" />
               </Bindings>
-            </Tab>
-            <Tab tabName="Contact" backendSystem="both">
+            </Tab> -->
+            <!-- <Tab tabName="Contact" backendSystem="both">
               <Bindings>
                 <Resource target="image" type="Image" id="UserGrey24" defaultImage="UserGrey24" bindingMode="ONE_TIME" />
                 <Resource target="text" type="Label" id="ContactId" defaultLabel="Contact" bindingMode="ONE_TIME" />
               </Bindings>
-            </Tab>
-            <Tab tabName="Revenue" backendSystem="both">
+            </Tab> -->
+            <!-- <Tab tabName="Revenue" backendSystem="both">
               <Bindings>
                 <Resource target="image" type="Image" id="DollarGrey24" defaultImage="DollarGrey24" bindingMode="ONE_TIME" />
                 <Resource target="text" type="Label" id="SalesId" defaultLabel="Sales" bindingMode="ONE_TIME" />
               </Bindings>
-            </Tab>
-            <Tab tabName="POS" backendSystem="both">
+            </Tab> -->
+            <!-- <Tab tabName="POS" backendSystem="both">
               <Bindings>
                 <Resource target="image" type="Image" id="ShelfGrey24" defaultImage="ShelfGrey24" bindingMode="ONE_TIME" />
                 <Resource target="text" type="Label" id="POSId" defaultLabel="POS" bindingMode="ONE_TIME" />
               </Bindings>
-            </Tab>
-            <Tab tabName="Call" backendSystem="both">
+            </Tab> -->
+            <!-- <Tab tabName="Call" backendSystem="both">
               <Bindings>
                 <Resource target="image" type="Image" id="SuitcaseGrey24" defaultImage="SuitcaseGrey24" bindingMode="ONE_TIME" />
                 <Resource target="text" type="Label" id="CallOverviewId" defaultLabel="Call" bindingMode="ONE_TIME" />
               </Bindings>
-            </Tab>
-            <Tab tabName="Roles" backendSystem="both">
+            </Tab> -->
+            <!-- <Tab tabName="Roles" backendSystem="both">
               <Bindings>
                 <Resource target="image" type="Image" id="UserClipboardGrey24" defaultImage="UserClipboardGrey24" bindingMode="ONE_TIME" />
                 <Resource target="text" type="Label" id="BpaRolesId" defaultLabel="Roles" bindingMode="ONE_TIME" />
@@ -143,13 +143,13 @@
                 <Resource target="image" type="Image" id="ConnectionGrey24" defaultImage="ConnectionGrey24" bindingMode="ONE_TIME" />
                 <Resource target="text" type="Label" id="RelationsId" defaultLabel="Relations" bindingMode="ONE_TIME" />
               </Bindings>
-            </Tab>
-            <Tab tabName="Attachments" backendSystem="both">
+            </Tab> -->
+            <!-- <Tab tabName="Attachments" backendSystem="both">
               <Bindings>
                 <Resource target="image" type="Image" id="ClipGrey24" defaultImage="ClipGrey24" bindingMode="ONE_TIME" />
                 <Resource target="text" type="Label" id="AttachmentId" defaultLabel="Attachments" bindingMode="ONE_TIME" />
               </Bindings>
-            </Tab>
+            </Tab> -->
           </Items>
           <Events>
             <ItemSelectedEvent event="tabSelected" storeTabNameIn="currentTabName" />
@@ -296,7 +296,7 @@
             <SelectionBox name="Tipo de Persona">
               <Bindings>
                 <Resource target="Label" type="Label" id="Tipo_de_PersonaID" defaultLabel="Tipo de Persona" />
-                <Binding target="DataSource" toggleId="DomCusTipoPersona" bindingMode="TWO_WAY" />
+                <Binding target="DataSource" toggleId="DomCustTipoPersona" bindingMode="TWO_WAY" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.tipo_de_persona" bindingMode="TWO_WAY" />
               </Bindings>
               <Items>
@@ -688,277 +688,6 @@
           
             </GroupElement>
           
-
-
-
-          <GroupElement name="IdentificationGroup">
-            <Bindings>
-              <Resource target="Title" type="Label" id="IdentificationId" defaultLabel="Identification" />
-            </Bindings>
-            <InputArea name="Id" editable="false">
-              <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="Id" id="IdId" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.customerId" bindingMode="ONE_WAY" />
-              </Bindings>
-            </InputArea>
-            <InputArea name="Name">
-              <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="Name" id="NameId" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.name" bindingMode="TWO_WAY" />
-              </Bindings>
-            </InputArea>
-            <InputArea name="SecondName">
-              <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="Second Name" id="Name2Id" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.name2" bindingMode="TWO_WAY" />
-              </Bindings>
-            </InputArea>
-            <InputArea name="Matchcode">
-              <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="Matchcode" id="MatchcodeId" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.matchcode" bindingMode="TWO_WAY" />
-              </Bindings>
-            </InputArea>
-            <Merger name="StreetNo" pattern="twoInputControls" labelHandling="Own" leftRatio="1" rightRatio="1">
-              <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="Street No." id="StreetNoId" />
-              </Bindings>
-              <InputArea name="Street">
-                <Bindings>
-                  <Resource target="Label" type="Label" defaultLabel="Street" id="StreetId" />
-                  <Binding target="Value" binding="ProcessContext::CustomerDetail.LoCustomerAddress.MainAddress.street" bindingMode="TWO_WAY" />
-                </Bindings>
-              </InputArea>
-              <InputArea name="House no">
-                <Bindings>
-                  <Resource target="Label" type="Label" defaultLabel="House No." id="HouseNumberId" />
-                  <Binding target="Value" binding="ProcessContext::CustomerDetail.LoCustomerAddress.MainAddress.houseNumber" bindingMode="TWO_WAY" />
-                </Bindings>
-              </InputArea>
-            </Merger>
-            <Merger name="ZIPCity" pattern="twoInputControls" labelHandling="Own" leftRatio="1" rightRatio="1">
-              <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="ZIP City" id="ZIPCityId" />
-              </Bindings>
-              <InputArea name="ZIP">
-                <Bindings>
-                  <Resource target="Label" type="Label" defaultLabel="ZIP" id="ZipCodeId" />
-                  <Binding target="Value" binding="ProcessContext::CustomerDetail.LoCustomerAddress.MainAddress.zipCode" bindingMode="TWO_WAY" />
-                </Bindings>
-              </InputArea>
-              <InputArea name="City">
-                <Bindings>
-                  <Resource target="Label" type="Label" defaultLabel="City" id="CityId" />
-                  <Binding target="Value" binding="ProcessContext::CustomerDetail.LoCustomerAddress.MainAddress.city" bindingMode="TWO_WAY" />
-                </Bindings>
-              </InputArea>
-            </Merger>
-            <!--Account Harmonization: changed to simple InputArea
-            <SelectionBox name="State">
-              <Bindings>
-                <Resource target="Label" type="Label" id="CountryStateId" defaultLabel="State" />
-                <Binding target="DataSource" toggleId="CountryState" bindingMode="TWO_WAY" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.LoCustomerAddress.MainAddress.countryState" bindingMode="TWO_WAY" />
-              </Bindings>
-              <Items>
-                <Bindings>
-                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
-                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
-                </Bindings>
-              </Items>
-            </SelectionBox>
-            Account Harmonization: changed to simple InputArea-->
-            <InputArea name="State">
-              <Bindings>
-                <Resource target="Label" type="Label" id="CountryStateId" defaultLabel="State" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.LoCustomerAddress.MainAddress.countryState" bindingMode="TWO_WAY" />
-              </Bindings>
-            </InputArea>
-          </GroupElement>
-
-         <GroupElement name="CommunicationGroup">
-            <Bindings>
-              <Resource target="Title" type="Label" id="CommunicationId" defaultLabel="Communication" />
-            </Bindings>
-            <Merger name="CustomerPhoneMerger" pattern="oneInputControlTwoButtonsMax">
-             
-              <ImageButton name="CustomerPhoneSMS">
-                <Bindings>
-                  <Resource target="Image" type="Image" id="SpeechBubbleGrey24" />
-                </Bindings>
-                <Events>
-                  <ButtonPressedEvent event="smsPressed" />
-                </Events>
-              </ImageButton>
-              <ImageButton name="CustomerPhoneImage">
-                <Bindings>
-                  <Resource target="Image" type="Image" id="PhoneGrey24" />
-                </Bindings>
-                <Events>
-                  <ButtonPressedEvent event="phonePressed" />
-                </Events>
-              </ImageButton>
-            </Merger>
-            <InputArea name="Fax">
-              <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="Fax" id="FaxId" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.fax1" bindingMode="TWO_WAY" />
-              </Bindings>
-            </InputArea>
-            <Merger name="CustomerEmailMerger" pattern="twoInputControls" labelHandling="Combined" separator="," leftRatio="10" rightRatio="1">
-              <InputArea name="CustomerEmail">
-                <Bindings>
-                  <Resource target="Label" type="Label" defaultLabel="EMail" id="EmailId" />
-                  <Binding target="Value" binding="ProcessContext::CustomerDetail.email1" bindingMode="TWO_WAY" />
-                </Bindings>
-              </InputArea>
-              <ImageButton name="CustomerEmailImage">
-                <Bindings>
-                  <Resource target="Image" type="Image" id="EnvelopeGrey24" />
-                </Bindings>
-                <Events>
-                  <ButtonPressedEvent event="mailPressed" />
-                </Events>
-              </ImageButton>
-            </Merger>
-          </GroupElement> 
-
-          <GroupElement name="ClassificationGroup">
-            <Bindings>
-              <Resource target="Title" type="Label" id="ClassificationId" defaultLabel="Classification" />
-            </Bindings>
-            <SelectionBox name="Prio">
-              <Bindings>
-                <Resource target="Label" type="Label" id="PrioId" defaultLabel="Prio" />
-                <Binding target="DataSource" toggleId="ABC" bindingMode="TWO_WAY" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.priority" bindingMode="TWO_WAY" />
-              </Bindings>
-              <Items>
-                <Bindings>
-                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
-                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
-                </Bindings>
-              </Items>
-            </SelectionBox>
-            <SelectionBox name="ClassOfTrade">
-              <Bindings>
-                <Resource target="Label" type="Label" id="ClassOfTradeId" defaultLabel="Class Of Trade" />
-                <Binding target="DataSource" toggleId="BpaClassOfTrade" bindingMode="TWO_WAY" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.classOfTrade" bindingMode="TWO_WAY" />
-              </Bindings>
-              <Items>
-                <Bindings>
-                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
-                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
-                </Bindings>
-              </Items>
-            </SelectionBox>
-            <SelectionBox name="Type">
-              <Bindings>
-                <Resource target="Label" type="Label" id="TypeId" defaultLabel="Customer Type" />
-                <Binding target="DataSource" toggleId="BpaCompanyType" bindingMode="TWO_WAY" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.companyType" bindingMode="TWO_WAY" />
-              </Bindings>
-              <Items>
-                <Bindings>
-                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
-                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
-                </Bindings>
-              </Items>
-            </SelectionBox>
-          </GroupElement>
-
-          <GroupElement name="StatusGroup">
-            <Bindings>
-              <Resource target="Title" type="Label" id="StatusId" defaultLabel="Status" />
-            </Bindings>
-            <SelectionBox name="Phase">
-              <Bindings>
-                <Resource target="Label" type="Label" id="PhaseId" defaultLabel="Phase" />
-                <Binding target="DataSource" toggleId="BpaPhase" bindingMode="TWO_WAY" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.phase" bindingMode="TWO_WAY" />
-              </Bindings>
-              <Items>
-                <Bindings>
-                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
-                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
-                </Bindings>
-              </Items>
-            </SelectionBox>
-            <SelectionBox name="SalesRelevant">
-              <Bindings>
-                <Resource target="Label" type="Label" id="SalesRelevantId" defaultLabel="Sales Relevant" />
-                <Binding target="DataSource" toggleId="BpaSalesRelevant" bindingMode="TWO_WAY" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.salesRelevant" bindingMode="TWO_WAY" />
-              </Bindings>
-              <Items>
-                <Bindings>
-                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
-                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
-                </Bindings>
-              </Items>
-            </SelectionBox>
-            <DatePickerField name="DateClosure">
-              <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="Closure Date" id="DateClosure" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.dateClosure" bindingMode="TWO_WAY" />
-              </Bindings>
-            </DatePickerField>
-            <CheckBox name="IsDeleted" disabled="true">
-              <Bindings>
-                <Resource target="Label" type="Label" id="Deleted" defaultLabel="Deleted" />
-                <Binding target="checkedValue" binding="ProcessContext::CustomerDetail.deleted" bindingMode="ONE_WAY" />
-              </Bindings>
-            </CheckBox>
-          </GroupElement>
-
-          <GroupElement name="LocationGroup">
-            <Bindings>
-              <Resource target="Title" type="Label" id="LocationId" defaultLabel="Location" />
-            </Bindings>
-            <Merger name="Coordinates" pattern="twoInputControls" labelHandling="Own" leftRatio="1" rightRatio="1">
-              <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="Latitude / Longitude" id="Coordinates" />
-              </Bindings>
-              <InputArea name="Latitude" disabled="true">
-                <Bindings>
-                  <Resource target="Label" type="Label" defaultLabel="Latitude" id="LatitudeId" />
-                  <Binding target="Value" type="Decimal" binding="ProcessContext::CustomerDetail.LoCustomerAddress.MainAddress.latitude" bindingMode="TWO_WAY" />
-                </Bindings>
-              </InputArea>
-              <InputArea name="Longitude" disabled="true">
-                <Bindings>
-                  <Resource target="Label" type="Label" defaultLabel="Longitude" id="LongitudeId" />
-                  <Binding target="Value" type="Decimal" binding="ProcessContext::CustomerDetail.LoCustomerAddress.MainAddress.longitude" bindingMode="TWO_WAY" />
-                </Bindings>
-              </InputArea>
-            </Merger>
-          </GroupElement>
-
-          <GroupElement name="TradeOrgGroup">
-            <Bindings>
-              <Resource target="Title" type="Label" id="TradeOrgId" defaultLabel="Trade Org." />
-            </Bindings>
-            <InputArea name="Name" disabled="true">
-              <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="Name" id="TradeOrgNameId" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.LuCustomerTradeOrg.name" bindingMode="TWO_WAY" />
-              </Bindings>
-            </InputArea>
-            <InputArea name="City" disabled="true">
-              <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="City" id="TradeOrgCityId" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.LuCustomerTradeOrg.city" bindingMode="TWO_WAY" />
-              </Bindings>
-            </InputArea>
-            <InputArea name="ID" disabled="true">
-              <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="ID" id="TradeOrgIdId" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.LuCustomerTradeOrg.id" bindingMode="TWO_WAY" />
-              </Bindings>
-            </InputArea>
-          </GroupElement>
-
 
 
         </Area>
