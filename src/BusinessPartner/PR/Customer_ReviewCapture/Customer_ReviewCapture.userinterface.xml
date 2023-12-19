@@ -199,7 +199,7 @@
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.name" bindingMode="TWO_WAY" />
               </Bindings>
             </InputArea>
-        
+
             <InputArea name="Apellido Paterno">
               <Bindings>
                 <Resource target="Label" type="Label" defaultLabel="Apellido Paterno *" id="apellido_paterno" />
@@ -292,7 +292,7 @@
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.brick" bindingMode="TWO_WAY" />
               </Bindings>
             </InputArea>
-            
+
             <SelectionBox name="Tipo de Persona">
               <Bindings>
                 <Resource target="Label" type="Label" id="Tipo_de_PersonaID" defaultLabel="Tipo de Persona" />
@@ -571,15 +571,15 @@
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.pais" bindingMode="TWO_WAY" />
               </Bindings>
             </InputArea>
-           
+
           </GroupElement>
 
-         
+
           <GroupElement name="Medicion_medicoGroup">
             <Bindings>
               <Resource target="Title" type="Label" id="Medicion_medicoId" defaultLabel="Medicion del médico" />
             </Bindings>
-          
+
             <SelectionBox name="Quintil del medico">
               <Bindings>
                 <Resource target="Label" type="Label" id="quintil_del_medicoID" defaultLabel="Quintil del medico" />
@@ -593,64 +593,64 @@
                 </Bindings>
               </Items>
             </SelectionBox>
-          
+
             <InputArea name="Prescripcion_1">
               <Bindings>
                 <Resource target="Label" type="Label" defaultLabel="Prescripcion 1" id="prescripcion_1" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.prescripcion_1" bindingMode="TWO_WAY" />
               </Bindings>
             </InputArea>
-          
+
             <InputArea name="Participacion de la auditoria">
               <Bindings>
                 <Resource target="Label" type="Label" defaultLabel="Participacion de la auditoria" id="participacion_de_la_auditoria" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.participacion_de_la_auditoria" bindingMode="TWO_WAY" />
               </Bindings>
             </InputArea>
-          
+
           </GroupElement>
 
           <GroupElement name="Medios_contactoGroup">
             <Bindings>
               <Resource target="Title" type="Label" id="Medicion_medicoId" defaultLabel="Medios de contacto del médico" />
             </Bindings>
-          
+
             <InputArea name="Phone_customer">
               <Bindings>
                 <Resource target="Label" type="Label" defaultLabel="Phone" id="PhoneId" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.phone1" bindingMode="TWO_WAY" />
               </Bindings>
             </InputArea>
-          
+
             <InputArea name="Celular">
               <Bindings>
                 <Resource target="Label" type="Label" defaultLabel="Celular" id="celularId" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.celular" bindingMode="TWO_WAY" />
               </Bindings>
             </InputArea>
-          
+
             <InputArea name="Telefono2">
               <Bindings>
                 <Resource target="Label" type="Label" defaultLabel="Telefono 2" id="telefono2Id" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.telefono2" bindingMode="TWO_WAY" />
               </Bindings>
             </InputArea>
-          
+
             <InputArea name="CustomerEmail">
               <Bindings>
                 <Resource target="Label" type="Label" defaultLabel="EMail" id="EmailId" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.email1" bindingMode="TWO_WAY" />
               </Bindings>
             </InputArea>
-          
+
           </GroupElement>
-         
+
           <GroupElement name="Datos_facturcionGroup">
             <Bindings>
               <Resource target="Title" type="Label" id="Medicion_medicoId" defaultLabel="Datos para facturar" />
             </Bindings>
-          
-            <SelectionBox name="Medico_galeno">
+
+            <!-- <SelectionBox name="Medico_galeno">
               <Bindings>
                 <Resource target="Label" type="Label" id="medicoGalenoID" defaultLabel="Medico Galeno" />
                 <Binding target="DataSource" toggleId="DomCusMedicoGaleno" bindingMode="TWO_WAY" />
@@ -662,15 +662,21 @@
                   <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
                 </Bindings>
               </Items>
-            </SelectionBox>
-          
+            </SelectionBox> -->
+            <CheckBox name="IsDeleted" disabled="false">
+              <Bindings>
+                <Resource target="Label" type="Label" id="medicoGalenoID" defaultLabel="Medico Galeno" />
+                <Binding target="checkedValue" binding="ProcessContext::CustomerDetail.medicoGaleno" bindingMode="ONE_WAY" />
+              </Bindings>
+            </CheckBox>
+
             <InputArea name="Razonsocial">
               <Bindings>
                 <Resource target="Label" type="Label" defaultLabel="Razon Social" id="razonsocialId" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.razonsocial" bindingMode="TWO_WAY" />
               </Bindings>
             </InputArea>
-          
+
             <SelectionBox name="Requiere_Factura">
               <Bindings>
                 <Resource target="Label" type="Label" id="requiereFacturaID" defaultLabel="Requiere Factura" />
@@ -684,10 +690,10 @@
                 </Bindings>
               </Items>
             </SelectionBox>
-          
-          
+
+
             </GroupElement>
-          
+
 
 
 
@@ -781,7 +787,7 @@
               <Resource target="Title" type="Label" id="CommunicationId" defaultLabel="Communication" />
             </Bindings>
             <Merger name="CustomerPhoneMerger" pattern="oneInputControlTwoButtonsMax">
-             
+
               <ImageButton name="CustomerPhoneSMS">
                 <Bindings>
                   <Resource target="Image" type="Image" id="SpeechBubbleGrey24" />
@@ -821,7 +827,7 @@
                 </Events>
               </ImageButton>
             </Merger>
-          </GroupElement> 
+          </GroupElement>
 
           <GroupElement name="ClassificationGroup">
             <Bindings>
@@ -2135,7 +2141,7 @@
                 </Bindings>
               </InputArea>
             </Merger>
-            <!--Account Harmonization: changed to simple InputArea          
+            <!--Account Harmonization: changed to simple InputArea
             <SelectionBox name="CountryState">
               <Bindings>
                 <Resource target="Label" type="Label" id="CountryStateId" defaultLabel="State" />
