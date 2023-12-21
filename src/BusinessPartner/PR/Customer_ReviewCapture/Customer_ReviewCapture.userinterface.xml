@@ -422,6 +422,20 @@
                 </Bindings>
               </Items>
             </SelectionBox>
+            <SelectionBox name="Motivo de baja">
+              <Bindings>
+                <Resource target="Label" type="Label" id="MotivoDeBajaID" defaultLabel="Motivo de baja" />
+                <Binding target="DataSource" toggleId="DomCusMotivoBaja" bindingMode="TWO_WAY" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.motivo_de_baja" bindingMode="TWO_WAY" />
+              </Bindings>
+              <Items>
+                <Bindings>
+                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                </Bindings>
+              </Items>
+            </SelectionBox>
+            
           </GroupElement>
 
 
@@ -492,6 +506,19 @@
                 <Resource target="Label" type="Label" id="formato_de_farmaciaID" defaultLabel="Formato de farmacia *" />
                 <Binding target="DataSource" toggleId="DomCusFormatoFarmacia" bindingMode="TWO_WAY" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.formato_de_farmacia" bindingMode="TWO_WAY" />
+              </Bindings>
+              <Items>
+                <Bindings>
+                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                </Bindings>
+              </Items>
+            </SelectionBox>
+            <SelectionBox name="subtipoFarmacia">
+              <Bindings>
+                <Resource target="Label" type="Label" id="subtipoFarmaciaID" defaultLabel="Subtipo Farmacia *" />
+                <Binding target="DataSource" toggleId="DomcusSubtipoFarmacia" bindingMode="TWO_WAY" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.subtipoFarmacia" bindingMode="TWO_WAY" />
               </Bindings>
               <Items>
                 <Bindings>

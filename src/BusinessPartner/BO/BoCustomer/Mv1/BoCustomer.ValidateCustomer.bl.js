@@ -96,10 +96,28 @@ var calleF = me.calle != undefined ? Utils.isEmptyString(me.getCalle().trim()) :
 var codigoPostalF = me.codigo_postal != undefined ? Utils.isEmptyString(me.getCodigo_postal().trim()) : true;
 var coloniaF = me.colonia != undefined ? Utils.isEmptyString(me.getColonia().trim()) : true;
 var formato = me.formato_de_farmacia != undefined ? Utils.isEmptyString(me.getFormato_de_farmacia().trim()) : true;
-var subtipo = me.subtipo != undefined ? Utils.isEmptyString(me.getSubtipo().trim()) : true;
+var subtipoFarmacia = me.subtipoFarmacia != undefined ? Utils.isEmptyString(me.getSubtipoFarmacia().trim()) : true;
 var tipoF = me.tipo != undefined ? Utils.isEmptyString(me.getTipo().trim()) : true;
-numExtF || calleF || codigoPostalF || coloniaF || formato || subtipo || tipoF
-if ((me.getBoBpaMeta().getId() == "Farmacia Indepentiente" || me.getBoBpaMeta().getId() == "Farmacia Farma" || me.getBoBpaMeta().getId() == "Farmacias Digrimex") && (numExtF || calleF || codigoPostalF || coloniaF || formato || subtipo || tipoF))
+numExtF || calleF || codigoPostalF || coloniaF || formato || subtipoFarmacia || tipoF
+if (( me.getBoBpaMeta().getId() == "Farmacias Digrimex") && (numExtF || calleF || codigoPostalF || coloniaF || formato || subtipoFarmacia || tipoF))
+{
+  messageCollector.add({
+    "level": "error",
+    "objectClass": "BoCustomer",
+    "messageID": "CasCustomerCamposRequeridos",
+    "messageParams": {}
+  });
+}
+
+var numExtF1 = me.num_exterior != undefined ? Utils.isEmptyString(me.getNum_exterior().trim()) : true;
+var calleF1 = me.calle != undefined ? Utils.isEmptyString(me.getCalle().trim()) : true;
+var codigoPostalF1 = me.codigo_postal != undefined ? Utils.isEmptyString(me.getCodigo_postal().trim()) : true;
+var coloniaF1 = me.colonia != undefined ? Utils.isEmptyString(me.getColonia().trim()) : true;
+var cadenaF1 = me.grupo_Cadena != undefined ? Utils.isEmptyString(me.getGrupo_Cadena().trim()) : true;
+var territorioF1 = me.territorio != undefined ? Utils.isEmptyString(me.getTerritorio().trim()) : true;
+var municipioF1= me.poblacion_municipio_delegación != undefined ? Utils.isEmptyString(me.getPoblacion_municipio_delegación().trim()) : true;
+numExtF1 || calleF1 || codigoPostalF1 || coloniaF1 ||  municipioF1 || cadenaF1 || territorioF1
+if ((me.getBoBpaMeta().getId() == "Farmacia Indepentiente" || me.getBoBpaMeta().getId() == "Farmacia Farma" ) && (numExtF1 || calleF1 || codigoPostalF1 || coloniaF1 ||  municipioF1 || cadenaF1 || territorioF1))
 {
   messageCollector.add({
     "level": "error",

@@ -94,6 +94,7 @@
     <SimpleProperty name="quintil_del_medico" type="DomCusQuintilMedico" storable="true" dataSourceProperty="quintil_del_medico" />
     <SimpleProperty name="grupo_Cadena" type="DomCusGrupoCadena" storable="true" dataSourceProperty="grupo_Cadena" />
     <SimpleProperty name="territorio" type="DomCusTerritorio" storable="true" dataSourceProperty="territorio" />
+    <SimpleProperty name="subtipoFarmacia" type="DomcusSubtipoFarmacia" storable="true" dataSourceProperty="subtipoFarmacia" />
 
     <SimpleProperty name="medicoGaleno" type="DomBool" storable="true" dataSourceProperty="medicoGaleno" />
     <SimpleProperty name="requiereFactura" type="DomCusRequiereFactura" storable="true" dataSourceProperty="requiereFactura" />
