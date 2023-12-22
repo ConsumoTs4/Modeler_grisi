@@ -41,7 +41,6 @@
     <SimpleProperty name="cedulaProfesional" type="DomBpaName" storable="true" dataSourceProperty="cedulaProfesional" />
     <SimpleProperty name="honorarios" type="DomString" storable="true" dataSourceProperty="honorarios" />
     <SimpleProperty name="rfc" type="DomString" storable="true" dataSourceProperty="rfc" />
-    <SimpleProperty name="cuenta_con_exhibición_adicional" type="DomBool" storable="true" dataSourceProperty="cuenta_con_exhibición_adicional" />
     <SimpleProperty name="costo_renta_exhibicion_adicional"  storable="true" dataSourceProperty="costo_renta_exhibicion_adicional" />
     <SimpleProperty name="calle" type="DomString" storable="true" dataSourceProperty="calle"/>
     <SimpleProperty name="num_exterior" type="DomString" storable="true" dataSourceProperty="num_exterior" />
@@ -95,9 +94,11 @@
     <SimpleProperty name="grupo_Cadena" type="DomCusGrupoCadena" storable="true" dataSourceProperty="grupo_Cadena" />
     <SimpleProperty name="territorio" type="DomCusTerritorio" storable="true" dataSourceProperty="territorio" />
     <SimpleProperty name="subtipoFarmacia" type="DomcusSubtipoFarmacia" storable="true" dataSourceProperty="subtipoFarmacia" />
+    
 
     <SimpleProperty name="medicoGaleno" type="DomBool" storable="true" dataSourceProperty="medicoGaleno" />
-    <SimpleProperty name="requiereFactura" type="DomCusRequiereFactura" storable="true" dataSourceProperty="requiereFactura" />
+    <SimpleProperty name="requiereFactura" type="DomBool" storable="true" dataSourceProperty="requiereFactura" />
+    <SimpleProperty name="cuenta_con_exhibición_adicional" type="DomBool" storable="true" dataSourceProperty="cuenta_con_exhibición_adicional" />
 
 
 

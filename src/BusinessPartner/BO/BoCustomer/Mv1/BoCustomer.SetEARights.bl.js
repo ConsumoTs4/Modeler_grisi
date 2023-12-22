@@ -78,17 +78,11 @@ if(me.getBoBpaMeta().getId() == "Hospital") {
   acl.removeRight(AclObjectType.PROPERTY, "requiereFactura", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "razonsocial", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "subtipoFarmacia", AclPermission.VISIBLE);
-
-
   acl.removeRight(AclObjectType.PROPERTY, "tipo_de_persona", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "apellido_paterno", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "apellido_materno", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "nombre", AclPermission.VISIBLE);
-  acl.removeRight(AclObjectType.PROPERTY, "calle", AclPermission.VISIBLE);
-  acl.removeRight(AclObjectType.PROPERTY, "num_exterior", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "numero_interior", AclPermission.VISIBLE);
-  acl.removeRight(AclObjectType.PROPERTY, "colonia", AclPermission.VISIBLE);
-  acl.removeRight(AclObjectType.PROPERTY, "codigo_postal", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "latitud", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "longitud", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "honorarios", AclPermission.VISIBLE);
@@ -129,6 +123,7 @@ if(me.getBoBpaMeta().getId() == "Hospital") {
 
 
 }else if(me.getBoBpaMeta().getId() == "Médico") {
+  acl.removeRight(AclObjectType.PROPERTY, "subtipoFarmacia", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "grupo_Cadena", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "latitud", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "longitud", AclPermission.VISIBLE);
@@ -145,8 +140,6 @@ if(me.getBoBpaMeta().getId() == "Hospital") {
   acl.removeRight(AclObjectType.PROPERTY, "costo_renta_exhibicion_adicional", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "parent_Account", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "brick", AclPermission.VISIBLE);
-  acl.removeRight(AclObjectType.PROPERTY, "subtipoFarmacia", AclPermission.VISIBLE);
-
 
 }else if(me.getBoBpaMeta().getId() == "Farmacias Digrimex") {
   acl.removeRight(AclObjectType.PROPERTY, "subtipo", AclPermission.VISIBLE);
@@ -155,11 +148,9 @@ if(me.getBoBpaMeta().getId() == "Hospital") {
   acl.removeRight(AclObjectType.PROPERTY, "phone1", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "telefono2", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "email1", AclPermission.VISIBLE);
-
   acl.removeRight(AclObjectType.PROPERTY, "medicoGaleno", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "requiereFactura", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "razonsocial", AclPermission.VISIBLE);
-
   acl.removeRight(AclObjectType.PROPERTY, "tipo_de_persona", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "apellido_paterno", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "apellido_materno", AclPermission.VISIBLE);
@@ -200,9 +191,10 @@ if(me.getBoBpaMeta().getId() == "Hospital") {
   acl.removeRight(AclObjectType.PROPERTY, "cuenta_con_exhibición_adicional", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "costo_renta_exhibicion_adicional", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "parent_Account", AclPermission.VISIBLE);
-  acl.removeRight(AclObjectType.PROPERTY, "subtipo", AclPermission.VISIBLE);
 
 }else if(me.getBoBpaMeta().getId() == "Farmacia Farma") {
+  acl.removeRight(AclObjectType.PROPERTY, "tipo", AclPermission.VISIBLE);
+  acl.removeRight(AclObjectType.PROPERTY, "subtipoFarmacia", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "medicoGaleno", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "requiereFactura", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "razonsocial", AclPermission.VISIBLE);
@@ -247,9 +239,12 @@ if(me.getBoBpaMeta().getId() == "Hospital") {
   acl.removeRight(AclObjectType.PROPERTY, "rfc", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "subtipo", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "formato_de_farmacia", AclPermission.VISIBLE);
-  acl.removeRight(AclObjectType.PROPERTY, "subtipoFarmacia", AclPermission.VISIBLE);
+  acl.removeRight(AclObjectType.PROPERTY, "motivo_de_baja", AclPermission.VISIBLE);
 
-}else if(me.getBoBpaMeta().getId() == "Farmacia Indepentiente") {
+
+}else if(me.getBoBpaMeta().getId() == "Farmacia Independiente") {
+  acl.removeRight(AclObjectType.PROPERTY, "tipo", AclPermission.VISIBLE);
+  acl.removeRight(AclObjectType.PROPERTY, "subtipoFarmacia", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "medicoGaleno", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "requiereFactura", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "razonsocial", AclPermission.VISIBLE);
@@ -294,12 +289,9 @@ if(me.getBoBpaMeta().getId() == "Hospital") {
   acl.removeRight(AclObjectType.PROPERTY, "rfc", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "subtipo", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "formato_de_farmacia", AclPermission.VISIBLE);
-  acl.removeRight(AclObjectType.PROPERTY, "subtipoFarmacia", AclPermission.VISIBLE);
-
+  acl.removeRight(AclObjectType.PROPERTY, "motivo_de_baja", AclPermission.VISIBLE);
 
 }
-
-
 
 
 switch (mode) {

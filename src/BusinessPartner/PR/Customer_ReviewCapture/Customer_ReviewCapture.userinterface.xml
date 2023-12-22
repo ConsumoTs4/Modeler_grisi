@@ -377,12 +377,20 @@
                 </Bindings>
               </Items>
             </SelectionBox>
-            <InputArea name="Lider de Opinion">
+            <!-- <InputArea name="Lider de Opinion">
               <Bindings>
                 <Resource target="Label" type="Label" defaultLabel="Lider de Opinion" id="lider_de_opinion" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.lider_de_opinion" bindingMode="TWO_WAY" />
               </Bindings>
-            </InputArea>
+            </InputArea> -->
+
+            <CheckBox name="Lider de Opinion" disabled="false">
+              <Bindings>
+                <Resource target="Label" type="Label" id="lider_de_opinionID" defaultLabel="Lider de Opinion" />
+                <Binding target="checkedValue" binding="ProcessContext::CustomerDetail.lider_de_opinion" bindingMode="ONE_WAY" />
+              </Bindings>
+            </CheckBox>
+
             <SelectionBox name="Uso de internet">
               <Bindings>
                 <Resource target="Label" type="Label" id="UsodeinternetID" defaultLabel="Uso de internet" />
@@ -422,9 +430,10 @@
                 </Bindings>
               </Items>
             </SelectionBox>
+
             <SelectionBox name="Motivo de baja">
               <Bindings>
-                <Resource target="Label" type="Label" id="MotivoDeBajaID" defaultLabel="Motivo de baja" />
+                <Resource target="Label" type="Label" id="motivo_de_bajaID" defaultLabel="Motivo de baja" />
                 <Binding target="DataSource" toggleId="DomCusMotivoBaja" bindingMode="TWO_WAY" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.motivo_de_baja" bindingMode="TWO_WAY" />
               </Bindings>
@@ -514,6 +523,7 @@
                 </Bindings>
               </Items>
             </SelectionBox>
+
             <SelectionBox name="subtipoFarmacia">
               <Bindings>
                 <Resource target="Label" type="Label" id="subtipoFarmaciaID" defaultLabel="Subtipo Farmacia *" />
@@ -528,12 +538,26 @@
               </Items>
             </SelectionBox>
 
-            <InputArea name="Cuenta con exhibición adicional">
+            <!-- <CheckBox name="Cuenta con exhibición adicional" disabled="false">
+              <Bindings>
+                <Resource target="Label" type="Label" id="cuenta_con_exhibición_adicionalID" defaultLabel="Cuenta con exhibición adicional" />
+                <Binding target="checkedValue" binding="ProcessContext::CustomerDetail.cuenta_con_exhibición_adicional" bindingMode="ONE_WAY" />
+              </Bindings>
+            </CheckBox> -->
+
+            <CheckBox name="Cuenta con exhibición adicional" disabled="false">
+              <Bindings>
+                <Resource target="Label" type="Label" id="cuenta_con_exhibición_adicionalID" defaultLabel="Cuenta con exhibición adicional" />
+                <Binding target="checkedValue" binding="ProcessContext::CustomerDetail.cuenta_con_exhibición_adicional" bindingMode="ONE_WAY" />
+              </Bindings>
+            </CheckBox>
+
+            <!-- <InputArea name="Cuenta con exhibición adicional">
               <Bindings>
                 <Resource target="Label" type="Label" defaultLabel="Cuenta con exhibición adicional" id="cuenta_con_exhibición_adicional" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.cuenta_con_exhibición_adicional" bindingMode="TWO_WAY" />
               </Bindings>
-            </InputArea>
+            </InputArea> -->
 
             <InputArea name="Costo renta exhibicion adicional">
               <Bindings>
@@ -710,7 +734,14 @@
               </Bindings>
             </InputArea>
 
-            <SelectionBox name="Requiere_Factura">
+            <CheckBox name="Requiere_Factura" disabled="false">
+              <Bindings>
+                <Resource target="Label" type="Label" id="requiereFacturaID" defaultLabel="Requiere Factura" />
+                <Binding target="checkedValue" binding="ProcessContext::CustomerDetail.requiereFactura" bindingMode="ONE_WAY" />
+              </Bindings>
+            </CheckBox>
+
+            <!-- <SelectionBox name="Requiere_Factura">
               <Bindings>
                 <Resource target="Label" type="Label" id="requiereFacturaID" defaultLabel="Requiere Factura" />
                 <Binding target="DataSource" toggleId="requiereFactura" bindingMode="TWO_WAY" />
@@ -722,7 +753,7 @@
                   <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
                 </Bindings>
               </Items>
-            </SelectionBox>
+            </SelectionBox> -->
 
 
             </GroupElement>
