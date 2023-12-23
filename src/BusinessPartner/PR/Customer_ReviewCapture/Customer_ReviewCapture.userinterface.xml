@@ -88,12 +88,12 @@
                 <Resource target="text" type="Label" id="MainId" defaultLabel="Main" bindingMode="ONE_TIME" />
               </Bindings>
             </Tab>
-            <!-- <Tab tabName="Map" backendSystem="both">
+            <Tab tabName="Map" backendSystem="both">
               <Bindings>
                 <Resource target="image" type="Image" id="MapGrey24" defaultImage="MapGrey24" bindingMode="ONE_TIME" />
                 <Resource target="text" type="Label" id="MapId" defaultLabel="Map" bindingMode="ONE_TIME" />
               </Bindings>
-            </Tab> -->
+            </Tab>
             <!--Account Harmonization: obsolete
             <Tab tabName="OpeningHours" backendSystem="both">
               <Bindings>
@@ -587,19 +587,19 @@
               </Bindings>
             </InputArea>
 
-            <InputArea name="Num Exterior">
+            <!-- <InputArea name="Num Exterior">
               <Bindings>
                 <Resource target="Label" type="Label" defaultLabel="Num Exterior *" id="num_exterior" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.num_exterior" bindingMode="TWO_WAY" />
               </Bindings>
-            </InputArea>
+            </InputArea> -->
 
-            <InputArea name="Colonia">
+            <!-- <InputArea name="Colonia">
               <Bindings>
                 <Resource target="Label" type="Label" defaultLabel="Colonia *" id="colonia" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.colonia" bindingMode="TWO_WAY" />
               </Bindings>
-            </InputArea>
+            </InputArea> -->
 
             <InputArea name="Codigo Postal">
               <Bindings>

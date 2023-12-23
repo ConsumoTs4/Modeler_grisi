@@ -63,9 +63,9 @@ var honorarios = me.honorarios != undefined ? Utils.isEmptyString(me.getHonorari
 var cedulaProfesional = me.cedulaProfesional != undefined ? Utils.isEmptyString(me.getCedulaProfesional().trim()) : true;
 var calle = me.calle != undefined ? Utils.isEmptyString(me.getCalle().trim()) : true;
 var codigoPostal = me.codigo_postal != undefined ? Utils.isEmptyString(me.getCodigo_postal().trim()) : true;
-var colonia = me.colonia != undefined ? Utils.isEmptyString(me.getColonia().trim()) : true;
+// var colonia = me.colonia != undefined ? Utils.isEmptyString(me.getColonia().trim()) : true;
 
-if (me.getBoBpaMeta().getId() == "Médico" && (apellidoPaterno || nombre || especialidad || pacientesPorSemana || honorarios || cedulaProfesional || calle || codigoPostal || colonia))
+if (me.getBoBpaMeta().getId() == "Médico" && (apellidoPaterno || nombre || especialidad || pacientesPorSemana || honorarios || cedulaProfesional || calle || codigoPostal ))
 {
   messageCollector.add({
     "level": "error",
@@ -77,11 +77,11 @@ if (me.getBoBpaMeta().getId() == "Médico" && (apellidoPaterno || nombre || espe
 
 var tipoH = me.tipo_de_institucion != undefined ? Utils.isEmptyString(me.getTipo_de_institucion().trim()) : true;
 var nombreH = me.name != undefined ? Utils.isEmptyString(me.getName().trim()) : true;
-var numExt = me.num_exterior != undefined ? Utils.isEmptyString(me.getNum_exterior().trim()) : true;
+// var numExt = me.num_exterior != undefined ? Utils.isEmptyString(me.getNum_exterior().trim()) : true;
 var codigoPostalH = me.codigo_postal != undefined ? Utils.isEmptyString(me.getCodigo_postal().trim()) : true;
-var coloniaH = me.colonia != undefined ? Utils.isEmptyString(me.getColonia().trim()) : true;
+// var coloniaH = me.colonia != undefined ? Utils.isEmptyString(me.getColonia().trim()) : true;
 
-if (me.getBoBpaMeta().getId() == "Hospitales" && (tipoH || nombreH || numExt || codigoPostalH || coloniaH))
+if (me.getBoBpaMeta().getId() == "Hospitales" && (tipoH || nombreH || codigoPostalH ))
 {
   messageCollector.add({
     "level": "error",
@@ -91,15 +91,15 @@ if (me.getBoBpaMeta().getId() == "Hospitales" && (tipoH || nombreH || numExt || 
   });
 }
 
-var numExtF = me.num_exterior != undefined ? Utils.isEmptyString(me.getNum_exterior().trim()) : true;
+// var numExtF = me.num_exterior != undefined ? Utils.isEmptyString(me.getNum_exterior().trim()) : true;
 var calleF = me.calle != undefined ? Utils.isEmptyString(me.getCalle().trim()) : true;
 var codigoPostalF = me.codigo_postal != undefined ? Utils.isEmptyString(me.getCodigo_postal().trim()) : true;
-var coloniaF = me.colonia != undefined ? Utils.isEmptyString(me.getColonia().trim()) : true;
+// var coloniaF = me.colonia != undefined ? Utils.isEmptyString(me.getColonia().trim()) : true;
 var formato = me.formato_de_farmacia != undefined ? Utils.isEmptyString(me.getFormato_de_farmacia().trim()) : true;
 var subtipoFarmacia = me.subtipoFarmacia != undefined ? Utils.isEmptyString(me.getSubtipoFarmacia().trim()) : true;
 var tipoF = me.tipo != undefined ? Utils.isEmptyString(me.getTipo().trim()) : true;
-numExtF || calleF || codigoPostalF || coloniaF || formato || subtipoFarmacia || tipoF
-if (( me.getBoBpaMeta().getId() == "Farmacias Digrimex") && (numExtF || calleF || codigoPostalF || coloniaF || formato || subtipoFarmacia || tipoF))
+calleF || codigoPostalF || formato || subtipoFarmacia || tipoF
+if (( me.getBoBpaMeta().getId() == "Farmacias Digrimex") && (numExtF || calleF || codigoPostalF || formato || subtipoFarmacia || tipoF))
 {
   messageCollector.add({
     "level": "error",
@@ -109,15 +109,15 @@ if (( me.getBoBpaMeta().getId() == "Farmacias Digrimex") && (numExtF || calleF |
   });
 }
 
-var numExtF1 = me.num_exterior != undefined ? Utils.isEmptyString(me.getNum_exterior().trim()) : true;
+// var numExtF1 = me.num_exterior != undefined ? Utils.isEmptyString(me.getNum_exterior().trim()) : true;
 var calleF1 = me.calle != undefined ? Utils.isEmptyString(me.getCalle().trim()) : true;
 var codigoPostalF1 = me.codigo_postal != undefined ? Utils.isEmptyString(me.getCodigo_postal().trim()) : true;
-var coloniaF1 = me.colonia != undefined ? Utils.isEmptyString(me.getColonia().trim()) : true;
+// var coloniaF1 = me.colonia != undefined ? Utils.isEmptyString(me.getColonia().trim()) : true;
 var cadenaF1 = me.grupo_Cadena != undefined ? Utils.isEmptyString(me.getGrupo_Cadena().trim()) : true;
 var territorioF1 = me.territorio != undefined ? Utils.isEmptyString(me.getTerritorio().trim()) : true;
 var municipioF1= me.poblacion_municipio_delegación != undefined ? Utils.isEmptyString(me.getPoblacion_municipio_delegación().trim()) : true;
-numExtF1 || calleF1 || codigoPostalF1 || coloniaF1 ||  municipioF1 || cadenaF1 || territorioF1
-if ((me.getBoBpaMeta().getId() == "Farmacia Indepentiente" || me.getBoBpaMeta().getId() == "Farmacia Farma" ) && (numExtF1 || calleF1 || codigoPostalF1 || coloniaF1 ||  municipioF1 || cadenaF1 || territorioF1))
+calleF1 || codigoPostalF1 ||  municipioF1 || cadenaF1 || territorioF1
+if ((me.getBoBpaMeta().getId() == "Farmacia Indepentiente" || me.getBoBpaMeta().getId() == "Farmacia Farma" ) && (numExtF1 || calleF1 || codigoPostalF1 ||  municipioF1 || cadenaF1 || territorioF1))
 {
   messageCollector.add({
     "level": "error",
