@@ -109,7 +109,7 @@ if (( me.getBoBpaMeta().getId() == "Farmacias Digrimex") && (numExtF || calleF |
   });
 }
 
-// var numExtF1 = me.num_exterior != undefined ? Utils.isEmptyString(me.getNum_exterior().trim()) : true;
+//var numExtF1 = me.num_exterior != undefined ? Utils.isEmptyString(me.getNum_exterior().trim()) : true;
 var calleF1 = me.calle != undefined ? Utils.isEmptyString(me.getCalle().trim()) : true;
 var codigoPostalF1 = me.codigo_postal != undefined ? Utils.isEmptyString(me.getCodigo_postal().trim()) : true;
 // var coloniaF1 = me.colonia != undefined ? Utils.isEmptyString(me.getColonia().trim()) : true;
@@ -117,7 +117,7 @@ var cadenaF1 = me.grupo_Cadena != undefined ? Utils.isEmptyString(me.getGrupo_Ca
 var territorioF1 = me.territorio != undefined ? Utils.isEmptyString(me.getTerritorio().trim()) : true;
 var municipioF1= me.poblacion_municipio_delegación != undefined ? Utils.isEmptyString(me.getPoblacion_municipio_delegación().trim()) : true;
 calleF1 || codigoPostalF1 ||  municipioF1 || cadenaF1 || territorioF1
-if ((me.getBoBpaMeta().getId() == "Farmacia Indepentiente" || me.getBoBpaMeta().getId() == "Farmacia Farma" ) && (numExtF1 || calleF1 || codigoPostalF1 ||  municipioF1 || cadenaF1 || territorioF1))
+if ((me.getBoBpaMeta().getId() == "Farmacia Indepentiente" || me.getBoBpaMeta().getId() == "Farmacia Farma" ) && (calleF1 || codigoPostalF1 ||  municipioF1 || cadenaF1 || territorioF1))
 {
   messageCollector.add({
     "level": "error",
