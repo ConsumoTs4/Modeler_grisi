@@ -72,7 +72,7 @@
 
 
 
-    <Attribute name="motivo_de_baja" table="Account" column="GCG_MotivoBaja__c" />
+    <Attribute name="motivo" table="Account" column="GCG_MotivoBaja__c" />
 
     <!-- Picklist-->
     <Attribute name="sexo" table="Account" column="GCG_Sexo__c" /> 

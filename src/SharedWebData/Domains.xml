@@ -404,6 +404,12 @@
       <Empty value="" />
     </Initializer>
   </Domain>
+  <Domain name="DomCusMotivoBaja" baseType="String" length="255">
+    <Initializer>
+      <Default value="' '" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
   <Domain name="DomBpaCustomerNumber" baseType="String" length="16">
     <Initializer>
       <Default value="' '" />

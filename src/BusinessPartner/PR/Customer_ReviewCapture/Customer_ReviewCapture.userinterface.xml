@@ -431,11 +431,11 @@
               </Items>
             </SelectionBox>
 
-            <SelectionBox name="Motivo de baja">
+            <SelectionBox name="MotivoDeBaja">
               <Bindings>
-                <Resource target="Label" type="Label" id="motivo_de_bajaID" defaultLabel="Motivo de baja" />
+                <Resource target="Label" type="Label" id="MotivoDeBaja" defaultLabel="Motivo de baja" />
                 <Binding target="DataSource" toggleId="DomCusMotivoBaja" bindingMode="TWO_WAY" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.motivo_de_baja" bindingMode="TWO_WAY" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.motivo" bindingMode="TWO_WAY" />
               </Bindings>
               <Items>
                 <Bindings>
