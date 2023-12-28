@@ -99,7 +99,7 @@ var formato = me.formato_de_farmacia != undefined ? Utils.isEmptyString(me.getFo
 var subtipoFarmacia = me.subtipoFarmacia != undefined ? Utils.isEmptyString(me.getSubtipoFarmacia().trim()) : true;
 var tipoF = me.tipo != undefined ? Utils.isEmptyString(me.getTipo().trim()) : true;
 calleF || codigoPostalF || formato || subtipoFarmacia || tipoF
-if (( me.getBoBpaMeta().getId() == "Farmacias Digrimex") && (numExtF || calleF || codigoPostalF || formato || subtipoFarmacia || tipoF))
+if (( me.getBoBpaMeta().getId() == "Farmacias Digrimex") && (calleF || codigoPostalF || formato || subtipoFarmacia || tipoF))
 {
   messageCollector.add({
     "level": "error",
