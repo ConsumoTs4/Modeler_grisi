@@ -117,7 +117,7 @@ var cadenaF1 = me.grupo_Cadena != undefined ? Utils.isEmptyString(me.getGrupo_Ca
 var territorioF1 = me.territorio != undefined ? Utils.isEmptyString(me.getTerritorio().trim()) : true;
 var municipioF1= me.poblacion_municipio_delegación != undefined ? Utils.isEmptyString(me.getPoblacion_municipio_delegación().trim()) : true;
 calleF1 || codigoPostalF1 ||  municipioF1 || cadenaF1 || territorioF1
-if ((me.getBoBpaMeta().getId() == "Farmacia Indepentiente" || me.getBoBpaMeta().getId() == "Farmacia Farma" ) && (numExtF1 || calleF1 || codigoPostalF1 ||  municipioF1 || cadenaF1 || territorioF1))
+if ((me.getBoBpaMeta().getId() == "Farmacia Indepentiente" || me.getBoBpaMeta().getId() == "Farmacia Farma" ) && (calleF1 || codigoPostalF1 ||  municipioF1 || cadenaF1 || territorioF1))
 {
   messageCollector.add({
     "level": "error",
