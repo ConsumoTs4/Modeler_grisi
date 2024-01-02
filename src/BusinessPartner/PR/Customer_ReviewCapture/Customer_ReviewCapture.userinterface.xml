@@ -444,7 +444,7 @@
                 </Bindings>
               </Items>
             </SelectionBox>
-            
+
           </GroupElement>
 
 
@@ -655,13 +655,6 @@
               <Bindings>
                 <Resource target="Label" type="Label" defaultLabel="Prescripcion 1" id="prescripcion_1" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.prescripcion_1" bindingMode="TWO_WAY" />
-              </Bindings>
-            </InputArea>
-
-            <InputArea name="Participacion de la auditoria">
-              <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="Participacion de la auditoria" id="participacion_de_la_auditoria" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.participacion_de_la_auditoria" bindingMode="TWO_WAY" />
               </Bindings>
             </InputArea>
 

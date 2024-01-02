@@ -47,7 +47,7 @@ function setEARights(mode){
     //               Add your customizing javaScript code below.                                 //
     //                                                                                           //
     ///////////////////////////////////////////////////////////////////////////////////////////////
-    
+
 /* #########################################################
        NGM Customer Main - If the respective customer template is not Mobility Relevant, the user can not edit any customer data. Only display.
        ######################################################### */
@@ -109,7 +109,6 @@ if(me.getBoBpaMeta().getId() == "Hospital") {
   acl.removeRight(AclObjectType.PROPERTY, "bancos", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "quintil_del_medico", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "prescripcion_1", AclPermission.VISIBLE);
-  acl.removeRight(AclObjectType.PROPERTY, "participacion_de_la_auditoria", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "razon_Social", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "id_SAP", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "tipo", AclPermission.VISIBLE);
@@ -182,7 +181,6 @@ if(me.getBoBpaMeta().getId() == "Hospital") {
   acl.removeRight(AclObjectType.PROPERTY, "bancos", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "quintil_del_medico", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "prescripcion_1", AclPermission.VISIBLE);
-  acl.removeRight(AclObjectType.PROPERTY, "participacion_de_la_auditoria", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "razon_Social", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "id_SAP", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "folio_de_tienda", AclPermission.VISIBLE);
@@ -234,7 +232,6 @@ if(me.getBoBpaMeta().getId() == "Hospital") {
   acl.removeRight(AclObjectType.PROPERTY, "bancos", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "quintil_del_medico", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "prescripcion_1", AclPermission.VISIBLE);
-  acl.removeRight(AclObjectType.PROPERTY, "participacion_de_la_auditoria", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "razon_Social", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "rfc", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "subtipo", AclPermission.VISIBLE);
@@ -284,7 +281,6 @@ if(me.getBoBpaMeta().getId() == "Hospital") {
   acl.removeRight(AclObjectType.PROPERTY, "bancos", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "quintil_del_medico", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "prescripcion_1", AclPermission.VISIBLE);
-  acl.removeRight(AclObjectType.PROPERTY, "participacion_de_la_auditoria", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "razon_Social", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "rfc", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "subtipo", AclPermission.VISIBLE);
@@ -358,5 +354,5 @@ if (Utils.isSfBackend() && Utils.isDefined(me.getLoCustomerAddress()) && Utils.i
     //                                                                                           //
     ///////////////////////////////////////////////////////////////////////////////////////////////
 
-    
+
 }
