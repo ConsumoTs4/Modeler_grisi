@@ -102,18 +102,18 @@
               </Bindings>
             </Tab>
             Account Harmonization: obsolete-->
-            <!-- <Tab tabName="OpenHours" backendSystem="both">
+            <Tab tabName="OpenHours" backendSystem="both">
               <Bindings>
                 <Resource target="image" type="Image" id="ClockGrey24" defaultImage="ClockGrey24" bindingMode="ONE_TIME" />
                 <Resource target="text" type="Label" id="OpenHoursId" defaultLabel="Open Hours" bindingMode="ONE_TIME" />
               </Bindings>
-            </Tab> -->
-            <!-- <Tab tabName="Contact" backendSystem="both">
+            </Tab>
+            <Tab tabName="Contact" backendSystem="both">
               <Bindings>
                 <Resource target="image" type="Image" id="UserGrey24" defaultImage="UserGrey24" bindingMode="ONE_TIME" />
                 <Resource target="text" type="Label" id="ContactId" defaultLabel="Contact" bindingMode="ONE_TIME" />
               </Bindings>
-            </Tab> -->
+            </Tab>
             <!-- <Tab tabName="Revenue" backendSystem="both">
               <Bindings>
                 <Resource target="image" type="Image" id="DollarGrey24" defaultImage="DollarGrey24" bindingMode="ONE_TIME" />
@@ -126,30 +126,30 @@
                 <Resource target="text" type="Label" id="POSId" defaultLabel="POS" bindingMode="ONE_TIME" />
               </Bindings>
             </Tab> -->
-            <!-- <Tab tabName="Call" backendSystem="both">
+            <Tab tabName="Call" backendSystem="both">
               <Bindings>
                 <Resource target="image" type="Image" id="SuitcaseGrey24" defaultImage="SuitcaseGrey24" bindingMode="ONE_TIME" />
                 <Resource target="text" type="Label" id="CallOverviewId" defaultLabel="Call" bindingMode="ONE_TIME" />
               </Bindings>
-            </Tab> -->
+            </Tab>
             <!-- <Tab tabName="Roles" backendSystem="both">
               <Bindings>
                 <Resource target="image" type="Image" id="UserClipboardGrey24" defaultImage="UserClipboardGrey24" bindingMode="ONE_TIME" />
                 <Resource target="text" type="Label" id="BpaRolesId" defaultLabel="Roles" bindingMode="ONE_TIME" />
               </Bindings>
-            </Tab>
-            <Tab tabName="Relations" backendSystem="both">
+            </Tab> -->
+            <!-- <Tab tabName="Relations" backendSystem="both">
               <Bindings>
                 <Resource target="image" type="Image" id="ConnectionGrey24" defaultImage="ConnectionGrey24" bindingMode="ONE_TIME" />
                 <Resource target="text" type="Label" id="RelationsId" defaultLabel="Relations" bindingMode="ONE_TIME" />
               </Bindings>
             </Tab> -->
-            <!-- <Tab tabName="Attachments" backendSystem="both">
+            <Tab tabName="Attachments" backendSystem="both">
               <Bindings>
                 <Resource target="image" type="Image" id="ClipGrey24" defaultImage="ClipGrey24" bindingMode="ONE_TIME" />
                 <Resource target="text" type="Label" id="AttachmentId" defaultLabel="Attachments" bindingMode="ONE_TIME" />
               </Bindings>
-            </Tab> -->
+            </Tab>
           </Items>
           <Events>
             <ItemSelectedEvent event="tabSelected" storeTabNameIn="currentTabName" />
@@ -651,12 +651,26 @@
               </Items>
             </SelectionBox>
 
-            <InputArea name="Prescripcion_1">
+            <!-- <InputArea name="Prescripcion_1">
               <Bindings>
                 <Resource target="Label" type="Label" defaultLabel="Prescripcion 1" id="prescripcion_1" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.prescripcion_1" bindingMode="TWO_WAY" />
               </Bindings>
-            </InputArea>
+            </InputArea> -->
+
+            <SelectionBox name="Prescripcion_1">
+              <Bindings>
+                <Resource target="Label" type="Label" id="prescripcion_1ID" defaultLabel="Prescripcion 1" />
+                <Binding target="DataSource" toggleId="DomCusPrescripcion1" bindingMode="TWO_WAY" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.prescripcion_1" bindingMode="TWO_WAY" />
+              </Bindings>
+              <Items>
+                <Bindings>
+                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                </Bindings>
+              </Items>
+            </SelectionBox>
 
           </GroupElement>
 

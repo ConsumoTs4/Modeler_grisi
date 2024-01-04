@@ -49,7 +49,6 @@
     <SimpleProperty name="estado" type="DomString" storable="true" dataSourceProperty="estado"/>
     <SimpleProperty name="ruta" type="DomString" storable="true" dataSourceProperty="ruta"/>
     <SimpleProperty name="pais" type="DomString" storable="true" dataSourceProperty="pais" />
-    <SimpleProperty name="prescripcion_1"  storable="true" dataSourceProperty="prescripcion_1" />
 
     <SimpleProperty name="celular"  storable="true" dataSourceProperty="celular" />
     <SimpleProperty name="telefono2"  storable="true" dataSourceProperty="telefono2" />
@@ -91,6 +90,7 @@
     <SimpleProperty name="grupo_Cadena" type="DomCusGrupoCadena" storable="true" dataSourceProperty="grupo_Cadena" />
     <SimpleProperty name="territorio" type="DomCusTerritorio" storable="true" dataSourceProperty="territorio" />
     <SimpleProperty name="subtipoFarmacia" type="DomcusSubtipoFarmacia" storable="true" dataSourceProperty="subtipoFarmacia" />
+    <SimpleProperty name="prescripcion_1"  type="DomCusPrescripcion1" storable="true" dataSourceProperty="prescripcion_1" />
 
 
     <SimpleProperty name="medicoGaleno" type="DomBool" storable="true" dataSourceProperty="medicoGaleno" />

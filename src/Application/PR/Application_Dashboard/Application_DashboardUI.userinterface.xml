@@ -33,7 +33,7 @@
             <Role name="PromotionApprover" />
           </VisibilityRoles>
         </ImageButton>
-        <ImageButton name="CockpitButton234">
+        <!-- <ImageButton name="CockpitButton234">
           <Bindings>
             <Resource target="Image" type="Image" id="MenuYourDay" />
             <Resource target="Text" type="Label" id="cockpitLabelId" defaultLabel="Your Day" />
@@ -42,7 +42,7 @@
           <Events>
             <ButtonPressedEvent event="openCockpit" />
           </Events>
-        </ImageButton>
+        </ImageButton> -->
         <ImageButton name="AgendaButton" backendSystem="both">
           <Bindings>
             <Resource target="Image" type="Image" id="MenuCalendar" />
@@ -179,7 +179,7 @@
             <Role name="ReservedForFutureUse_PromotionApprover" />
           </VisibilityRoles>
         </ImageButton>
-        <ImageButton name="TodoButton" backendSystem="both">
+        <!-- <ImageButton name="TodoButton" backendSystem="both">
           <Bindings>
             <Resource target="Image" type="Image" id="MenuClipboardChecklist" />
             <Resource target="Text" type="Label" id="TodoLabelId" defaultLabel="Todo" />
@@ -192,7 +192,7 @@
             <Role name="RetailUser" />
             <Role name="PromotionApprover" />
           </VisibilityRoles>
-        </ImageButton>
+        </ImageButton> -->
         <ImageButton name="IssueButton" backendSystem="both">
           <Bindings>
             <Resource target="Image" type="Image" id="MenuBolt" />

@@ -404,12 +404,6 @@
       <Empty value="" />
     </Initializer>
   </Domain>
-  <Domain name="DomCusMotivoBaja" baseType="String" length="255">
-    <Initializer>
-      <Default value="' '" />
-      <Empty value="" />
-    </Initializer>
-  </Domain>
   <Domain name="DomBpaCustomerNumber" baseType="String" length="16">
     <Initializer>
       <Default value="' '" />
@@ -7863,7 +7857,7 @@
       <Empty value="" />
     </Initializer>
   </Domain>
-  <Domain name="DomCusSex" baseType="String" length="15">
+  <!-- <Domain name="DomCusSex" baseType="String" length="15">
     <Initializer>
       <Default value="' '" />
       <Empty value="" />
@@ -7874,8 +7868,12 @@
       <Default value="' '" />
       <Empty value="" />
     </Initializer>
-  </Domain>
-  
-
+  </Domain> -->
+  <!-- <Domain name="DomCusMotivoBaja" baseType="String" length="255">
+    <Initializer>
+      <Default value="''" />
+      <Empty value="" />
+    </Initializer>
+  </Domain> -->
 
 </DomainRepository>
