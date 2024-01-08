@@ -61,11 +61,11 @@ var especialidad = me.especialidad != undefined ? Utils.isEmptyString(me.getEspe
 var pacientesPorSemana = me.pacientes_por_semana != undefined ? Utils.isEmptyString(me.getPacientes_por_semana().trim()) : true;
 var honorarios = me.honorarios != undefined ? Utils.isEmptyString(me.getHonorarios().trim()) : true;
 var cedulaProfesional = me.cedulaProfesional != undefined ? Utils.isEmptyString(me.getCedulaProfesional().trim()) : true;
-var calle = me.street != undefined ? Utils.isEmptyString(me.getStreet().trim()) : true;
+//var calle = me.street != undefined ? Utils.isEmptyString(me.getStreet().trim()) : true;
 //var codigoPostal = me.codigo_postal != undefined ? Utils.isEmptyString(me.getCodigo_postal().trim()) : true;
 // var colonia = me.colonia != undefined ? Utils.isEmptyString(me.getColonia().trim()) : true;
 
-if (me.getBoBpaMeta().getId() == "Médico" && (apellidoPaterno || nombre || especialidad || pacientesPorSemana || honorarios || cedulaProfesional ||calle))
+if (me.getBoBpaMeta().getId() == "Médico" && (apellidoPaterno || nombre || especialidad || pacientesPorSemana || honorarios || cedulaProfesional))
 {
   messageCollector.add({
     "level": "error",
