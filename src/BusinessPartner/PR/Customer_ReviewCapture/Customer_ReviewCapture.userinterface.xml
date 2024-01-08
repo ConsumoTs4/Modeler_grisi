@@ -573,26 +573,26 @@
               <Resource target="Title" type="Label" id="DireccionId" defaultLabel="Direccion" />
             </Bindings>
 
-            <InputArea name="Calle">
-              <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="Calle *" id="calle" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.calle" bindingMode="TWO_WAY" />
-              </Bindings>
-            </InputArea>
+            <InputArea name="Street">
+                <Bindings>
+                  <Resource target="Label" type="Label" defaultLabel="Street *" id="StreetId" />
+                  <Binding target="Value" binding="ProcessContext::CustomerDetail.LoCustomerAddress.MainAddress.street" bindingMode="TWO_WAY" />
+                </Bindings>
+              </InputArea>
 
-            <InputArea name="Num Interior">
+            <!--InputArea name="Num Interior">
               <Bindings>
                 <Resource target="Label" type="Label" defaultLabel="Num Interior " id="numero_interior" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.numero_interior" bindingMode="TWO_WAY" />
               </Bindings>
-            </InputArea>
+            </InputArea-->
 
-            <!-- <InputArea name="Num Exterior">
-              <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="Num Exterior *" id="num_exterior" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.num_exterior" bindingMode="TWO_WAY" />
-              </Bindings>
-            </InputArea> -->
+            <InputArea name="House no">
+                <Bindings>
+                  <Resource target="Label" type="Label" defaultLabel="House No." id="HouseNumberId" />
+                  <Binding target="Value" binding="ProcessContext::CustomerDetail.LoCustomerAddress.MainAddress.houseNumber" bindingMode="TWO_WAY" />
+                </Bindings>
+              </InputArea>
 
             <!-- <InputArea name="Colonia">
               <Bindings>
@@ -601,24 +601,23 @@
               </Bindings>
             </InputArea> -->
 
-            <InputArea name="Codigo Postal">
-              <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="Codigo Postal *" id="codigo_postal" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.codigo_postal" bindingMode="TWO_WAY" />
-              </Bindings>
-            </InputArea>
+            <InputArea name="ZIP">
+                <Bindings>
+                  <Resource target="Label" type="Label" defaultLabel="Codigo postal" id="ZipCodeId" />
+                  <Binding target="Value" binding="ProcessContext::CustomerDetail.LoCustomerAddress.MainAddress.zipCode" bindingMode="TWO_WAY" />
+                </Bindings>
+              </InputArea>
+              <InputArea name="City">
+                <Bindings>
+                  <Resource target="Label" type="Label" defaultLabel="City" id="CityId" />
+                  <Binding target="Value" binding="ProcessContext::CustomerDetail.LoCustomerAddress.MainAddress.city" bindingMode="TWO_WAY" />
+                </Bindings>
+              </InputArea>
 
-            <InputArea name="Poblacion (Municipio/Delegación)">
+              <InputArea name="State">
               <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="Poblacion (Municipio/Delegación) *" id="poblacion_municipio_delegación" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.poblacion_municipio_delegación" bindingMode="TWO_WAY" />
-              </Bindings>
-            </InputArea>
-
-            <InputArea name="Estado">
-              <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="Estado *" id="estado" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.estado" bindingMode="TWO_WAY" />
+                <Resource target="Label" type="Label" id="CountryStateId" defaultLabel="State" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.LoCustomerAddress.MainAddress.countryState" bindingMode="TWO_WAY" />
               </Bindings>
             </InputArea>
 
