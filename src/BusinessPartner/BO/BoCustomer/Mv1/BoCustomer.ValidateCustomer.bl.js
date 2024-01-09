@@ -64,7 +64,7 @@ var cedulaProfesional = me.cedulaProfesional != undefined ? Utils.isEmptyString(
 //var calle = me.street != undefined ? Utils.isEmptyString(me.getStreet().trim()) : true;
 //var codigoPostal = me.codigo_postal != undefined ? Utils.isEmptyString(me.getCodigo_postal().trim()) : true;
 // var colonia = me.colonia != undefined ? Utils.isEmptyString(me.getColonia().trim()) : true;
-
+apellidoPaterno || nombre || especialidad || pacientesPorSemana || honorarios || cedulaProfesional
 if (me.getBoBpaMeta().getId() == "Médico" && (apellidoPaterno || nombre || especialidad || pacientesPorSemana || honorarios || cedulaProfesional))
 {
   messageCollector.add({
@@ -81,7 +81,7 @@ var nombreH = me.name != undefined ? Utils.isEmptyString(me.getName().trim()) : 
 //var codigoPostalH = me.codigo_postal != undefined ? Utils.isEmptyString(me.getCodigo_postal().trim()) : true;
 // var coloniaH = me.colonia != undefined ? Utils.isEmptyString(me.getColonia().trim()) : true;
 
-if (me.getBoBpaMeta().getId() == "Hospitales" && (tipoH || nombreH ))
+if (me.getBoBpaMeta().getId() == "Hospital" && (tipoH || nombreH ))
 {
   messageCollector.add({
     "level": "error",

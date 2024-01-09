@@ -280,9 +280,36 @@
 
             <SelectionBox name="Tipo de Institucion">
               <Bindings>
-                <Resource target="Label" type="Label" id="Tipo_de_InstitucionID" defaultLabel="Tipo de Institucion" />
+                <Resource target="Label" type="Label" id="Tipo_de_InstitucionID" defaultLabel="Tipo de Institucion *" />
                 <Binding target="DataSource" toggleId="DomCusTipoInstitucion" bindingMode="TWO_WAY" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.tipo_de_institucion" bindingMode="TWO_WAY" />
+              </Bindings>
+              <Items>
+                <Bindings>
+                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                </Bindings>
+              </Items>
+            </SelectionBox>
+            <SelectionBox name="Tipo">
+              <Bindings>
+                <Resource target="Label" type="Label" id="tipoID" defaultLabel="Tipo *" />
+                <Binding target="DataSource" toggleId="DomBpaCompanyType" bindingMode="TWO_WAY" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.tipo" bindingMode="TWO_WAY" />
+              </Bindings>
+              <Items>
+                <Bindings>
+                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                </Bindings>
+              </Items>
+            </SelectionBox>
+
+            <SelectionBox name="Subtipo">
+              <Bindings>
+                <Resource target="Label" type="Label" id="subtipoID" defaultLabel="Subtipo *" />
+                <Binding target="DataSource" toggleId="DomCusSubtipo" bindingMode="TWO_WAY" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.subtipo" bindingMode="TWO_WAY" />
               </Bindings>
               <Items>
                 <Bindings>
@@ -445,6 +472,13 @@
               </Items>
             </SelectionBox>
 
+            <InputArea name="Folio de tienda">
+              <Bindings>
+                <Resource target="Label" type="Label" defaultLabel="Folio Tienda" id="Folio_tiendaID" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.folio_tienda" bindingMode="TWO_WAY" />
+              </Bindings>
+            </InputArea>
+
           </GroupElement>
 
 
@@ -472,35 +506,6 @@
                 <Resource target="Label" type="Label" id="territorioID" defaultLabel="Territorio *" />
                 <Binding target="DataSource" toggleId="DomCusTerritorio" bindingMode="TWO_WAY" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.territorio" bindingMode="TWO_WAY" />
-              </Bindings>
-              <Items>
-                <Bindings>
-                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
-                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
-                </Bindings>
-              </Items>
-            </SelectionBox>
-
-
-            <SelectionBox name="Tipo">
-              <Bindings>
-                <Resource target="Label" type="Label" id="tipoID" defaultLabel="Tipo *" />
-                <Binding target="DataSource" toggleId="DomBpaCompanyType" bindingMode="TWO_WAY" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.tipo" bindingMode="TWO_WAY" />
-              </Bindings>
-              <Items>
-                <Bindings>
-                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
-                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
-                </Bindings>
-              </Items>
-            </SelectionBox>
-
-            <SelectionBox name="Subtipo">
-              <Bindings>
-                <Resource target="Label" type="Label" id="subtipoID" defaultLabel="Subtipo *" />
-                <Binding target="DataSource" toggleId="DomCusSubtipo" bindingMode="TWO_WAY" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.subtipo" bindingMode="TWO_WAY" />
               </Bindings>
               <Items>
                 <Bindings>

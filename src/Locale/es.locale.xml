@@ -994,7 +994,7 @@
         <Label id="UpdateGeoCoordinatesId" text="Actualizar ubicación" translationStatus="7" />
         <Label id="IdentificationId" text="Identificación" translationStatus="7" />
         <Label id="IdId" text="Id." translationStatus="7" />
-        <Label id="NameId" text="Nombre" translationStatus="7" />
+        <Label id="NameId" text="Nombre *" translationStatus="7" />
         <Label id="Name2Id" text="Segundo nombre" translationStatus="7" />
         <Label id="MatchcodeId" text="Código de coincidencia" translationStatus="7" />
         <Label id="StreetId" text="Calle, numero y colonia *" translationStatus="7" />

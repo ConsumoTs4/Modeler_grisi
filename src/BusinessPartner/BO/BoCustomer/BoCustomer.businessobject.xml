@@ -54,7 +54,7 @@
     <SimpleProperty name="telefono2"  storable="true" dataSourceProperty="telefono2" />
     <SimpleProperty name="razonsocial"  storable="true" dataSourceProperty="razonsocial" />
     <SimpleProperty name="brick" type="DomString" storable="true" dataSourceProperty="brick" />
-
+    <SimpleProperty name="folio_tienda" type="DomString" storable="true" dataSourceProperty="folio_tienda" />
 
 
     <!-- <SimpleProperty name="estatus" type="DomString" storable="true" dataSourceProperty="estatus" />
