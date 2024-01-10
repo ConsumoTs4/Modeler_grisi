@@ -458,7 +458,7 @@
               </Items>
             </SelectionBox>
 
-            <SelectionBox name="MotivoDeBaja">
+            <SelectionBox name="MotivoDeBaja" disabled="true">
               <Bindings>
                 <Resource target="Label" type="Label" id="MotivoDeBaja" defaultLabel="Motivo de baja" />
                 <Binding target="DataSource" toggleId="DomCusMotivoBaja" bindingMode="TWO_WAY" />
@@ -472,12 +472,13 @@
               </Items>
             </SelectionBox>
 
-            <InputArea name="Folio de tienda">
+            <InputArea name="Folio de tienda" disabled="true">
               <Bindings>
                 <Resource target="Label" type="Label" defaultLabel="Folio Tienda" id="Folio_tiendaID" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.folio_tienda" bindingMode="TWO_WAY" />
               </Bindings>
             </InputArea>
+            
 
           </GroupElement>
 
@@ -641,6 +642,7 @@
               <Resource target="Title" type="Label" id="Medicion_medicoId" defaultLabel="Medicion del médico" />
             </Bindings>
 
+            
             <SelectionBox name="Quintil del medico">
               <Bindings>
                 <Resource target="Label" type="Label" id="quintil_del_medicoID" defaultLabel="Quintil del medico" />
@@ -675,6 +677,13 @@
                 </Bindings>
               </Items>
             </SelectionBox>
+
+            <InputArea name="Categoria del medico" editable="false">
+              <Bindings>
+                <Resource target="Label" type="Label" defaultLabel="Categoria del medico" id="categoria_del_medico" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.categoria_del_medico" bindingMode="TWO_WAY" />
+              </Bindings>
+            </InputArea>
 
           </GroupElement>
 

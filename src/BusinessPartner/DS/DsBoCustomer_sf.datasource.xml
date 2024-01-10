@@ -55,6 +55,7 @@
     <Attribute name="razonsocial" table="Account" column="GCG_RazonSocial__c" />
     <Attribute name="brick" table="Account" column="GCG_Brick__c " />
     <Attribute name="folio_tienda" table="Account" column="GCG_FolioTienda__c " />
+    <Attribute name="categoria_del_medico" table="Account" column="GCG_CategoriaMedico__c" />
 
     <!-- <Attribute name="estatus" table="Account" column="GCG_Estatus__c" />
     <Attribute name="fecha_de_alta" table="Account" column="GCG_FechaAlta__c" />
