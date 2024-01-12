@@ -64,7 +64,7 @@ var cedulaProfesional = me.cedulaProfesional != undefined ? Utils.isEmptyString(
 //var calle = me.street != undefined ? Utils.isEmptyString(me.getStreet().trim()) : true;
 //var codigoPostal = me.codigo_postal != undefined ? Utils.isEmptyString(me.getCodigo_postal().trim()) : true;
 // var colonia = me.colonia != undefined ? Utils.isEmptyString(me.getColonia().trim()) : true;
-apellidoPaterno || nombre || especialidad || pacientesPorSemana || honorarios || cedulaProfesional
+
 if (me.getBoBpaMeta().getId() == "Médico" && (apellidoPaterno || nombre || especialidad || pacientesPorSemana || honorarios || cedulaProfesional))
 {
   messageCollector.add({
@@ -125,6 +125,20 @@ if ((me.getBoBpaMeta().getId() == "Farmacia Indepentiente" || me.getBoBpaMeta().
   });
 }
 
+var street01 = me.loCustomerAddress.current.street != undefined ? Utils.isEmptyString(me.getLoCustomerAddress().getCurrent().getStreet().trim()) : true;
+var zipCode01 = me.loCustomerAddress.current.zipCode != undefined ? Utils.isEmptyString(me.getLoCustomerAddress().getCurrent().getZipCode().trim()) : true;
+var city01 = me.loCustomerAddress.current.city != undefined ? Utils.isEmptyString(me.getLoCustomerAddress().getCurrent().getCity().trim()) : true;
+var countryState01 = me.loCustomerAddress.current.countryState != undefined ? Utils.isEmptyString(me.getLoCustomerAddress().getCurrent().getCountryState().trim()) : true;
+
+if (street01 || zipCode01 || city01 || countryState01)
+{
+  messageCollector.add({
+    "level": "error",
+    "objectClass": "BoCustomer",
+    "messageID": "CasCustomerCamposRequeridos",
+    "messageParams": {}
+  });
+}
 
     ///////////////////////////////////////////////////////////////////////////////////////////////
     //                                                                                           //
