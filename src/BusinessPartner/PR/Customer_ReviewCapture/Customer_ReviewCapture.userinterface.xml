@@ -458,7 +458,7 @@
               </Items>
             </SelectionBox>
 
-            <SelectionBox name="MotivoDeBaja" disabled="true">
+            <SelectionBox name="MotivoDeBaja">
               <Bindings>
                 <Resource target="Label" type="Label" id="MotivoDeBaja" defaultLabel="Motivo de baja" />
                 <Binding target="DataSource" toggleId="DomCusMotivoBaja" bindingMode="TWO_WAY" />
@@ -478,7 +478,7 @@
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.folio_tienda" bindingMode="TWO_WAY" />
               </Bindings>
             </InputArea>
-            
+
 
           </GroupElement>
 
@@ -642,7 +642,7 @@
               <Resource target="Title" type="Label" id="Medicion_medicoId" defaultLabel="Medicion del médico" />
             </Bindings>
 
-            
+
             <SelectionBox name="Quintil del medico">
               <Bindings>
                 <Resource target="Label" type="Label" id="quintil_del_medicoID" defaultLabel="Quintil del medico" />
