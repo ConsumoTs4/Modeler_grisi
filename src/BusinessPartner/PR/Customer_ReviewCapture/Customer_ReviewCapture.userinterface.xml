@@ -239,7 +239,7 @@
             </SelectionBox>
             <InputArea name="CedulaProfesional">
               <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="Cedula Profesional *" id="cedulaProfesional" />
+                <Resource target="Label" type="Label" defaultLabel="Cédula Profesional *" id="cedulaProfesional" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.cedulaProfesional" bindingMode="TWO_WAY" />
               </Bindings>
             </InputArea>
@@ -280,7 +280,7 @@
 
             <SelectionBox name="Tipo de Institucion">
               <Bindings>
-                <Resource target="Label" type="Label" id="Tipo_de_InstitucionID" defaultLabel="Tipo de Institucion *" />
+                <Resource target="Label" type="Label" id="Tipo_de_InstitucionID" defaultLabel="Tipo de Institución *" />
                 <Binding target="DataSource" toggleId="DomCusTipoInstitucion" bindingMode="TWO_WAY" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.tipo_de_institucion" bindingMode="TWO_WAY" />
               </Bindings>
@@ -413,7 +413,7 @@
 
             <CheckBox name="Lider de Opinion" disabled="false">
               <Bindings>
-                <Resource target="Label" type="Label" id="lider_de_opinionID" defaultLabel="Lider de Opinion" />
+                <Resource target="Label" type="Label" id="lider_de_opinionID" defaultLabel="Lider de Opinión" />
                 <Binding target="checkedValue" binding="ProcessContext::CustomerDetail.lider_de_opinion" bindingMode="ONE_WAY" />
               </Bindings>
             </CheckBox>
@@ -433,7 +433,7 @@
             </SelectionBox>
             <SelectionBox name="Adopcion">
               <Bindings>
-                <Resource target="Label" type="Label" id="adopcionID" defaultLabel="Adopcion" />
+                <Resource target="Label" type="Label" id="adopcionID" defaultLabel="Adopción" />
                 <Binding target="DataSource" toggleId="DomCusAdopcion" bindingMode="TWO_WAY" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.adopcion" bindingMode="TWO_WAY" />
               </Bindings>
@@ -567,7 +567,7 @@
 
             <InputArea name="Costo renta exhibicion adicional">
               <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="Costo renta exhibicion adicional" id="costo_renta_exhibicion_adicional" />
+                <Resource target="Label" type="Label" defaultLabel="Costo renta exhibición adicional" id="costo_renta_exhibicion_adicional" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.costo_renta_exhibicion_adicional" bindingMode="TWO_WAY" />
               </Bindings>
             </InputArea>
@@ -576,7 +576,7 @@
 
           <GroupElement name="DireccionGroup">
             <Bindings>
-              <Resource target="Title" type="Label" id="DireccionId" defaultLabel="Direccion" />
+              <Resource target="Title" type="Label" id="DireccionId" defaultLabel="Dirección" />
             </Bindings>
 
             <InputArea name="Street">
@@ -609,7 +609,7 @@
 
             <InputArea name="ZIP">
                 <Bindings>
-                  <Resource target="Label" type="Label" defaultLabel="Codigo postal" id="ZipCodeId" />
+                  <Resource target="Label" type="Label" defaultLabel="Código postal" id="ZipCodeId" />
                   <Binding target="Value" binding="ProcessContext::CustomerDetail.LoCustomerAddress.MainAddress.zipCode" bindingMode="TWO_WAY" />
                 </Bindings>
               </InputArea>
@@ -629,7 +629,7 @@
 
             <InputArea name="Pais">
               <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="Pais" id="pais" />
+                <Resource target="Label" type="Label" defaultLabel="País" id="pais" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.pais" bindingMode="TWO_WAY" />
               </Bindings>
             </InputArea>
@@ -645,7 +645,7 @@
 
             <SelectionBox name="Quintil del medico">
               <Bindings>
-                <Resource target="Label" type="Label" id="quintil_del_medicoID" defaultLabel="Quintil del medico" />
+                <Resource target="Label" type="Label" id="quintil_del_medicoID" defaultLabel="Quintil del médico" />
                 <Binding target="DataSource" toggleId="DomCusQuintilMedico" bindingMode="TWO_WAY" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.quintil_del_medico" bindingMode="TWO_WAY" />
               </Bindings>
@@ -666,7 +666,7 @@
 
             <SelectionBox name="Prescripcion_1">
               <Bindings>
-                <Resource target="Label" type="Label" id="prescripcion_1ID" defaultLabel="Prescripcion 1" />
+                <Resource target="Label" type="Label" id="prescripcion_1ID" defaultLabel="Prescripción 1" />
                 <Binding target="DataSource" toggleId="DomCusPrescripcion1" bindingMode="TWO_WAY" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.prescripcion_1" bindingMode="TWO_WAY" />
               </Bindings>
@@ -680,7 +680,7 @@
 
             <InputArea name="Categoria del medico" editable="false">
               <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="Categoria del medico" id="categoria_del_medico" />
+                <Resource target="Label" type="Label" defaultLabel="Categoria del médico" id="categoria_del_medico" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.categoria_del_medico" bindingMode="TWO_WAY" />
               </Bindings>
             </InputArea>
@@ -708,7 +708,7 @@
 
             <InputArea name="Telefono2">
               <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="Telefono 2" id="telefono2Id" />
+                <Resource target="Label" type="Label" defaultLabel="Teléfono 2" id="telefono2Id" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.telefono2" bindingMode="TWO_WAY" />
               </Bindings>
             </InputArea>
@@ -742,14 +742,14 @@
             </SelectionBox> -->
             <CheckBox name="medicoGaleno" disabled="false">
               <Bindings>
-                <Resource target="Label" type="Label" id="medicoGalenoID" defaultLabel="Medico Galeno" />
+                <Resource target="Label" type="Label" id="medicoGalenoID" defaultLabel="Médico Galeno" />
                 <Binding target="checkedValue" binding="ProcessContext::CustomerDetail.medicoGaleno" bindingMode="ONE_WAY" />
               </Bindings>
             </CheckBox>
 
             <InputArea name="Razonsocial">
               <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="Razon Social" id="razonsocialId" />
+                <Resource target="Label" type="Label" defaultLabel="Razón Social" id="razonsocialId" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.razonsocial" bindingMode="TWO_WAY" />
               </Bindings>
             </InputArea>
