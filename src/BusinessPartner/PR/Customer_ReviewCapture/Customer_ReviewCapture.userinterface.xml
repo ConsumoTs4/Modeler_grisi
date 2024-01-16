@@ -294,7 +294,7 @@
             <SelectionBox name="Tipo">
               <Bindings>
                 <Resource target="Label" type="Label" id="tipoID" defaultLabel="Tipo *" />
-                <Binding target="DataSource" toggleId="DomBpaCompanyType" bindingMode="TWO_WAY" />
+                <Binding target="DataSource" toggleId="DomCusTipo" bindingMode="TWO_WAY" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.tipo" bindingMode="TWO_WAY" />
               </Bindings>
               <Items>
