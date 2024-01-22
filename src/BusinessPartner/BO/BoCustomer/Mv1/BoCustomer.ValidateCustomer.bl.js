@@ -61,11 +61,14 @@ var especialidad = me.especialidad != undefined ? Utils.isEmptyString(me.getEspe
 var pacientesPorSemana = me.pacientes_por_semana != undefined ? Utils.isEmptyString(me.getPacientes_por_semana().trim()) : true;
 var honorarios = me.honorarios != undefined ? Utils.isEmptyString(me.getHonorarios().trim()) : true;
 var cedulaProfesional = me.cedulaProfesional != undefined ? Utils.isEmptyString(me.getCedulaProfesional().trim()) : true;
+var rfcfd= me.rfc != undefined ? Utils.isEmptyString(me.getRfc().trim()) : true;
+var email1fd= me.email1 != undefined ? Utils.isEmptyString(me.getEmail1().trim()) : true;
+
 //var calle = me.street != undefined ? Utils.isEmptyString(me.getStreet().trim()) : true;
 //var codigoPostal = me.codigo_postal != undefined ? Utils.isEmptyString(me.getCodigo_postal().trim()) : true;
 // var colonia = me.colonia != undefined ? Utils.isEmptyString(me.getColonia().trim()) : true;
 
-if (me.getBoBpaMeta().getId() == "Médico" && (apellidoPaterno || nombre || especialidad || pacientesPorSemana || honorarios || cedulaProfesional))
+if (me.getBoBpaMeta().getId() == "Médico" && (apellidoPaterno || nombre || especialidad || pacientesPorSemana || honorarios || cedulaProfesional ||rfcfd))
 {
   messageCollector.add({
     "level": "error",
@@ -77,11 +80,12 @@ if (me.getBoBpaMeta().getId() == "Médico" && (apellidoPaterno || nombre || espe
 
 var tipoH = me.tipo_de_institucion != undefined ? Utils.isEmptyString(me.getTipo_de_institucion().trim()) : true;
 var nombreH = me.name != undefined ? Utils.isEmptyString(me.getName().trim()) : true;
+var rfcfd= me.rfc != undefined ? Utils.isEmptyString(me.getRfc().trim()) : true;
 // var numExt = me.num_exterior != undefined ? Utils.isEmptyString(me.getNum_exterior().trim()) : true;
 //var codigoPostalH = me.codigo_postal != undefined ? Utils.isEmptyString(me.getCodigo_postal().trim()) : true;
 // var coloniaH = me.colonia != undefined ? Utils.isEmptyString(me.getColonia().trim()) : true;
 
-if (me.getBoBpaMeta().getId() == "Hospital" && (tipoH || nombreH ))
+if (me.getBoBpaMeta().getId() == "Hospital" && (tipoH || nombreH || rfcfd))
 {
   messageCollector.add({
     "level": "error",
@@ -97,8 +101,9 @@ if (me.getBoBpaMeta().getId() == "Hospital" && (tipoH || nombreH ))
 // var coloniaF = me.colonia != undefined ? Utils.isEmptyString(me.getColonia().trim()) : true;
 var formato = me.formato_de_farmacia != undefined ? Utils.isEmptyString(me.getFormato_de_farmacia().trim()) : true;
 var subtipoFarmacia = me.subtipoFarmacia != undefined ? Utils.isEmptyString(me.getSubtipoFarmacia().trim()) : true;
-var tipoF = me.tipo != undefined ? Utils.isEmptyString(me.getTipo().trim()) : true; formato || subtipoFarmacia || tipoF
-if (( me.getBoBpaMeta().getId() == "Farmacias Digrimex") && (formato || subtipoFarmacia || tipoF))
+var rfcfd= me.rfc != undefined ? Utils.isEmptyString(me.getRfc().trim()) : true;
+var tipoF = me.tipo != undefined ? Utils.isEmptyString(me.getTipo().trim()) : true; formato || subtipoFarmacia || tipoF || rfcfd
+if (( me.getBoBpaMeta().getId() == "Farmacias Digrimex") && (formato || subtipoFarmacia || tipoF || rfcfd))
 {
   messageCollector.add({
     "level": "error",

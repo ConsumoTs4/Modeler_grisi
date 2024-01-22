@@ -93,7 +93,10 @@
     <Attribute name="quintil_del_medico" table="Account" column="GCG_QuintilMedico__c" />
     <Attribute name="territorio" table="Account" column="GCG_Territorio__c" />
     <Attribute name="subtipoFarmacia" table="Account" column="GCG_SubtipoFarmacia__c" />
+    <Attribute name="tipoAseguradora" table="Account" column="GCG_EsDeTipoAseguradora__c" />
+    <Attribute name="grupoFarmaciaIndependiente" table="Account" column="GCG_GrupoFarmaciaIndependiente__c" />
 
+    
 
 
     <Attribute name="medicoGaleno" table="Account" column="GCG_MedicoGaleno__c" />

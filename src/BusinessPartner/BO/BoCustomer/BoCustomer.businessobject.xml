@@ -92,8 +92,9 @@
     <SimpleProperty name="territorio" type="DomCusTerritorio" storable="true" dataSourceProperty="territorio" />
     <SimpleProperty name="subtipoFarmacia" type="DomcusSubtipoFarmacia" storable="true" dataSourceProperty="subtipoFarmacia" />
     <SimpleProperty name="prescripcion_1"  type="DomCusPrescripcion1" storable="true" dataSourceProperty="prescripcion_1" />
-
-
+    <SimpleProperty name="tipoAseguradora"  type="DomCustEsDeTipoAseguradora" storable="true" dataSourceProperty="tipoAseguradora" />
+    <SimpleProperty name="grupoFarmaciaIndependiente"  type="DomCustGrupoFarmaciaIndependiente" storable="true" dataSourceProperty="grupoFarmaciaIndependiente" />
+    
     <SimpleProperty name="medicoGaleno" type="DomBool" storable="true" dataSourceProperty="medicoGaleno" />
     <SimpleProperty name="requiereFactura" type="DomBool" storable="true" dataSourceProperty="requiereFactura" />
     <SimpleProperty name="cuenta_con_exhibición_adicional" type="DomBool" storable="true" dataSourceProperty="cuenta_con_exhibición_adicional" />

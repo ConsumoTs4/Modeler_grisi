@@ -244,12 +244,7 @@
               </Bindings>
             </InputArea>
 
-            <InputArea name="RFC">
-              <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="RFC" id="rfc" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.rfc" bindingMode="TWO_WAY" />
-              </Bindings>
-            </InputArea>
+           
 
             <SelectionBox name="Especialidad">
               <Bindings>
@@ -544,6 +539,37 @@
               </Items>
             </SelectionBox>
 
+            <SelectionBox name="tipoAseguradora">
+              <Bindings>
+                <Resource target="Label" type="Label" id="tipoAseguradoraID" defaultLabel="¿Es de tipo Aseguradora?" />
+                <Binding target="DataSource" toggleId="DomCustEsDeTipoAseguradora" bindingMode="TWO_WAY" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.tipoAseguradora" bindingMode="TWO_WAY" />
+              </Bindings>
+              <Items>
+                <Bindings>
+                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                </Bindings>
+              </Items>
+            </SelectionBox>
+
+            <SelectionBox name="grupoFarmaciaIndependiente">
+              <Bindings>
+                <Resource target="Label" type="Label" id="grupoFarmaciaIndependienteID" defaultLabel="Grupo Farmacia Independiente" />
+                <Binding target="DataSource" toggleId="DomCustGrupoFarmaciaIndependiente" bindingMode="TWO_WAY" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.grupoFarmaciaIndependiente" bindingMode="TWO_WAY" />
+              </Bindings>
+              <Items>
+                <Bindings>
+                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                </Bindings>
+              </Items>
+            </SelectionBox>
+
+            
+
+
             <!-- <CheckBox name="Cuenta con exhibición adicional" disabled="false">
               <Bindings>
                 <Resource target="Label" type="Label" id="cuenta_con_exhibición_adicionalID" defaultLabel="Cuenta con exhibición adicional" />
@@ -551,12 +577,12 @@
               </Bindings>
             </CheckBox> -->
 
-            <CheckBox name="Cuenta con exhibición adicional" disabled="false">
+            <!-- <CheckBox name="Cuenta con exhibición adicional" disabled="false">
               <Bindings>
                 <Resource target="Label" type="Label" id="cuenta_con_exhibición_adicionalID" defaultLabel="Cuenta con exhibición adicional" />
                 <Binding target="checkedValue" binding="ProcessContext::CustomerDetail.cuenta_con_exhibición_adicional" bindingMode="ONE_WAY" />
               </Bindings>
-            </CheckBox>
+            </CheckBox> -->
 
             <!-- <InputArea name="Cuenta con exhibición adicional">
               <Bindings>
@@ -565,12 +591,12 @@
               </Bindings>
             </InputArea> -->
 
-            <InputArea name="Costo renta exhibicion adicional">
+            <!-- <InputArea name="Costo renta exhibicion adicional">
               <Bindings>
                 <Resource target="Label" type="Label" defaultLabel="Costo renta exhibición adicional" id="costo_renta_exhibicion_adicional" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.costo_renta_exhibicion_adicional" bindingMode="TWO_WAY" />
               </Bindings>
-            </InputArea>
+            </InputArea> -->
 
           </GroupElement>
 
@@ -627,12 +653,12 @@
               </Bindings>
             </InputArea>
 
-            <InputArea name="Pais">
+            <!-- <InputArea name="Pais">
               <Bindings>
                 <Resource target="Label" type="Label" defaultLabel="País" id="pais" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.pais" bindingMode="TWO_WAY" />
               </Bindings>
-            </InputArea>
+            </InputArea> -->
 
           </GroupElement>
 
@@ -760,6 +786,12 @@
                 <Binding target="checkedValue" binding="ProcessContext::CustomerDetail.requiereFactura" bindingMode="ONE_WAY" />
               </Bindings>
             </CheckBox>
+            <InputArea name="RFC">
+              <Bindings>
+                <Resource target="Label" type="Label" defaultLabel="RFC *" id="rfc" />
+                <Binding target="Value" binding="ProcessContext::CustomerDetail.rfc" bindingMode="TWO_WAY" />
+              </Bindings>
+            </InputArea>
 
             <!-- <SelectionBox name="Requiere_Factura">
               <Bindings>

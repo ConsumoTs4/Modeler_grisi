@@ -833,7 +833,7 @@
         <Label id="StreetId" text="Calle, número y colonia *" translationStatus="7" />
         <Label id="HouseNumberId" text="Número de casa" translationStatus="7" />
         <Label id="ZipCodeId" text="Código postal *" translationStatus="7" />
-        <Label id="CityId" text="Ciudad *" translationStatus="7" />
+        <Label id="CityId" text="Alcaldía/Municipio *" translationStatus="7" />
         <Label id="CountryStateId" text="Estado/Provincia *" translationStatus="7" />
         <Label id="CommunicationId" text="Comunicación" translationStatus="7" />
         <Label id="PhoneId" text="Teléfono" translationStatus="7" />
@@ -852,7 +852,7 @@
         <Label id="LatitudeId" text="Latitud" translationStatus="7" />
         <Label id="TradeOrgId" text="Organización mercantil" translationStatus="7" />
         <Label id="TradeOrgNameId" text="Nombre" translationStatus="7" />
-        <Label id="TradeOrgCityId" text="Ciudad *" translationStatus="7" />
+        <Label id="TradeOrgCityId" text="Alcaldía/Municipio *" translationStatus="7" />
         <Label id="TradeOrgIdId" text="Id." translationStatus="7" />
         <Label id="NewOpeningHourId" text="Nuevo" translationStatus="7" />
         <Label id="OpeningDaysLabelId" text="Días de apertura" translationStatus="7" />
@@ -948,7 +948,7 @@
         <Label id="SplittingRuleId" text="Regla de división" translationStatus="7" />
         <Label id="NavigateId" text="Navegar a cliente" translationStatus="7" />
         <Label id="RelIdLabel" text="Id." translationStatus="7" />
-        <Label id="RelCityLabel" text="Ciudad *" translationStatus="7" />
+        <Label id="RelCityLabel" text="Alcaldía/Municipio *" translationStatus="7" />
         <Label id="ListingClassificationId" text="Clasificación de lista" translationStatus="7" />
         <Label id="AcceptListingModuleChangesId" text="Listo" translationStatus="7" />
         <Label id="DepartmentId" text="Departamento" translationStatus="7" />
@@ -1000,7 +1000,7 @@
         <Label id="StreetId" text="Calle, numero y colonia *" translationStatus="7" />
         <Label id="HouseNumberId" text="Número de casa" translationStatus="7" />
         <Label id="ZipCodeId" text="Código postal *" translationStatus="7" />
-        <Label id="CityId" text="Ciudad *" translationStatus="7" />
+        <Label id="CityId" text="Alcaldía/Municipio *" translationStatus="7" />
         <Label id="CountryStateId" text="Estado/Provincia *" translationStatus="7" />
         <Label id="CommunicationId" text="Comunicación" translationStatus="7" />
         <Label id="PhoneId" text="Teléfono" translationStatus="7" />
@@ -1019,7 +1019,7 @@
         <Label id="LatitudeId" text="Latitud" translationStatus="7" />
         <Label id="TradeOrgId" text="Organización mercantil" translationStatus="7" />
         <Label id="TradeOrgNameId" text="Nombre" translationStatus="7" />
-        <Label id="TradeOrgCityId" text="Ciudad *" translationStatus="7" />
+        <Label id="TradeOrgCityId" text="Alcaldía/Municipio *" translationStatus="7" />
         <Label id="TradeOrgIdId" text="Id." translationStatus="7" />
         <Label id="NewOpeningHourId" text="Nuevo" translationStatus="7" />
         <Label id="OpeningDaysLabelId" text="Días de apertura" translationStatus="7" />
@@ -1120,7 +1120,7 @@
         <Label id="SortByDistanceId" text="Ordenar por distancia" translationStatus="7" />
         <Label id="SortByAlphabetId" text="Ordenar alfabéticamente" translationStatus="7" />
         <Label id="RelIdLabel" text="Id." translationStatus="7" />
-        <Label id="RelCityLabel" text="Ciudad *" translationStatus="7" />
+        <Label id="RelCityLabel" text="Alcaldía/Municipio *" translationStatus="7" />
         <Label id="DepartmentId" text="Departamento" translationStatus="7" />
         <Label id="DescriptionId" text="Descripción" translationStatus="7" />
         <Label id="OpenHoursId" text="Horas de apertura" translationStatus="7" />
@@ -1193,7 +1193,7 @@
         <Label id="CustomerName" text="Nombre del cliente" translationStatus="7" />
         <Label id="Street" text="Calle, número y colonia *" translationStatus="7" />
         <Label id="ZIP" text="Código postal *" translationStatus="7" />
-        <Label id="City" text="Ciudad *" translationStatus="7" />
+        <Label id="City" text="Alcaldía/Municipio *" translationStatus="7" />
         <Label id="State" text="Estado/Provincia *" translationStatus="7" />
         <Label id="AllDay" text="Todo el día" translationStatus="7" />
         <Label id="VisitDateEnd" text="Fecha de finalización de visita" translationStatus="7" />
@@ -1261,7 +1261,7 @@
         <Label id="ActivitiesListTitle" text="Actividades" translationStatus="7" />
         <Label id="VisitType" text="Tipo de visita" translationStatus="7" />
         <Label id="ZIP" text="Código postal *" translationStatus="7" />
-        <Label id="City" text="Ciudad *" translationStatus="7" />
+        <Label id="City" text="Alcaldía/Municipio *" translationStatus="7" />
         <Label id="State" text="Estado/Provincia *" translationStatus="7" />
         <Label id="separatorLabelId" text=" - " translationStatus="7" />
         <Label id="TimeFromThruId" text="Hora desde / hasta" translationStatus="7" />
@@ -4210,7 +4210,7 @@
         <Label id="Customer_Name" text="Nombre" translationStatus="7" />
         <Label id="Customer_Street" text="Calle, número y colonia *" translationStatus="7" />
         <Label id="Customer_ZipCode" text="Código postal *" translationStatus="7" />
-        <Label id="Customer_City" text="Ciudad *" translationStatus="7" />
+        <Label id="Customer_City" text="Alcaldía/Municipio *" translationStatus="7" />
         <Label id="Customer_State" text="Estado/Provincia *" translationStatus="7" />
         <Label id="Customer_Prio" text="Prioridad" translationStatus="7" />
         <Label id="Customer_ClassOfTrade" text="Clase de intercambio" translationStatus="7" />
@@ -4223,7 +4223,7 @@
         <Label id="Customer_Name" text="Nombre" translationStatus="7" />
         <Label id="Customer_Street" text="Calle, número y colonia *" translationStatus="7" />
         <Label id="Customer_ZipCode" text="Código postal *" translationStatus="7" />
-        <Label id="Customer_City" text="Ciudad *" translationStatus="7" />
+        <Label id="Customer_City" text="Alcaldía/Municipio *" translationStatus="7" />
         <Label id="Customer_State" text="Estado/Provincia *" translationStatus="7" />
         <Label id="Customer_Prio" text="Prioridad" translationStatus="7" />
         <Label id="Customer_ClassOfTrade" text="Clase de intercambio" translationStatus="7" />
@@ -4347,7 +4347,7 @@
         <Label id="JobLists_Activity" text="Actividad" translationStatus="7" />
         <Label id="JobLists_Street" text="Calle, número y colonia *" translationStatus="7" />
         <Label id="JobLists_ZIP" text="Código postal *" translationStatus="7" />
-        <Label id="JobLists_City" text="Ciudad *" translationStatus="7" />
+        <Label id="JobLists_City" text="Alcaldía/Municipio *" translationStatus="7" />
         <Label id="JobLists_State" text="Estado/Provinci *" translationStatus="7" />
         <Label id="JobLists_validFrom" text="Válido desde" translationStatus="7" />
         <Label id="JobLists_validThru" text="Válido hasta" translationStatus="7" />
@@ -4358,7 +4358,7 @@
         <Label id="Orderer_Name" text="Nombre" translationStatus="7" />
         <Label id="Orderer_Street" text="Calle, número y colonia *" translationStatus="7" />
         <Label id="Orderer_ZipCode" text="Código postal *" translationStatus="7" />
-        <Label id="Orderer_City" text="Ciudad *" translationStatus="7" />
+        <Label id="Orderer_City" text="Alcaldía/Municipio *" translationStatus="7" />
         <Label id="Orderer_State" text="Estado/Provincia *" translationStatus="7" />
         <Label id="Orderer_Prio" text="Prioridad" translationStatus="7" />
         <Label id="Orderer_ClassOfTrade" text="Clase de intercambio" translationStatus="7" />
@@ -4432,7 +4432,7 @@
       <AdvancedSearchObject id="AsoContactPartnerOverview">
         <Label id="ContactPartner_Street" text="Calle, número y colonia *" translationStatus="7" />
         <Label id="ContactPartner_ZIP" text="Código postal *" translationStatus="7" />
-        <Label id="ContactPartner_City" text="Ciudad *" translationStatus="7" />
+        <Label id="ContactPartner_City" text="Alcaldía/Municipio *" translationStatus="7" />
         <Label id="ContactPartner_State" text="Estado/Provincia" translationStatus="7" />
         <Label id="ContactPartner_FirstName" text="Nombre" translationStatus="7" />
         <Label id="ContactPartner_LastName" text="Apellidos" translationStatus="7" />
