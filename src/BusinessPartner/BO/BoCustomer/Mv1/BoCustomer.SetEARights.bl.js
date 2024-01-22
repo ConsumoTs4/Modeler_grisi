@@ -119,6 +119,9 @@ if(me.getBoBpaMeta().getId() == "Hospital") {
   acl.removeRight(AclObjectType.PROPERTY, "cuenta_con_exhibición_adicional", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "costo_renta_exhibicion_adicional", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "brick", AclPermission.VISIBLE);
+  acl.removeRight(AclObjectType.PROPERTY, "grupoFarmaciaIndependiente", AclPermission.VISIBLE);
+  acl.removeRight(AclObjectType.PROPERTY, "tipoAseguradora", AclPermission.VISIBLE);
+
 }else if(me.getBoBpaMeta().getId() == "Médico") {
   acl.removeRight(AclObjectType.PROPERTY, "folio_tienda", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "subtipoFarmacia", AclPermission.VISIBLE);
@@ -137,6 +140,10 @@ if(me.getBoBpaMeta().getId() == "Hospital") {
   acl.removeRight(AclObjectType.PROPERTY, "costo_renta_exhibicion_adicional", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "parent_Account", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "brick", AclPermission.VISIBLE);
+  acl.removeRight(AclObjectType.PROPERTY, "grupoFarmaciaIndependiente", AclPermission.VISIBLE);
+  acl.removeRight(AclObjectType.PROPERTY, "tipoAseguradora", AclPermission.VISIBLE);
+
+
 }else if(me.getBoBpaMeta().getId() == "Farmacias Digrimex") {
   acl.removeRight(AclObjectType.PROPERTY, "folio_tienda", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "subtipo", AclPermission.VISIBLE);
@@ -167,7 +174,6 @@ if(me.getBoBpaMeta().getId() == "Hospital") {
   acl.removeRight(AclObjectType.PROPERTY, "tel_1", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "tel_2", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "celular", AclPermission.VISIBLE);
-  acl.removeRight(AclObjectType.PROPERTY, "email1", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "medico_Galeno", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "requiere_factura", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "lider_de_opinion", AclPermission.VISIBLE);
@@ -186,6 +192,8 @@ if(me.getBoBpaMeta().getId() == "Hospital") {
   acl.removeRight(AclObjectType.PROPERTY, "cuenta_con_exhibición_adicional", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "costo_renta_exhibicion_adicional", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "parent_Account", AclPermission.VISIBLE);
+  acl.removeRight(AclObjectType.PROPERTY, "grupoFarmaciaIndependiente", AclPermission.VISIBLE);
+
 
 }else if(me.getBoBpaMeta().getId() == "Farmacia Farma") {
   // acl.removeRight(AclObjectType.PROPERTY, "folio_tienda", AclPermission.EDIT);
@@ -234,6 +242,10 @@ if(me.getBoBpaMeta().getId() == "Hospital") {
   acl.removeRight(AclObjectType.PROPERTY, "rfc", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "subtipo", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "formato_de_farmacia", AclPermission.VISIBLE);
+  acl.removeRight(AclObjectType.PROPERTY, "costo_renta_exhibicion_adicional", AclPermission.VISIBLE);
+  acl.removeRight(AclObjectType.PROPERTY, "grupoFarmaciaIndependiente", AclPermission.VISIBLE);
+  acl.removeRight(AclObjectType.PROPERTY, "tipoAseguradora", AclPermission.VISIBLE);
+
 }else if(me.getBoBpaMeta().getId() == "Farmacia Independiente") {
   // acl.removeRight(AclObjectType.PROPERTY, "folio_tienda", AclPermission.EDIT);
   acl.removeRight(AclObjectType.PROPERTY, "tipo", AclPermission.VISIBLE);
@@ -281,11 +293,15 @@ if(me.getBoBpaMeta().getId() == "Hospital") {
   acl.removeRight(AclObjectType.PROPERTY, "rfc", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "subtipo", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "formato_de_farmacia", AclPermission.VISIBLE);
+  acl.removeRight(AclObjectType.PROPERTY, "costo_renta_exhibicion_adicional", AclPermission.VISIBLE);
+  acl.removeRight(AclObjectType.PROPERTY, "tipoAseguradora", AclPermission.VISIBLE);
 }
 
 var name = me.name != undefined ? Utils.isEmptyString(me.getName().trim()) : true;
 if (name) {
   acl.removeRight(AclObjectType.PROPERTY, "motivo", AclPermission.VISIBLE);
+  acl.removeRight(AclObjectType.PROPERTY, "categoria_del_medico", AclPermission.VISIBLE);
+  
 }
 
 switch (mode) {
