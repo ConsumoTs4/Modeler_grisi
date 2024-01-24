@@ -39,7 +39,6 @@
     <SimpleProperty name="cedulaProfesional" type="DomBpaName" storable="true" dataSourceProperty="cedulaProfesional" />
     <SimpleProperty name="honorarios" type="DomString" storable="true" dataSourceProperty="honorarios" />
     <SimpleProperty name="rfc" type="DomString" storable="true" dataSourceProperty="rfc" />
-    <SimpleProperty name="costo_renta_exhibicion_adicional"  storable="true" dataSourceProperty="costo_renta_exhibicion_adicional" />
     <SimpleProperty name="calle" type="DomString" storable="true" dataSourceProperty="calle"/>
     <SimpleProperty name="num_exterior" type="DomString" storable="true" dataSourceProperty="num_exterior" />
     <SimpleProperty name="numero_interior" type="DomString" storable="true" dataSourceProperty="numero_interior" />
@@ -50,23 +49,12 @@
     <SimpleProperty name="ruta" type="DomString" storable="true" dataSourceProperty="ruta"/>
     <SimpleProperty name="pais" type="DomString" storable="true" dataSourceProperty="pais" />
 
-    <SimpleProperty name="celular"  storable="true" dataSourceProperty="celular" />
-    <SimpleProperty name="telefono2"  storable="true" dataSourceProperty="telefono2" />
-    <SimpleProperty name="razonsocial"  storable="true" dataSourceProperty="razonsocial" />
+    <SimpleProperty name="celular" type="DomString" storable="true" dataSourceProperty="celular" />
+    <SimpleProperty name="telefono2" type="DomString" storable="true" dataSourceProperty="telefono2" />
+    <SimpleProperty name="razonsocial" type="DomString" storable="true" dataSourceProperty="razonsocial" />
     <SimpleProperty name="brick" type="DomString" storable="true" dataSourceProperty="brick" />
     <SimpleProperty name="folio_tienda" type="DomString" storable="true" dataSourceProperty="folio_tienda" />
     <SimpleProperty name="categoria_del_medico" type="DomString" storable="true" dataSourceProperty="categoria_del_medico" />
-
-
-    <!-- <SimpleProperty name="estatus" type="DomString" storable="true" dataSourceProperty="estatus" />
-    <SimpleProperty name="fecha_de_alta"  storable="true" dataSourceProperty="fecha_de_alta" />
-    <SimpleProperty name="account_name" type="DomString" storable="true" dataSourceProperty="account_name"/>
-    <SimpleProperty name="brick" type="DomString" storable="true" dataSourceProperty="brick" />
-    <SimpleProperty name="prescripcion_1"  storable="true" dataSourceProperty="prescripcion_1" />
-    <SimpleProperty name="participacion_de_la_auditoria"  storable="true" dataSourceProperty="participacion_de_la_auditoria" />
-    <SimpleProperty name="celular"  storable="true" dataSourceProperty="celular" />
-    <SimpleProperty name="telefono2"  storable="true" dataSourceProperty="telefono2" />
-    <SimpleProperty name="razonsocial"  storable="true" dataSourceProperty="razonsocial" /> -->
 
     <!-- Picklist-->
 
@@ -94,15 +82,9 @@
     <SimpleProperty name="prescripcion_1"  type="DomCusPrescripcion1" storable="true" dataSourceProperty="prescripcion_1" />
     <SimpleProperty name="tipoAseguradora"  type="DomCustEsDeTipoAseguradora" storable="true" dataSourceProperty="tipoAseguradora" />
     <SimpleProperty name="grupoFarmaciaIndependiente"  type="DomCustGrupoFarmaciaIndependiente" storable="true" dataSourceProperty="grupoFarmaciaIndependiente" />
-    
+
     <SimpleProperty name="medicoGaleno" type="DomBool" storable="true" dataSourceProperty="medicoGaleno" />
     <SimpleProperty name="requiereFactura" type="DomBool" storable="true" dataSourceProperty="requiereFactura" />
-    <SimpleProperty name="cuenta_con_exhibición_adicional" type="DomBool" storable="true" dataSourceProperty="cuenta_con_exhibición_adicional" />
-
-
-
-
-
   </SimpleProperties>
   <ObjectLookups>
     <!-- luCustomerTradeOrg: load immediate -->

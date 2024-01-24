@@ -54,95 +54,72 @@ The system saves and validates the customer data.
 The customer Name must not be empty.
 The Id must be unique within the sales organization.
 */
-
-var apellidoPaterno = me.apellido_paterno != undefined ? Utils.isEmptyString(me.getApellido_paterno().trim()) : true;
-var nombre = me.name != undefined ? Utils.isEmptyString(me.getName().trim()) : true;
-var especialidad = me.especialidad != undefined ? Utils.isEmptyString(me.getEspecialidad().trim()) : true;
-var pacientesPorSemana = me.pacientes_por_semana != undefined ? Utils.isEmptyString(me.getPacientes_por_semana().trim()) : true;
-var honorarios = me.honorarios != undefined ? Utils.isEmptyString(me.getHonorarios().trim()) : true;
-var cedulaProfesional = me.cedulaProfesional != undefined ? Utils.isEmptyString(me.getCedulaProfesional().trim()) : true;
-var rfcfd= me.rfc != undefined ? Utils.isEmptyString(me.getRfc().trim()) : true;
-var email1fd= me.email1 != undefined ? Utils.isEmptyString(me.getEmail1().trim()) : true;
-
-//var calle = me.street != undefined ? Utils.isEmptyString(me.getStreet().trim()) : true;
-//var codigoPostal = me.codigo_postal != undefined ? Utils.isEmptyString(me.getCodigo_postal().trim()) : true;
-// var colonia = me.colonia != undefined ? Utils.isEmptyString(me.getColonia().trim()) : true;
-
-if (me.getBoBpaMeta().getId() == "Médico" && (apellidoPaterno || nombre || especialidad || pacientesPorSemana || honorarios || cedulaProfesional ||rfcfd))
-{
-  messageCollector.add({
-    "level": "error",
-    "objectClass": "BoCustomer",
-    "messageID": "CasCustomerCamposRequeridos",
-    "messageParams": {}
-  });
-}
-
-var tipoH = me.tipo_de_institucion != undefined ? Utils.isEmptyString(me.getTipo_de_institucion().trim()) : true;
-var nombreH = me.name != undefined ? Utils.isEmptyString(me.getName().trim()) : true;
-var rfcfd= me.rfc != undefined ? Utils.isEmptyString(me.getRfc().trim()) : true;
-// var numExt = me.num_exterior != undefined ? Utils.isEmptyString(me.getNum_exterior().trim()) : true;
-//var codigoPostalH = me.codigo_postal != undefined ? Utils.isEmptyString(me.getCodigo_postal().trim()) : true;
-// var coloniaH = me.colonia != undefined ? Utils.isEmptyString(me.getColonia().trim()) : true;
-
-if (me.getBoBpaMeta().getId() == "Hospital" && (tipoH || nombreH || rfcfd))
-{
-  messageCollector.add({
-    "level": "error",
-    "objectClass": "BoCustomer",
-    "messageID": "CasCustomerCamposRequeridos",
-    "messageParams": {}
-  });
-}
-
-// var numExtF = me.num_exterior != undefined ? Utils.isEmptyString(me.getNum_exterior().trim()) : true;
-//var calleF = me.calle != undefined ? Utils.isEmptyString(me.getCalle().trim()) : true;
-//var codigoPostalF = me.codigo_postal != undefined ? Utils.isEmptyString(me.getCodigo_postal().trim()) : true;
-// var coloniaF = me.colonia != undefined ? Utils.isEmptyString(me.getColonia().trim()) : true;
-var formato = me.formato_de_farmacia != undefined ? Utils.isEmptyString(me.getFormato_de_farmacia().trim()) : true;
-var subtipoFarmacia = me.subtipoFarmacia != undefined ? Utils.isEmptyString(me.getSubtipoFarmacia().trim()) : true;
-var rfcfd= me.rfc != undefined ? Utils.isEmptyString(me.getRfc().trim()) : true;
-var tipoF = me.tipo != undefined ? Utils.isEmptyString(me.getTipo().trim()) : true; formato || subtipoFarmacia || tipoF || rfcfd
-if (( me.getBoBpaMeta().getId() == "Farmacias Digrimex") && (formato || subtipoFarmacia || tipoF || rfcfd))
-{
-  messageCollector.add({
-    "level": "error",
-    "objectClass": "BoCustomer",
-    "messageID": "CasCustomerCamposRequeridos",
-    "messageParams": {}
-  });
-}
-
-// var numExtF1 = me.num_exterior != undefined ? Utils.isEmptyString(me.getNum_exterior().trim()) : true;
-//var calleF1 = me.calle != undefined ? Utils.isEmptyString(me.getCalle().trim()) : true;
-//var codigoPostalF1 = me.codigo_postal != undefined ? Utils.isEmptyString(me.getCodigo_postal().trim()) : true;
-// var coloniaF1 = me.colonia != undefined ? Utils.isEmptyString(me.getColonia().trim()) : true;
-var cadenaF1 = me.grupo_Cadena != undefined ? Utils.isEmptyString(me.getGrupo_Cadena().trim()) : true;
-var territorioF1 = me.territorio != undefined ? Utils.isEmptyString(me.getTerritorio().trim()) : true;
-//var municipioF1= me.poblacion_municipio_delegación != undefined ? Utils.isEmptyString(me.getPoblacion_municipio_delegación().trim()) : true; cadenaF1 || territorioF1
-if ((me.getBoBpaMeta().getId() == "Farmacia Indepentiente" || me.getBoBpaMeta().getId() == "Farmacia Farma" ) && (cadenaF1 || territorioF1))
-{
-  messageCollector.add({
-    "level": "error",
-    "objectClass": "BoCustomer",
-    "messageID": "CasCustomerCamposRequeridos",
-    "messageParams": {}
-  });
-}
-
-var street01 = me.loCustomerAddress.current.street != undefined ? Utils.isEmptyString(me.getLoCustomerAddress().getCurrent().getStreet().trim()) : true;
-var zipCode01 = me.loCustomerAddress.current.zipCode != undefined ? Utils.isEmptyString(me.getLoCustomerAddress().getCurrent().getZipCode().trim()) : true;
-var city01 = me.loCustomerAddress.current.city != undefined ? Utils.isEmptyString(me.getLoCustomerAddress().getCurrent().getCity().trim()) : true;
-var countryState01 = me.loCustomerAddress.current.countryState != undefined ? Utils.isEmptyString(me.getLoCustomerAddress().getCurrent().getCountryState().trim()) : true;
-
-if (street01 || zipCode01 || city01 || countryState01)
-{
-  messageCollector.add({
-    "level": "error",
-    "objectClass": "BoCustomer",
-    "messageID": "CasCustomerCamposRequeridos",
-    "messageParams": {}
-  });
+if (me.getBoBpaMeta().getId() == "Médico") {
+  var apellidoPaterno = me.apellido_paterno != undefined ? Utils.isEmptyString(me.getApellido_paterno().trim()) : true;
+  var nombre = me.name != undefined ? Utils.isEmptyString(me.getName().trim()) : true;
+  var especialidad = me.especialidad != undefined ? Utils.isEmptyString(me.getEspecialidad().trim()) : true;
+  var pacientesPorSemana = me.pacientes_por_semana != undefined ? Utils.isEmptyString(me.getPacientes_por_semana().trim()) : true;
+  var honorarios = me.honorarios != undefined ? Utils.isEmptyString(me.getHonorarios().trim()) : true;
+  var cedulaProfesional = me.cedulaProfesional != undefined ? Utils.isEmptyString(me.getCedulaProfesional().trim()) : true;
+  var rfcfd = me.rfc != undefined ? Utils.isEmptyString(me.getRfc().trim()) : true;
+  var email1fd = me.email1 != undefined ? Utils.isEmptyString(me.getEmail1().trim()) : true;
+  if (apellidoPaterno || nombre || especialidad || pacientesPorSemana || honorarios || cedulaProfesional || rfcfd) {
+    messageCollector.add({
+      "level": "error",
+      "objectClass": "BoCustomer",
+      "messageID": "CasCustomerCamposRequeridos",
+      "messageParams": {}
+    });
+  }
+} else if (me.getBoBpaMeta().getId() == "Hospital") {
+  var tipoH = me.tipo_de_institucion != undefined ? Utils.isEmptyString(me.getTipo_de_institucion().trim()) : true;
+  var nombreH = me.name != undefined ? Utils.isEmptyString(me.getName().trim()) : true;
+  var rfcfd = me.rfc != undefined ? Utils.isEmptyString(me.getRfc().trim()) : true;
+  if (tipoH || nombreH || rfcfd) {
+    messageCollector.add({
+      "level": "error",
+      "objectClass": "BoCustomer",
+      "messageID": "CasCustomerCamposRequeridos",
+      "messageParams": {}
+    });
+  }
+} else if (me.getBoBpaMeta().getId() == "Farmacias Digrimex") {
+  var formato = me.formato_de_farmacia != undefined ? Utils.isEmptyString(me.getFormato_de_farmacia().trim()) : true;
+  var subtipoFarmacia = me.subtipoFarmacia != undefined ? Utils.isEmptyString(me.getSubtipoFarmacia().trim()) : true;
+  var rfcfd = me.rfc != undefined ? Utils.isEmptyString(me.getRfc().trim()) : true;
+  var tipoF = me.tipo != undefined ? Utils.isEmptyString(me.getTipo().trim()) : true; formato || subtipoFarmacia || tipoF || rfcfd
+  if (formato || subtipoFarmacia || tipoF || rfcfd) {
+    messageCollector.add({
+      "level": "error",
+      "objectClass": "BoCustomer",
+      "messageID": "CasCustomerCamposRequeridos",
+      "messageParams": {}
+    });
+  }
+} else if (me.getBoBpaMeta().getId() == "Farmacia Indepentiente" || me.getBoBpaMeta().getId() == "Farmacia Farma") {
+  var cadenaF1 = me.grupo_Cadena != undefined ? Utils.isEmptyString(me.getGrupo_Cadena().trim()) : true;
+  var territorioF1 = me.territorio != undefined ? Utils.isEmptyString(me.getTerritorio().trim()) : true;
+  if (cadenaF1 || territorioF1) {
+    messageCollector.add({
+      "level": "error",
+      "objectClass": "BoCustomer",
+      "messageID": "CasCustomerCamposRequeridos",
+      "messageParams": {}
+    });
+  }
+} else if (!Utils.isEmptyString(me.getName().trim())) {
+  var street01 = me.loCustomerAddress.current.street != undefined ? Utils.isEmptyString(me.getLoCustomerAddress().getCurrent().getStreet().trim()) : true;
+  var zipCode01 = me.loCustomerAddress.current.zipCode != undefined ? Utils.isEmptyString(me.getLoCustomerAddress().getCurrent().getZipCode().trim()) : true;
+  var city01 = me.loCustomerAddress.current.city != undefined ? Utils.isEmptyString(me.getLoCustomerAddress().getCurrent().getCity().trim()) : true;
+  var countryState01 = me.loCustomerAddress.current.countryState != undefined ? Utils.isEmptyString(me.getLoCustomerAddress().getCurrent().getCountryState().trim()) : true;
+  if (street01 || zipCode01 || city01 || countryState01) {
+    messageCollector.add({
+      "level": "error",
+      "objectClass": "BoCustomer",
+      "messageID": "CasCustomerCamposRequeridos",
+      "messageParams": {}
+    });
+  }
 }
 
     ///////////////////////////////////////////////////////////////////////////////////////////////
