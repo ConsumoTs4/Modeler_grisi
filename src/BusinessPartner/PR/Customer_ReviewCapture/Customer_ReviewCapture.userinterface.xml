@@ -741,7 +741,7 @@
 
             <InputArea name="CustomerEmail">
               <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="EMail" id="EmailId" />
+                <Resource target="Label" type="Label" defaultLabel="EMail *" id="EmailId" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.email1" bindingMode="TWO_WAY" />
               </Bindings>
             </InputArea>

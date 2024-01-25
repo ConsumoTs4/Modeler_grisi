@@ -7851,29 +7851,178 @@
     </Initializer>
   </Domain>
 
-  <!-- <Domain name="DomCusGrupoCadena" baseType="String" length="15">
+  <Domain name="DomCusGrupoCadena" baseType="String" length="15">
     <Initializer>
       <Default value="' '" />
       <Empty value="" />
     </Initializer>
-  </Domain> -->
-  <!-- <Domain name="DomCusSex" baseType="String" length="15">
+  </Domain>
+  <Domain name="DomCusSex" baseType="String" length="15">
     <Initializer>
       <Default value="' '" />
       <Empty value="" />
     </Initializer>
-  </Domain> 
+  </Domain>
   <Domain name="DomCustTipoPersona" baseType="String" length="30">
     <Initializer>
       <Default value="' '" />
       <Empty value="" />
     </Initializer>
-  </Domain> -->
-  <!-- <Domain name="DomCusMotivoBaja" baseType="String" length="255">
+  </Domain>
+  <Domain name="DomCusMotivoBaja" baseType="String" length="255">
     <Initializer>
-      <Default value="''" />
+      <Default value="' '" />
       <Empty value="" />
     </Initializer>
-  </Domain> -->
-
+  </Domain>
+  <Domain name="DomCusHonorarios" baseType="String" length="255">
+    <Initializer>
+      <Default value="' '" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCusEspecialidad" baseType="String" length="255">
+    <Initializer>
+      <Default value="' '" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCusSubEspecialidad" baseType="String" length="255">
+    <Initializer>
+      <Default value="' '" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCustTipoPersona" baseType="String" length="255">
+    <Initializer>
+      <Default value="' '" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCusPacientesXsemana" baseType="String" length="255">
+    <Initializer>
+      <Default value="' '" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCusNivelInfluencia" baseType="String" length="255">
+    <Initializer>
+      <Default value="' '" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCusPortafolio" baseType="String" length="255">
+    <Initializer>
+      <Default value="' '" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCusAccesibilidad" baseType="String" length="255">
+    <Initializer>
+      <Default value="' '" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCusUsoInternet" baseType="String" length="255">
+    <Initializer>
+      <Default value="' '" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCusAdopcion" baseType="String" length="255">
+    <Initializer>
+      <Default value="' '" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCusBancos" baseType="String" length="255">
+    <Initializer>
+      <Default value="' '" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCusTipo" baseType="String" length="255">
+    <Initializer>
+      <Default value="' '" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCusSubtipo" baseType="String" length="255">
+    <Initializer>
+      <Default value="' '" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCusFormatoFarmacia" baseType="String" length="255">
+    <Initializer>
+      <Default value="' '" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCusTipoInstitucion" baseType="String" length="255">
+    <Initializer>
+      <Default value="' '" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCusQuintilMedico" baseType="String" length="255">
+    <Initializer>
+      <Default value="' '" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCusGrupoCadena" baseType="String" length="255">
+    <Initializer>
+      <Default value="' '" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCusTerritorio" baseType="String" length="255">
+    <Initializer>
+      <Default value="' '" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomcusSubtipoFarmacia" baseType="String" length="255">
+    <Initializer>
+      <Default value="' '" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCusPrescripcion1" baseType="String" length="255">
+    <Initializer>
+      <Default value="' '" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCustEsDeTipoAseguradora" baseType="String" length="255">
+    <Initializer>
+      <Default value="' '" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCustGrupoFarmaciaIndependiente" baseType="String" length="255">
+    <Initializer>
+      <Default value="' '" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCusPhaseCustomerTask" baseType="String" length="255">
+    <Initializer>
+      <Default value="' '" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCusMotivoBajaTask" baseType="String" length="255">
+    <Initializer>
+      <Default value="' '" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCusPicklistPrueba" baseType="String" length="255">
+    <Initializer>
+      <Default value="' '" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
 </DomainRepository>

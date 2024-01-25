@@ -301,7 +301,7 @@ var name = me.name != undefined ? Utils.isEmptyString(me.getName().trim()) : tru
 if (name) {
   acl.removeRight(AclObjectType.PROPERTY, "motivo", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "categoria_del_medico", AclPermission.VISIBLE);
-  
+
 }
 
 switch (mode) {

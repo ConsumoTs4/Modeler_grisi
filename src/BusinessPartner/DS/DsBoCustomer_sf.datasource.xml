@@ -37,8 +37,6 @@
     <Attribute name="honorarios" table="Account" column="GCG_Honorarios__c" />
     <Attribute name="grupo_Cadena" table="Account" column="GCG_GrupoDeCadena__c" />
     <Attribute name="rfc" table="Account" column="GCG_Rfc__c" />
-    <Attribute name="cuenta_con_exhibición_adicional" table="Account" column="GCG_CuentaExhibicionAdicional__c" />
-    <Attribute name="costo_renta_exhibicion_adicional" table="Account" column="GCG_CostoRentaExhibicionAdicional__c" />
     <Attribute name="calle" table="Account" column="ShippingStreet" />
     <Attribute name="numero_interior" table="Account" column="GCG_NumeroInterior__c" />
     <Attribute name="num_exterior" table="Account" column="ShippingStreet" />
@@ -56,21 +54,6 @@
     <Attribute name="brick" table="Account" column="GCG_Brick__c " />
     <Attribute name="folio_tienda" table="Account" column="GCG_FolioTienda__c " />
     <Attribute name="categoria_del_medico" table="Account" column="GCG_CategoriaMedico__c" />
-
-    <!-- <Attribute name="estatus" table="Account" column="GCG_Estatus__c" />
-    <Attribute name="fecha_de_alta" table="Account" column="GCG_FechaAlta__c" />
-    <Attribute name="account_name" table="Account" column="Name" />
-    <Attribute name="brick" table="Account" column="GCG_Brick__c " />
-    <Attribute name="prescripcion_1" table="Account" column="GCG_Prescripcion1__c" />
-    <Attribute name="participacion_de_la_auditoria" table="Account" column="GCG_ParticipacionAuditoria__c" />
-
-    <Attribute name="celular" table="Account" column="GCG_Celular__c" />
-    <Attribute name="telefono2" table="Account" column="GCG_Telefono__c" />
-    <Attribute name="razonsocial" table="Account" column="GCG_RazonSocial__c" /> -->
-
-
-
-
 
     <Attribute name="motivo" table="Account" column="GCG_MotivoBaja__c" />
 
@@ -96,7 +79,7 @@
     <Attribute name="tipoAseguradora" table="Account" column="GCG_EsDeTipoAseguradora__c" />
     <Attribute name="grupoFarmaciaIndependiente" table="Account" column="GCG_GrupoFarmaciaIndependiente__c" />
 
-    
+
 
 
     <Attribute name="medicoGaleno" table="Account" column="GCG_MedicoGaleno__c" />
