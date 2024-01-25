@@ -109,8 +109,10 @@ else {
   });
 }
 
+var ownerLookupAcl = ownerLookup.getACL();
 if (me.getBoSvcRequestMeta().getId() == "Solicitud de baja") {
   acl.removeRight(AclObjectType.PROPERTY, "classification", AclPermission.VISIBLE);
+  ownerLookupAcl.removeRight(AclObjectType.PROPERTY, "name", AclPermission.VISIBLE);
 }
 
     ///////////////////////////////////////////////////////////////////////////////////////////////
