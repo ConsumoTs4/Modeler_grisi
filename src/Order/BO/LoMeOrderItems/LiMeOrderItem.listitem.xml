@@ -48,5 +48,6 @@
     <SimpleProperty name="pricingInfo8" type="DomDecimal" dataSourceProperty="pricingInfo8" />
     <SimpleProperty name="pricingInfo9" type="DomDecimal" dataSourceProperty="pricingInfo9" />
     <SimpleProperty name="pricingInfo10" type="DomDecimal" dataSourceProperty="pricingInfo10" />
+    <SimpleProperty name="stockCustom" type="DomDecimal" dataSourceProperty="stockCustom" />
   </SimpleProperties>
 </ListItem>

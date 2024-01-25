@@ -55,6 +55,8 @@
     <Attribute name="pricingInfo8" table="Order_Item__c" column="Pricing_Info_8__c" />
     <Attribute name="pricingInfo9" table="Order_Item__c" column="Pricing_Info_9__c" />
     <Attribute name="pricingInfo10" table="Order_Item__c" column="Pricing_Info_10__c" />
+
+    <Attribute name="stockCustom" table="GCG_Inventario__c" column="GCG_InventarioReal__c" />
   </Attributes>
   <Entities>
     <Entity name="Order_Item__c" alias="" idAttribute="Id" />
@@ -62,6 +64,21 @@
       <Join Type="inner">
         <SimpleJoin>
           <Condition leftSideValue="Order_Item__c.Order_Item_Template__c" comparator="eq" rightSideType="Attribute" rightSideValue="Order_Item_Template__c.Id" />
+        </SimpleJoin>
+      </Join>
+    </Entity>
+    <Entity name="Order__c" alias="">
+      <Join Type="inner">
+        <SimpleJoin>
+          <Condition leftSideValue="Order_Item__c.Order__c" comparator="eq" rightSideType="Attribute" rightSideValue="Order__c.Id" />
+        </SimpleJoin>
+      </Join>
+    </Entity>
+    <Entity name="GCG_Inventario__c" alias="">
+      <Join Type="left">
+        <SimpleJoin>
+          <Condition leftSideValue="Order__c.Responsible__c" comparator="eq" rightSideType="Attribute" rightSideValue="GCG_Inventario__c.GCG_Representante__c" />
+          <Condition leftSideValue="Order_Item__c.Product__c" comparator="eq" rightSideType="Attribute" rightSideValue="GCG_Inventario__c.GCG_Producto__c" />
         </SimpleJoin>
       </Join>
     </Entity>

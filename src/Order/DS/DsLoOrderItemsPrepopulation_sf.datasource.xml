@@ -242,7 +242,7 @@ selectAttributes += "	,persistedProduct.pricingInfo7 AS pricingInfo7 ";
 selectAttributes += "	,persistedProduct.pricingInfo8 AS pricingInfo8 ";
 selectAttributes += "	,persistedProduct.pricingInfo9 AS pricingInfo9 ";
 selectAttributes += "	,persistedProduct.pricingInfo10 AS pricingInfo10 ";
-selectAttributes += "	,37 AS ivcBalance ";
+selectAttributes += "	,persistedProduct.stockCustom AS ivcBalance ";
 selectAttributes += "	,IFNULL(persistedProduct.refPKey, proposedProduct.prdMainPKey || #sdoItemMetaPKey# || proposedProduct.promotionPKey || ' ') AS refPKey ";
 
 //Select relevant data from UoM table
