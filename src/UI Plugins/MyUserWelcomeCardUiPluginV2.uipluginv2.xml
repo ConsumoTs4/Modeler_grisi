@@ -1,108 +1,29 @@
 <UIPluginV2 name="MyUserWelcomeCardUiPluginV2">
 	<Interface>
-		<Property id="userImage" />
-		<Property id="userName" />
-		<Property id="visitsLabel" />
-		<Property id="visitCount" />
-		<Property id="customerTasksLabel" />
-		<Property id="issuesCount" />
-		<Property id="tasksLabel" />
-		<Property id="todosCount" />
-		<Property id="userMessage" />
-		<Property id="isTourUser" />
-		<Property id="userDefaultImage" />
-		<Property id="isSfBackend" />
-		<Property id="selectedDate" />
-		<Property id="previousDayIcon" />
-		<Property id="nextDayIcon" />
-		<Property id="previousDayOnTouchIcon" />
-		<Property id="nextDayOnTouchIcon" />
-		<Property id="todayIcon" />
-		<Property id="todayLabel" />
-		<Events>
-			<Event name="nextDay" />
-		</Events>
+		<Property id="userCuentasAsignadas" />
 	</Interface>
 	<Libraries>
 		<Library name="C3JS" />
 		<Library name="D3JS" />
 	</Libraries>
 	<UIComponentHTML name="UIComponentHTML"><![CDATA[
-		<div style="margin-top: 0.924em">
-			<table width="100%">
-			<tbody>
-			<tr style="display: flex; padding-bottom: 11px">
-			  <td>
-				  <div style="padding-right: 5px">
-						<img class="userImageStyle" id="welcomeUser_userImage" /> 
-				  </div>
-			  </td>
-			  <td style="width: -webkit-fill-available; textAlign: left">
-				  <div style="padding-top: 7px">
-						<span class='userNameStyle' id="welcomeUser_userName"></span>
-						<br/>
-						<span class='userMessageStyle' id="welcomeUser_userMessage"></span>
-				  </div>
-			  </td>
-			</tr>
-
-
-			<tr style="display: flex">
-				<td>
-				  <div class="ButtonContainer">
-						<button id="welcomeUser_prevDayButton">
-							<img id="welcomeUser_prevDayButtonImg" />
-						</button>
-				  </div>
-				</td>
-				<td style="width: -webkit-fill-available; text-align: center">
-				  <div style="padding-top: 15px">
-						  <span id="welcomeUser_cardDate"></span>
-					  </div>
-				</td>
-				<td id="welcomeUser_todayContainer">
-				  <button id="welcomeUser_todayButton">
-						<img id="welcomeUser_todayButtonImage"/>
-						<div id="welcomeUser_todayLabel"></div>
-				  </button>
-				</td>
-				<td>
-				  <div class="ButtonContainer" style="padding-left: 2px">
-						<button id="welcomeUser_nextDayButton">
-							<img id="welcomeUser_nextDayButtonImg" />
-						</button>
-					  </div>
-				</td>
-			  </tr>
-
-			  <tr>
-				<td colspan="2" id="welcomeUser_countersContainer">	
-					<div id="welcomerUser_visitCounterContainer">
-
-					  <div id="welcomerUser_visitCounterInnerContainer">
-						<span id="welcomerUser_visitCounterValue"></span>											
-						<span id="welcomerUser_visitCounterLabel"></span>
-					  </div>
-
-					  <span id="welcomeUser_counterBar01">|</span>
-					  
-					  <div id="welcomerUser_issueCounterInnerContainer">
-						  <span id="welcomerUser_issueCounterValue"></span>
-						  <span id="welcomerUser_issueCounterLabel"></span>
-						</div>
-						
-					  <span id="welcomeUser_counterBar02">|</span>
-
-					  <div id="welcomerUser_taskCounterInnerContainer">
-						<span id="welcomerUser_taskCounterValue"></span>										
-						<span id="welcomerUser_taskCounterLabel"></span>   
-					  </div>
+		<div class="SyncCardReplicationArea">
+			<div class="ReplicationAreaNew">
+			  <div class="ReplicationInfoAreaWrapper">
+				<div class="UploadInfo">
+				  <div class="ReplicationTimestampVisualization">
+					<div class="InfoString" style="color: rgba(57, 62, 75, 0.8)">
+					  <span>Cuentas Asignadas</span>
 					</div>
-				</td>
-			  </tr>	
-			</tbody>
-			</table>
-		</div>
+					<div class="TimeStamp" style="color: rgb(57, 62, 75)">
+						<span class='userMessageStyle' id="welcomeUser_userCuentasAsignadas">
+						</span>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
 	]]></UIComponentHTML>
 	<UIComponentCSS name="UIComponentCSS"><![CDATA[
 		.userImageStyle {
@@ -123,246 +44,58 @@
 			padding-top: 6px;
 			padding-bottom: 12px;	                 	                     			  
 		}
+
+		.SyncCardReplicationArea {
+			margin-top: 0.693em;
+			margin-left: 4px;
+		}
+
+		.SyncCardReplicationArea .ReplicationAreaNew {
+			display: flex;
+			width: 100%;
+			// justify-content: space-around;
+			align-items: center;
+		}
+
+		.SyncCardReplicationArea .ReplicationAreaNew .ReplicationInfoAreaWrapper .ReplicationTimestampVisualization {
+			display: flex;
+			align-items: baseline;
+		}
+
+		.SyncCardReplicationArea .ReplicationAreaNew .ReplicationInfoAreaWrapper .ReplicationTimestampVisualization .InfoString {
+			font-family: "Regular";
+			font-size: 11px;
+			text-align: right;
+			flex: 1;
+			margin-right: 12px;
+		}
+
+		.SyncCardReplicationArea .ReplicationAreaNew .ReplicationInfoAreaWrapper .ReplicationTimestampVisualization .TimeStamp {
+			font-family: "Light";
+			font-size: 14px;
+		}
+
+		.SyncCardReplicationArea .ReplicationAreaNew .ReplicationInfoAreaWrapper .ReplicationTimestampVisualization {
+			display: flex;
+			align-items: baseline;
+		}
+
+		.SyncCardReplicationArea .ReplicationAreaNew .SyncHealthIndicatorWrapper {
+			margin-left: auto;
+			display: flex;
+			padding-top: 1px;
 	]]></UIComponentCSS>
 	<UIComponentJS name="UIComponentJS"><![CDATA[
+		const formatTime = d3.utcFormat("%B %d, %Y");
+
 		function connectCallback() {
-			if(!!PluginManager.userImage.path) {
-				document.getElementById('welcomeUser_userImage').src = PluginManager.userImage.path;
-			}
-
-			document.getElementById('welcomeUser_userName').innerHTML = PluginManager.userName;
-			document.getElementById('welcomeUser_userName').style = `
-				font: ${PluginManager.pluginConfiguration.FontMedium18};
-				color: ${PluginManager.pluginConfiguration.Color4};
-			`;
-
-			document.getElementById('welcomeUser_userMessage').innerHTML = PluginManager.userMessage;
-			document.getElementById('welcomeUser_userMessage').style = `
-				font: ${PluginManager.pluginConfiguration.FontRegular12};
-				color: ${PluginManager.pluginConfiguration.Color22};
-			`;
-
-			const prevDayButton = document.getElementById('welcomeUser_prevDayButton')
-			prevDayButton.style = `background: ${PluginManager.pluginConfiguration.Color1};`;
-
-			const prevDayButtonImg = document.getElementById('welcomeUser_prevDayButtonImg');
-			prevDayButtonImg.src = PluginManager.previousDayIcon;
-			prevDayButtonImg.style = `
-				background: ${PluginManager.pluginConfiguration.Color6};
-				width: 36px;
-				height: 36px;
-				border-radius: 18px;
-				margin-left: -9px;
-			`
-
-			const cardDate = document.getElementById('welcomeUser_cardDate');
-			cardDate.innerHTML = PluginManager.selectedDate;
-			cardDate.style = `
-				font: ${PluginManager.pluginConfiguration.FontMedium14};
-				color: ${PluginManager.pluginConfiguration.Color8};
-			`;
-
-			const todayContainer = document.getElementById('welcomeUser_todayContainer');
-			todayContainer.style = `
-				background-color: ${PluginManager.pluginConfiguration.Color6};
-				height: 34px;
-				width: 100%;
-				align-content: center;
-				align-self: center;
-				border-radius: 17px;
-				margin-top: -5px;
-			`;
-
-
-			const todayButton = document.getElementById('welcomeUser_todayButton');
-			todayButton.style = `
-				background-color: ${PluginManager.pluginConfiguration.Color6};
-				height: 34px;
-				width: 100%;
-				text-align: center;
-				align-self: center;
-				vertical-align: middle;
-				border-radius: 17px;
-			`;
-			todayButton.addEventListener('click', function(e) {
-				PluginManager.CardDate.previousDay();
-				PluginManager.throwEvent('nextDay');
-				PluginManager.userName = "CHANGE";
-			})
-
-
-			const todayButtonImage = document.getElementById('welcomeUser_todayButtonImage');
-			todayButtonImage.src = PluginManager.todayIcon;
-			todayButtonImage.style = `
-				width: 16px;
-				display: inline-block;
-				margin-top: -4.5px;
-			`;
-
-			const todayLabel = document.getElementById('welcomeUser_todayLabel');
-			todayLabel.innerHTML = PluginManager.todayLabel;
-			todayLabel.style = `
-				font: ${PluginManager.pluginConfiguration.FontRegular12};
-				color: ${PluginManager.pluginConfiguration.Color22};
-				display: inline-block;
-				align-self: center;
-				text-align: center;
-				vertical-align: middle;
-				padding-left: 6px;
-				margin-top: -6px;
-			`;
-
-			const nextDayButton = document.getElementById('welcomeUser_nextDayButton');
-			nextDayButton.style = `background: ${PluginManager.pluginConfiguration.Color1}`;
-
-			const nextDayButtonImg = document.getElementById('welcomeUser_nextDayButtonImg');
-			nextDayButtonImg.src = PluginManager.nextDayIcon;
-			nextDayButtonImg.style = `
-				font: ${PluginManager.pluginConfiguration.FontRegular14};
-				background: ${PluginManager.pluginConfiguration.Color6};
-				width: 36px;
-				height:36px;
-				border-radius: 18px;
-				margin-right: -8.9px;
-			`;
-
-			const countersContainer = document.getElementById('welcomeUser_countersContainer');
-			countersContainer.style = `
-				background-color: ${PluginManager.pluginConfiguration.Color6};
-				height: 36px;
-				width: 90%;
-				align-content: center;
-				align-self: center;
-				border-radius: 18px;
-			`;
-
-			const visitCounterContainer = document.getElementById('welcomerUser_visitCounterContainer');
-			visitCounterContainer.style = `
-				display: flex;
-				justify-content: center;
-				align-self: center;
-			`;
-
-			const visitCounterInnerContainer = document.getElementById('welcomerUser_visitCounterInnerContainer');
-			visitCounterInnerContainer.style = `
-				text-align: center;
-				align-self: center;
-				vertical-align: middle;
-				padding-left: 5px;
-			`;
-
-			const visitCounterValue = document.getElementById('welcomerUser_visitCounterValue');
-			visitCounterValue.innerHTML = PluginManager.visitCount;
-			visitCounterValue.style = `
-				font: 24px Regular;
-				color: ${PluginManager.pluginConfiguration.Color4};
-				display: table-cell;
-				align-self: center;
-			`;
-
-			const visitCounterLabel = document.getElementById('welcomerUser_visitCounterLabel');
-			visitCounterLabel.innerHTML = PluginManager.visitsLabel;
-			visitCounterLabel.style = `
-				font: ${PluginManager.pluginConfiguration.FontRegular12};
-				color: ${PluginManager.pluginConfiguration.Color22};
-				display: table-cell;
-				align-self: center;
-				text-align: center;
-				vertical-align: middle;
-				padding-left: 5px;
-			`;
-
-			const counterBar01 = document.getElementById('welcomeUser_counterBar01');
-			counterBar01.style = `
-				font: ${PluginManager.pluginConfiguration.FontRegular14};
-				color: ${PluginManager.pluginConfiguration.Color1};
-				display: table-cell;
-				text-align: center;
-				vertical-align: middle;
-				align-self: center;
-				padding-left: 2px;
-			`;
-
-			const issueCounterInnerContainer = document.getElementById('welcomerUser_issueCounterInnerContainer');
-			issueCounterInnerContainer.style = `
-				text-align: center;
-				overflow: auto;
-				width: 38%;
-				align-self: center;
-				vertical-align: middle;
-				padding-left: 5px;
-			`;
-
-			const issueCounterValue = document.getElementById('welcomerUser_issueCounterValue');
-			issueCounterValue.innerHTML = PluginManager.issuesCount;
-			issueCounterValue.style = `
-				font: 24px Regular;
-				color: ${PluginManager.pluginConfiguration.Color4};
-				display: table-cell;
-				align-self: center;
-			`;
-
-			const issueCounterLabel = document.getElementById('welcomerUser_issueCounterLabel');
-			issueCounterLabel.innerHTML = PluginManager.customerTasksLabel
-			issueCounterLabel.style = `
-				font: ${PluginManager.pluginConfiguration.FontRegular12};
-				color: ${PluginManager.pluginConfiguration.Color22};
-				display: table-cell;
-				align-self: center;
-				text-align: center;
-				vertical-align: middle;
-				padding-left: 5px;
-			`;
-
-			const counterBar02 = document.getElementById('welcomeUser_counterBar02');
-			counterBar02.style = `
-				font: ${PluginManager.pluginConfiguration.FontRegular14};
-				color: ${PluginManager.pluginConfiguration.Color1};
-				display: table-cell;
-				text-align: center;
-				vertical-align: middle;
-				align-self: center;
-				padding-left: 2px;
-			`;
-
-			const taskCounterInnerContainer = document.getElementById('welcomerUser_taskCounterInnerContainer');
-			taskCounterInnerContainer.style = `
-				text-align: center;
-				align-self: center;
-				vertical-align: middle;
-				padding-left: 5px;
-			`;
-
-			const taskCounterValue = document.getElementById('welcomerUser_taskCounterValue');
-			taskCounterValue.innerHTML = PluginManager.todosCount;
-			taskCounterValue.style = `
-				font: 24px Regular;
-				color: ${PluginManager.pluginConfiguration.Color4};
-				display: table-cell;
-				align-self: center;
-			`;
-
-			const taskCounterLabel = document.getElementById('welcomerUser_taskCounterLabel');
-			taskCounterLabel.innerHTML = PluginManager.tasksLabel;
-			taskCounterLabel.style = `
-				font: ${PluginManager.pluginConfiguration.FontRegular12};
-				color: ${PluginManager.pluginConfiguration.Color22};
-				display: table-cell;
-				align-self: center;
-				text-align: center;
-				vertical-align: middle;
-				padding-left: 5px;
-			`;
+			const userCuentasAsignadas = document.getElementById('welcomeUser_userCuentasAsignadas');
+			userCuentasAsignadas.innerHTML = PluginManager.userCuentasAsignadas;
 		}
 
 		function renderCallback() {
-			document.getElementById('welcomeUser_userName').innerHTML = PluginManager.userName;
-		}
-
-		function previousDayButtonImageChange(e) {
-			PluginManager.CardDate.previousDay();
-			//this.setState({previousDay: this.props.previousDayOnTouchIcon});
-			// this.props.CardDate.previousDay(); 
+			const userCuentasAsignadas = document.getElementById('welcomeUser_userCuentasAsignadas');
+			userCuentasAsignadas.innerHTML = PluginManager.userCuentasAsignadas;
 		}
 	]]></UIComponentJS>
 </UIPluginV2>

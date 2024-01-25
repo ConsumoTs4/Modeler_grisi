@@ -436,7 +436,7 @@
                 <Input name="cardName" type="Literal" value="CardUserWelcome" />
               </Parameters>
             </Binding>
-            <Resource target="Title" type="Label" id="UserWelcomeCardTitle" defaultLabel="Summary" />
+            <Resource target="Title" type="Label" id="UserRelevantCardTitle" defaultLabel="Relevant" />
             <Binding target="Information" type="Text" binding="ProcessContext::CardController.cardUserWelcome_DateText" bindingMode="ONE_WAY" />
             <Binding target="CollapseState" type="Text" binding="ProcessContext::CardController.CollapseState_CardUserWelcome" bindingMode="TWO_WAY" />
             <Binding target="IsReadyToLoad" type="Text" binding="ProcessContext::CardUserWelcome_DataLoaded" bindingMode="ONE_WAY" />
@@ -450,30 +450,8 @@
           </CardEventSubcription>
           <UIPluginV2 name="UserWelcomeCardUiPlugin" uiPlugin="MyUserWelcomeCardUiPluginV2">
             <Bindings>
-              <Binding target="userImage" type="Blob" binding="ApplicationContext::User.profilePicture" />
-              <Binding target="userName" type="Text" binding="ApplicationContext::User.name" bindingMode="TWO_WAY" />
-              <Resource target="visitsLabel" type="Label" id="VisitsId" defaultLabel="Visits" />
-              <Binding target="visitCount" type="Text" binding="ProcessContext::LuCallCount.callCount" bindingMode="ONE_WAY" />
-              <Resource target="customerTasksLabel" type="Label" id="CustomerTasksId" defaultLabel="Customer Tasks" />
-              <Binding target="issuesCount" type="Text" binding="ProcessContext::LuIssueCount.issueCount" bindingMode="ONE_WAY" />
-              <Resource target="tasksLabel" type="Label" id="TasksId" defaultLabel="Tasks" />
-              <Binding target="todosCount" type="Text" binding="ProcessContext::LuTodoCount.todoCount" bindingMode="ONE_WAY" />
-              <Resource target="userMessage" type="Label" id="CardUserWelcome_MessageText" defaultLabel="Have a great day." />
-              <Binding target="isTourUser" type="Bool" binding="ProcessContext::CardController.isTourUser" />
-              <Resource id="NoUser" target="userDefaultImage" type="Image" />
-              <Binding target="selectedDate" type="Text" binding="ProcessContext::CardDate" bindingMode="ONE_WAY" />
-              <Resource target="previousDayIcon" type="Image" id="ChevronLeft" defaultImage="ChevronLeft" />
-              <Resource target="nextDayIcon" type="Image" id="ChevronRight" defaultImage="ChevronRight" />
-              <Resource target="previousDayOnTouchIcon" type="Image" id="ChevronLeftPressed" defaultImage="ChevronLeftPressed" />
-              <Resource target="nextDayOnTouchIcon" type="Image" id="ChevronRightPressed" defaultImage="ChevronRightPressed" />
-              <Resource target="todayIcon" type="Image" id="TodayIcon" defaultImage="TodayIcon" />
-              <Resource target="todayLabel" type="Label" id="TodayLabel" defaultLabel="Today" />
+              <Binding target="userCuentasAsignadas" type="Blob" binding="ApplicationContext::User.cuentasAsignadas" />
             </Bindings>
-            <Events>
-              <CustomPluginEvent name="nextDay" event="nextDayEvent" />
-              <!-- <CustomPluginEvent name="nextDay" event="ProcessContext::CardDate.nextDay" /> -->
-              <!-- <CustomPluginEvent name="nextDay" event="ProcessContext::CardDate" /> -->
-            </Events>
           </UIPluginV2>
         </CardContainer>
         <!-- CardVisits START -->
