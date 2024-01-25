@@ -8007,5 +8007,22 @@
       <Empty value="" />
     </Initializer>
   </Domain>
-
+  <Domain name="DomCusPhaseCustomerTask" baseType="String" length="255">
+    <Initializer>
+      <Default value="' '" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCusMotivoBajaTask" baseType="String" length="255">
+    <Initializer>
+      <Default value="' '" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
+  <Domain name="DomCusPicklistPrueba" baseType="String" length="255">
+    <Initializer>
+      <Default value="' '" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
 </DomainRepository>

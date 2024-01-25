@@ -287,11 +287,50 @@
             <Bindings>
               <Resource target="title" type="Label" id="CurrentStatusGroupId" defaultLabel="Current Status" />
             </Bindings>
-            <SelectionBox name="Phase" editable="false">
+            <!-- <SelectionBox name="Phase" editable="false">
               <Bindings>
                 <Resource target="Label" type="Label" id="StatusId" defaultLabel="Status" />
                 <Binding target="DataSource" toggleId="SvcIssuePhase" bindingMode="TWO_WAY" />
                 <Binding target="Value" binding="ProcessContext::IssueDetail.issuePhase" bindingMode="TWO_WAY" />
+              </Bindings>
+              <Items>
+                <Bindings>
+                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                </Bindings>
+              </Items>
+            </SelectionBox> -->
+            <SelectionBox name="PhaseCustomerTask">
+              <Bindings>
+                <Resource target="Label" type="Label" id="PhaseCustomerTaskID" defaultLabel="Estatus" />
+                <Binding target="DataSource" toggleId="DomCusPhaseCustomerTask" bindingMode="TWO_WAY" />
+                <Binding target="Value"  binding="ProcessContext::IssueDetail.phaseCustomerTask" bindingMode="TWO_WAY" />
+              </Bindings>
+              <Items>
+                <Bindings>
+                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                </Bindings>
+              </Items>
+            </SelectionBox>
+            <SelectionBox name="pruebapick" >
+              <Bindings>
+                <Resource target="Label" type="Label" id="pruebapickId" defaultLabel="Prueba picklist" />
+                <Binding target="DataSource" toggleId="DomCusPicklistPrueba" bindingMode="TWO_WAY" />
+                <Binding target="Value" binding="ProcessContext::IssueDetail.picklistprueba" bindingMode="TWO_WAY" />
+              </Bindings>
+              <Items>
+                <Bindings>
+                  <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                  <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                </Bindings>
+              </Items>
+            </SelectionBox>
+            <SelectionBox name="motivoBaja">
+              <Bindings>
+                <Resource target="Label" type="Label" id="motivoBajaID" defaultLabel="Motivo de baja" />
+                <Binding target="DataSource" toggleId="DomCusMotivoBajaTask" bindingMode="TWO_WAY" />
+                <Binding target="Value"  binding="ProcessContext::IssueDetail.motivoBaja" bindingMode="TWO_WAY" />
               </Bindings>
               <Items>
                 <Bindings>

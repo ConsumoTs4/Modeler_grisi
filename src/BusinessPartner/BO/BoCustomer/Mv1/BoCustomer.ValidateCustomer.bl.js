@@ -84,11 +84,12 @@ if (me.getBoBpaMeta().getId() == "Médico") {
     });
   }
 } else if (me.getBoBpaMeta().getId() == "Farmacias Digrimex") {
+  var nombreFD = me.name != undefined ? Utils.isEmptyString(me.getName().trim()) : true;
   var formato = me.formato_de_farmacia != undefined ? Utils.isEmptyString(me.getFormato_de_farmacia().trim()) : true;
   var subtipoFarmacia = me.subtipoFarmacia != undefined ? Utils.isEmptyString(me.getSubtipoFarmacia().trim()) : true;
   var rfcfd = me.rfc != undefined ? Utils.isEmptyString(me.getRfc().trim()) : true;
-  var tipoF = me.tipo != undefined ? Utils.isEmptyString(me.getTipo().trim()) : true; formato || subtipoFarmacia || tipoF || rfcfd
-  if (formato || subtipoFarmacia || tipoF || rfcfd) {
+  var tipoF = me.tipo != undefined ? Utils.isEmptyString(me.getTipo().trim()) : true; nombreFD ||formato || subtipoFarmacia || tipoF || rfcfd
+  if (nombreFD || formato || subtipoFarmacia || tipoF || rfcfd) {
     messageCollector.add({
       "level": "error",
       "objectClass": "BoCustomer",
@@ -97,9 +98,10 @@ if (me.getBoBpaMeta().getId() == "Médico") {
     });
   }
 } else if (me.getBoBpaMeta().getId() == "Farmacia Indepentiente" || me.getBoBpaMeta().getId() == "Farmacia Farma") {
+  var nombreFIF= me.name != undefined ? Utils.isEmptyString(me.getName().trim()) : true;
   var cadenaF1 = me.grupo_Cadena != undefined ? Utils.isEmptyString(me.getGrupo_Cadena().trim()) : true;
   var territorioF1 = me.territorio != undefined ? Utils.isEmptyString(me.getTerritorio().trim()) : true;
-  if (cadenaF1 || territorioF1) {
+  if (nombreFIF ||cadenaF1 || territorioF1) {
     messageCollector.add({
       "level": "error",
       "objectClass": "BoCustomer",
