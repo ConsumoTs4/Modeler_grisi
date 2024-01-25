@@ -46,10 +46,11 @@ function setEARights(){
     //               Add your customizing javaScript code below.                                 //
     //                                                                                           //
     ///////////////////////////////////////////////////////////////////////////////////////////////
-    
+
 var acl = me.getACL();
 var userPKey = ApplicationContext.get('user').getPKey();
 var customerManagementInfoLookup = me.getLuCustomerManagementInfo();
+var ownerLookup = me.getLuOwner();
 var readOnlyBySubstitution = "0";
 var substitutedIssue = "0";
 
@@ -108,11 +109,15 @@ else {
   });
 }
 
+if (me.getBoSvcRequestMeta().getId() == "Solicitud de baja") {
+  acl.removeRight(AclObjectType.PROPERTY, "classification", AclPermission.VISIBLE);
+}
+
     ///////////////////////////////////////////////////////////////////////////////////////////////
     //                                                                                           //
     //               Add your customizing javaScript code above.                                 //
     //                                                                                           //
     ///////////////////////////////////////////////////////////////////////////////////////////////
 
-    
+
 }
