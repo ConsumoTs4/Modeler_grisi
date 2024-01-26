@@ -789,6 +789,7 @@
         <Label id="CardUserWelcome_MessageText" text="Que tenga un buen día." translationStatus="7" />
         <Label id="TodayLabel" text="Hoy" translationStatus="7" />
         <Label id="UserWelcomeCardTitle" text="Resumen" translationStatus="7" />
+        <Label id="UserRelevantCardTitle" text="Relevante" translationStatus="7" />
         <Label id="ShowVisitCalendarLink" text="Mostrar calendario de visitas" translationStatus="7" />
         <Label id="VisitsCardTitle" text="Visitas para hoy" translationStatus="7" />
         <Label id="SyncCardTitle" text="Estado de sincronización" translationStatus="7" />
@@ -2956,6 +2957,7 @@
         <Label id="ReportingCardTitle" text="Generación de informes" translationStatus="7" />
         <Label id="ReportingCardInformation" text="Todos los clientes" translationStatus="7" />
         <Label id="UserWelcomeCardTitle" text="Resumen" translationStatus="7" />
+        <Label id="UserRelevantCardTitle" text="Relevante" translationStatus="7" />
         <Label id="VisitsId" text="Visitas" translationStatus="7" />
         <Label id="TodayLabel" text="Hoy" translationStatus="7" />
         <Label id="CustomerTasksId" text="Tareas de cliente" translationStatus="7" />

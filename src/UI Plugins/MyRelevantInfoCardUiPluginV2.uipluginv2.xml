@@ -1,0 +1,102 @@
+<UIPluginV2 name="MyRelevantInfoCardUiPluginV2">
+	<Interface>
+		<Property id="userCuentasAsignadas" />
+	</Interface>
+	<Libraries>
+		<Library name="C3JS" />
+		<Library name="D3JS" />
+	</Libraries>
+	<UIComponentHTML name="UIComponentHTML"><![CDATA[
+		<div class="SyncCardReplicationArea">
+			<div class="ReplicationAreaNew">
+			  <div class="ReplicationInfoAreaWrapper">
+				<div class="UploadInfo">
+				  <div class="ReplicationTimestampVisualization">
+					<div class="InfoString" style="color: rgba(57, 62, 75, 0.8)">
+					  <span>Cuentas Asignadas</span>
+					</div>
+					<div class="TimeStamp" style="color: rgb(57, 62, 75)">
+						<span class='userMessageStyle' id="relevantInfo_userCuentasAsignadas">
+						</span>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+	]]></UIComponentHTML>
+	<UIComponentCSS name="UIComponentCSS"><![CDATA[
+		.userImageStyle {
+			width: 57px;
+			height: 57px;
+			border-radius: 50%;
+			float: left;
+			display: inline-block;
+		}
+
+		.userNameStyle {
+			padding-left: 12px;
+			padding-bottom: 12px;		
+		}
+
+		.userMessageStyle {
+			padding-left: 12px;
+			padding-top: 6px;
+			padding-bottom: 12px;	                 	                     			  
+		}
+
+		.SyncCardReplicationArea {
+			margin-top: 0.693em;
+			margin-left: 4px;
+		}
+
+		.SyncCardReplicationArea .ReplicationAreaNew {
+			display: flex;
+			width: 100%;
+			// justify-content: space-around;
+			align-items: center;
+			padding: 0.2rem 0;
+		}
+
+		.SyncCardReplicationArea .ReplicationAreaNew .ReplicationInfoAreaWrapper .ReplicationTimestampVisualization {
+			display: flex;
+			align-items: baseline;
+		}
+
+		.SyncCardReplicationArea .ReplicationAreaNew .ReplicationInfoAreaWrapper .ReplicationTimestampVisualization .InfoString {
+			font-family: "Regular";
+			font-size: 11px;
+			text-align: right;
+			flex: 1;
+			margin-right: 12px;
+		}
+
+		.SyncCardReplicationArea .ReplicationAreaNew .ReplicationInfoAreaWrapper .ReplicationTimestampVisualization .TimeStamp {
+			font-family: "Light";
+			font-size: 14px;
+		}
+
+		.SyncCardReplicationArea .ReplicationAreaNew .ReplicationInfoAreaWrapper .ReplicationTimestampVisualization {
+			display: flex;
+			align-items: baseline;
+		}
+
+		.SyncCardReplicationArea .ReplicationAreaNew .SyncHealthIndicatorWrapper {
+			margin-left: auto;
+			display: flex;
+			padding-top: 1px;
+	]]></UIComponentCSS>
+	<UIComponentJS name="UIComponentJS"><![CDATA[
+		const formatTime = d3.utcFormat("%B %d, %Y");
+
+		function connectCallback() {
+			const userCuentasAsignadas = document.getElementById('relevantInfo_userCuentasAsignadas');
+			userCuentasAsignadas.innerHTML = PluginManager.userCuentasAsignadas;
+		}
+
+		function renderCallback() {
+			const userCuentasAsignadas = document.getElementById('relevantInfo_userCuentasAsignadas');
+			userCuentasAsignadas.innerHTML = PluginManager.userCuentasAsignadas;
+		}
+	]]></UIComponentJS>
+</UIPluginV2>

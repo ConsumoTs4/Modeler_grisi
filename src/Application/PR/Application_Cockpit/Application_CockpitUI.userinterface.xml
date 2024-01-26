@@ -423,6 +423,37 @@
             </Bindings>
           </UserWelcome>
         </CardContainer>
+        <!-- Relevant Info Card-->
+        <CardContainer name="RelevantInfoCardUiPluginV2">
+          <Bindings>
+            <Binding type="Visible" target="Visible" call="ProcessContext::CardController.isCardVisible">
+              <Parameters>
+                <Input name="cardName" type="Literal" value="CardUserWelcome" />
+              </Parameters>
+            </Binding>
+            <Binding type="Text" target="IsCollapsible" call="ProcessContext::CardController.isCardCollapsible" bindingMode="ONE_WAY">
+              <Parameters>
+                <Input name="cardName" type="Literal" value="CardUserWelcome" />
+              </Parameters>
+            </Binding>
+            <Resource target="Title" type="Label" id="UserRelevantCardTitle" defaultLabel="Relevant" />
+            <Binding target="Information" type="Text" binding="ProcessContext::CardController.cardUserWelcome_DateText" bindingMode="ONE_WAY" />
+            <Binding target="CollapseState" type="Text" binding="ProcessContext::CardController.CollapseState_CardUserWelcome" bindingMode="TWO_WAY" />
+            <Binding target="IsReadyToLoad" type="Text" binding="ProcessContext::CardUserWelcome_DataLoaded" bindingMode="ONE_WAY" />
+          </Bindings>
+          <VisibilityRoles allRoles="true" />
+          <Events>
+            <LoadContainerData event="CardUserWelcome_loadData" />
+          </Events>
+          <CardEventSubcription>
+            <CardEvent name="onDateChange" />
+          </CardEventSubcription>
+          <UIPluginV2 name="RelevantInfoCardUiPluginV2" uiPlugin="MyRelevantInfoCardUiPluginV2">
+            <Bindings>
+              <Binding target="userCuentasAsignadas" type="Blob" binding="ApplicationContext::User.cuentasAsignadas" />
+            </Bindings>
+          </UIPluginV2>
+        </CardContainer>
         <!-- CardVisits START -->
         <CardContainer name="CardVisits">
           <Bindings>

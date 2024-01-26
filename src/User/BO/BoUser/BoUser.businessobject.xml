@@ -4,6 +4,7 @@
     <SimpleProperty name="pKey" type="DomPKey" dataSourceProperty="pKey" />
     <SimpleProperty name="salutation" type="DomBpaSalutation" dataSourceProperty="salutation" />
     <SimpleProperty name="name" type="DomText" dataSourceProperty="name" />
+    <SimpleProperty name="cuentasAsignadas" type="DomText" dataSourceProperty="cuentasAsignadas" />
     <SimpleProperty name="firstName" type="DomUsrName" dataSourceProperty="firstName" />
     <SimpleProperty name="middleName" type="DomUsrName" dataSourceProperty="middleName" />
     <SimpleProperty name="lastName" type="DomUsrName" dataSourceProperty="lastName" />
