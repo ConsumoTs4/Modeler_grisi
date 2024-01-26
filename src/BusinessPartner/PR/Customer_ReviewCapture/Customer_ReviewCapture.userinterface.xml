@@ -453,7 +453,7 @@
               </Items>
             </SelectionBox>
 
-            <SelectionBox name="MotivoDeBaja">
+            <!-- <SelectionBox name="MotivoDeBaja">
               <Bindings>
                 <Resource target="Label" type="Label" id="MotivoDeBaja" defaultLabel="Motivo de baja" />
                 <Binding target="DataSource" toggleId="DomCusMotivoBaja" bindingMode="TWO_WAY" />
@@ -465,7 +465,7 @@
                   <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
                 </Bindings>
               </Items>
-            </SelectionBox>
+            </SelectionBox> -->
 
             <InputArea name="Folio de tienda" disabled="true">
               <Bindings>
