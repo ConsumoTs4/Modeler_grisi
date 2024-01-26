@@ -23,7 +23,6 @@
     <SimpleProperty name="fromClbMainPKey" type="DomPKey" dataSourceProperty="fromClbMainPKey" />
     <SimpleProperty name="phaseCustomerTask" type="DomCusPhaseCustomerTask" storable="true" dataSourceProperty="phaseCustomerTask" />
     <SimpleProperty name="motivoBaja" type="DomCusMotivoBajaTask" storable="true" dataSourceProperty="motivoBaja" />
-    <SimpleProperty name="picklistprueba" type="DomCusPicklistPrueba" storable="true" dataSourceProperty="picklistprueba" />
   </SimpleProperties>
   <NestedObjects>
     <NestedObject name="boIssueNote" objectClass="BoIssueNote" dataSourceProperty="pKey" nestingProperty="svcIssuePKey" loadMode="LoadImmediate" />

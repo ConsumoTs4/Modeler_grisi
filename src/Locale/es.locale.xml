@@ -997,7 +997,7 @@
         <Label id="NameId" text="Nombre *" translationStatus="7" />
         <Label id="Name2Id" text="Segundo nombre" translationStatus="7" />
         <Label id="MatchcodeId" text="Código de coincidencia" translationStatus="7" />
-        <Label id="StreetId" text="Calle, numero y colonia *" translationStatus="7" />
+        <Label id="StreetId" text="Calle y número *" translationStatus="7" />
         <Label id="HouseNumberId" text="Número de casa" translationStatus="7" />
         <Label id="ZipCodeId" text="Código postal *" translationStatus="7" />
         <Label id="CityId" text="Alcaldía/Municipio *" translationStatus="7" />

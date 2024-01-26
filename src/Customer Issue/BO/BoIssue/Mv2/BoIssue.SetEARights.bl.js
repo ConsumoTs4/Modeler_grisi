@@ -51,6 +51,10 @@ var acl = me.getACL();
 var userPKey = ApplicationContext.get('user').getPKey();
 var customerManagementInfoLookup = me.getLuCustomerManagementInfo();
 var ownerLookup = me.getLuOwner();
+var luResponsibleLookup = me.getLuResponsible();
+var luInitiatorLookup = me.getLuInitiator();
+var lboIssueNoteLookup = me.getBoIssueNote();
+
 var readOnlyBySubstitution = "0";
 var substitutedIssue = "0";
 
@@ -110,9 +114,22 @@ else {
 }
 
 var ownerLookupAcl = ownerLookup.getACL();
+var luResponsibleLookupAcl= luResponsibleLookup.getACL();
+var luInitiatorLookupAcl = luInitiatorLookup.getACL();
+var lboIssueNoteLookupAcl = lboIssueNoteLookup.getACL();
+
 if (me.getBoSvcRequestMeta().getId() == "Solicitud de baja") {
   acl.removeRight(AclObjectType.PROPERTY, "classification", AclPermission.VISIBLE);
+  acl.removeRight(AclObjectType.PROPERTY, "initiationDate", AclPermission.VISIBLE);
+  acl.removeRight(AclObjectType.PROPERTY, "dueDate", AclPermission.VISIBLE);
+  acl.removeRight(AclObjectType.PROPERTY, "priority", AclPermission.VISIBLE);
+  acl.removeRight(AclObjectType.PROPERTY, "phaseCustomerTask", AclPermission.VISIBLE);
+  
+  
+  luResponsibleLookupAcl.removeRight(AclObjectType.PROPERTY, "name", AclPermission.VISIBLE);
+  luInitiatorLookupAcl.removeRight(AclObjectType.PROPERTY, "name", AclPermission.VISIBLE);
   ownerLookupAcl.removeRight(AclObjectType.PROPERTY, "name", AclPermission.VISIBLE);
+  lboIssueNoteLookupAcl.removeRight(AclObjectType.PROPERTY, "text", AclPermission.VISIBLE);
 }
 
     ///////////////////////////////////////////////////////////////////////////////////////////////
