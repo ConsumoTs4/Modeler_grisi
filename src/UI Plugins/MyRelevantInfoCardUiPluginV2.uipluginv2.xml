@@ -1,4 +1,4 @@
-<UIPluginV2 name="MyUserWelcomeCardUiPluginV2">
+<UIPluginV2 name="MyRelevantInfoCardUiPluginV2">
 	<Interface>
 		<Property id="userCuentasAsignadas" />
 	</Interface>
@@ -16,7 +16,7 @@
 					  <span>Cuentas Asignadas</span>
 					</div>
 					<div class="TimeStamp" style="color: rgb(57, 62, 75)">
-						<span class='userMessageStyle' id="welcomeUser_userCuentasAsignadas">
+						<span class='userMessageStyle' id="relevantInfo_userCuentasAsignadas">
 						</span>
 					</div>
 				  </div>
@@ -55,6 +55,7 @@
 			width: 100%;
 			// justify-content: space-around;
 			align-items: center;
+			padding: 0.2rem 0;
 		}
 
 		.SyncCardReplicationArea .ReplicationAreaNew .ReplicationInfoAreaWrapper .ReplicationTimestampVisualization {
@@ -89,12 +90,12 @@
 		const formatTime = d3.utcFormat("%B %d, %Y");
 
 		function connectCallback() {
-			const userCuentasAsignadas = document.getElementById('welcomeUser_userCuentasAsignadas');
+			const userCuentasAsignadas = document.getElementById('relevantInfo_userCuentasAsignadas');
 			userCuentasAsignadas.innerHTML = PluginManager.userCuentasAsignadas;
 		}
 
 		function renderCallback() {
-			const userCuentasAsignadas = document.getElementById('welcomeUser_userCuentasAsignadas');
+			const userCuentasAsignadas = document.getElementById('relevantInfo_userCuentasAsignadas');
 			userCuentasAsignadas.innerHTML = PluginManager.userCuentasAsignadas;
 		}
 	]]></UIComponentJS>

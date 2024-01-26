@@ -423,8 +423,8 @@
             </Bindings>
           </UserWelcome>
         </CardContainer>
-
-        <CardContainer name="CardUserWelcomeV2">
+        <!-- Relevant Info Card-->
+        <CardContainer name="RelevantInfoCardUiPluginV2">
           <Bindings>
             <Binding type="Visible" target="Visible" call="ProcessContext::CardController.isCardVisible">
               <Parameters>
@@ -448,7 +448,7 @@
           <CardEventSubcription>
             <CardEvent name="onDateChange" />
           </CardEventSubcription>
-          <UIPluginV2 name="UserWelcomeCardUiPlugin" uiPlugin="MyUserWelcomeCardUiPluginV2">
+          <UIPluginV2 name="RelevantInfoCardUiPluginV2" uiPlugin="MyRelevantInfoCardUiPluginV2">
             <Bindings>
               <Binding target="userCuentasAsignadas" type="Blob" binding="ApplicationContext::User.cuentasAsignadas" />
             </Bindings>
