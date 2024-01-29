@@ -4210,6 +4210,7 @@
       <AdvancedSearchObject id="AsoCustomerOverview">
         <Label id="Customer_Id" text="Id." translationStatus="7" />
         <Label id="Customer_Name" text="Nombre" translationStatus="7" />
+        <Label id="Customer_Type" text="Tipo de Cliente" translationStatus="7" />
         <Label id="Customer_Street" text="Calle, número y colonia *" translationStatus="7" />
         <Label id="Customer_ZipCode" text="Código postal *" translationStatus="7" />
         <Label id="Customer_City" text="Alcaldía/Municipio *" translationStatus="7" />
@@ -4223,6 +4224,7 @@
       <AdvancedSearchObject id="AsoOverdueCustomerOverview">
         <Label id="Customer_Id" text="Id." translationStatus="7" />
         <Label id="Customer_Name" text="Nombre" translationStatus="7" />
+        <Label id="Customer_Type" text="Tipo de Cliente" translationStatus="7" />
         <Label id="Customer_Street" text="Calle, número y colonia *" translationStatus="7" />
         <Label id="Customer_ZipCode" text="Código postal *" translationStatus="7" />
         <Label id="Customer_City" text="Alcaldía/Municipio *" translationStatus="7" />
