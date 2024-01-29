@@ -374,6 +374,12 @@
       <Empty value="" />
     </Initializer>
   </Domain>
+  <Domain name="DomCusTipoCliente" baseType="Toggle" length="30">
+    <Initializer>
+      <Default value="' '" />
+      <Empty value="" />
+    </Initializer>
+  </Domain>
   <Domain name="DomBpaCompanyType" baseType="Toggle" length="30">
     <Initializer>
       <Default value="'Retailer'" />
