@@ -2,6 +2,7 @@
   <Attributes>
     <Attribute name="pKey" table="Account" column="Id" />
     <Attribute name="name" table="Account" column="Name" />
+    <Attribute name="tipoDeCliente" table="Account" column="GCG_TipoCliente__c" />
     <Attribute name="customerId" table="Account" column="Account_Number__c" />
     <DerivedAttribute name="mainAddress" value="''" />
     <Attribute name="street" table="Account" column="ShippingStreet" />
@@ -55,6 +56,7 @@
 			var addCondSearch = "";
 			var customerId = "";
 			var name = "";
+			var tipoDeCliente = "";
 			var street = "";
 			var zipCode = "";
 			var city = "";
@@ -121,6 +123,12 @@
 			if (Utils.isDefined(newParams.name)){
               name = Utils.convertForDBParam(newParams.name, "DomBpaName");
               addCondSearch += " AND customers.name " + Utils.replaceOperator(newParams.nameComp) + "#name# ";
+			}
+
+			/**  Customer Tipo De Cliente  */
+			if (Utils.isDefined(newParams.tipoDeCliente)){
+			  tipoDeCliente = Utils.convertForDBParam(newParams.tipoDeCliente, "DomCusTipoCliente");
+              addCondSearch += " AND customers.tipoDeCliente " + Utils.replaceOperator(newParams.tipoDeClienteComp) + "#tipoDeCliente# ";
 			}
 
 			/**  Street  */
@@ -210,11 +218,12 @@
             }
 
 			var sqlParams1 = {referenceDateThru, referenceDateFrom, currentLatitude, currentLongitude, distance};
-			var sqlParams2 = {referenceDateThru, referenceDateFrom, customerId, name, street, zipCode, city, countryState, prio, classOfTrade, substituted, tradeOrgPKey, currentDate, overdue, distributionIssue, outOfStockIssue, hasActivity, hasPromotion, currentLatitude, currentLongitude, referenceUserPKey, distance};
+			var sqlParams2 = {referenceDateThru, referenceDateFrom, customerId, name, tipoDeCliente, street, zipCode, city, countryState, prio, classOfTrade, substituted, tradeOrgPKey, currentDate, overdue, distributionIssue, outOfStockIssue, hasActivity, hasPromotion, currentLatitude, currentLongitude, referenceUserPKey, distance};
 
 			var sqlStmt1 = "SELECT ";
 			sqlStmt1 +=      "customers.pKey AS pKey, ";
 			sqlStmt1 +=      "customers.name  as name, ";
+			sqlStmt1 +=      "customers.tipoDeCliente as tipoDeCliente, ";
 			sqlStmt1 +=      "customers.customerid as customerId, ";
 			sqlStmt1 +=      "customers.Prio as prio, ";
 			sqlStmt1 +=      "customers.ClassOfTrade as classOfTrade, ";
@@ -244,7 +253,8 @@
 			sqlStmt1 +=      " SELECT  ";
 			sqlStmt1 +=          "Account.Id AS pKey, ";
 			sqlStmt1 +=          "Account.Name as name, ";
-			sqlStmt1 +=          "Account.Account_Number__c as customerId,";
+			sqlStmt1 +=          "Account.GCG_TipoCliente__c as tipoDeCliente,";
+			sqlStmt1 +=          "Account.Account_Number__c as customerId,"; 
 			sqlStmt1 +=          "#toggleMapping('Account_Extension__c', 'Priority__c')# as prio, ";
 			sqlStmt1 +=          "Account_Extension__c.Class_Of_Trade__c as ClassOfTrade,   ";
 			sqlStmt1 +=          "Account.ShippingStreet || ', ' || Account.ShippingPostalCode || ' ' || Account.ShippingCity || ', ' || Account.ShippingState as mainAddress, ";
