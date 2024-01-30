@@ -287,7 +287,7 @@
             <Bindings>
               <Resource target="title" type="Label" id="CurrentStatusGroupId" defaultLabel="Current Status" />
             </Bindings>
-            <!-- <SelectionBox name="Phase" editable="false">
+            <SelectionBox name="Phase" editable="false">
               <Bindings>
                 <Resource target="Label" type="Label" id="StatusId" defaultLabel="Status" />
                 <Binding target="DataSource" toggleId="SvcIssuePhase" bindingMode="TWO_WAY" />
@@ -299,8 +299,8 @@
                   <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
                 </Bindings>
               </Items>
-            </SelectionBox> -->
-            <SelectionBox name="PhaseCustomerTask">
+            </SelectionBox>
+            <!-- <SelectionBox name="PhaseCustomerTask">
               <Bindings>
                 <Resource target="Label" type="Label" id="PhaseCustomerTaskID" defaultLabel="Estatus" />
                 <Binding target="DataSource" toggleId="DomCusPhaseCustomerTask" bindingMode="TWO_WAY" />
@@ -312,7 +312,7 @@
                   <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
                 </Bindings>
               </Items>
-            </SelectionBox>
+            </SelectionBox> -->
 
             <SelectionBox name="motivoBaja">
               <Bindings>

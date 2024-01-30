@@ -71,6 +71,7 @@ if(me.getDeleted() == "1") {
 }
 
 if(me.getBoBpaMeta().getId() == "Hospital") {
+  acl.removeRight(AclObjectType.PROPERTY, "rfc", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "folio_tienda", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "grupo_Cadena", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "phone1", AclPermission.VISIBLE);
@@ -145,6 +146,7 @@ if(me.getBoBpaMeta().getId() == "Hospital") {
 
 
 }else if(me.getBoBpaMeta().getId() == "Farmacias Digrimex") {
+  acl.removeRight(AclObjectType.PROPERTY, "rfc", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "folio_tienda", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "subtipo", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "tipo_de_institucion", AclPermission.VISIBLE);

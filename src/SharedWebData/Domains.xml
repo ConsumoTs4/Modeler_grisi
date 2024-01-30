@@ -7869,12 +7869,12 @@
       <Empty value="" />
     </Initializer>
   </Domain>
-  <Domain name="DomCusMotivoBaja" baseType="String" length="255">
+  <!-- <Domain name="DomCusMotivoBaja" baseType="String" length="255">
     <Initializer>
       <Default value="' '" />
       <Empty value="" />
     </Initializer>
-  </Domain>
+  </Domain> -->
   <Domain name="DomCusHonorarios" baseType="String" length="255">
     <Initializer>
       <Default value="' '" />
