@@ -838,7 +838,7 @@
         <Label id="CountryStateId" text="Estado/Provincia *" translationStatus="7" />
         <Label id="CommunicationId" text="Comunicación" translationStatus="7" />
         <Label id="PhoneId" text="Teléfono" translationStatus="7" />
-        <Label id="EmailId" text="Correo electrónico" translationStatus="7" />
+        <Label id="EmailId" text="Correo electrónico *" translationStatus="7" />
         <Label id="FaxId" text="Fax" translationStatus="7" />
         <Label id="ClassificationId" text="Clasificación" translationStatus="7" />
         <Label id="PrioId" text="Prio" translationStatus="7" />
@@ -1005,7 +1005,7 @@
         <Label id="CountryStateId" text="Estado/Provincia *" translationStatus="7" />
         <Label id="CommunicationId" text="Comunicación" translationStatus="7" />
         <Label id="PhoneId" text="Teléfono" translationStatus="7" />
-        <Label id="EmailId" text="Correo electrónico" translationStatus="7" />
+        <Label id="EmailId" text="Correo electrónico *" translationStatus="7" />
         <Label id="FaxId" text="Fax" translationStatus="7" />
         <Label id="ClassificationId" text="Clasificación" translationStatus="7" />
         <Label id="PrioId" text="Prio" translationStatus="7" />
@@ -1094,10 +1094,10 @@
         <Label id="AttachmentId" text="Archivos adjuntos" translationStatus="7" />
         <Label id="Deleted" text="Eliminado" translationStatus="7" />
         <Label id="ContactPhone2Id" text="Móvil" translationStatus="7" />
-        <Label id="StreetNoId" text="Calle, número y colonia *" translationStatus="7" />
+        <Label id="StreetNoId" text="Calle y número *" translationStatus="7" />
         <Label id="ZIPCityId" text="Ciudad de código postal/Zip *" translationStatus="7" />
         <Label id="Coordinates" text="Latitud / Longitud" translationStatus="7" />
-        <Label id="Street" text="Calle, número y colonia *" translationStatus="7" />
+        <Label id="Street" text="Calle y número *" translationStatus="7" />
         <Label id="City" text="Ciudad de código postal/Zip *" translationStatus="7" />
         <Label id="DeliveryRecipientRoleGroupId" text="Función de destinatario de entrega" translationStatus="7" />
         <Label id="PhoneId1" text="Teléfono" translationStatus="7" />
@@ -2957,7 +2957,7 @@
         <Label id="ReportingCardTitle" text="Generación de informes" translationStatus="7" />
         <Label id="ReportingCardInformation" text="Todos los clientes" translationStatus="7" />
         <Label id="UserWelcomeCardTitle" text="Resumen" translationStatus="7" />
-        <Label id="UserRelevantCardTitle" text="Relevante" translationStatus="7" />
+        <Label id="UserRelevantCardTitle" text="Médicos asignados" translationStatus="7" />
         <Label id="VisitsId" text="Visitas" translationStatus="7" />
         <Label id="TodayLabel" text="Hoy" translationStatus="7" />
         <Label id="CustomerTasksId" text="Tareas de cliente" translationStatus="7" />
@@ -3281,7 +3281,7 @@
         <Label id="CustomerDetailVisitHourTabId" text="Horas de visita preferidas" translationStatus="7" />
         <Label id="retailStoreNameId" text="Nombre" translationStatus="7" />
         <Label id="RetailStoreDetailId" text="Detalles del establecimiento" translationStatus="7" />
-        <Label id="EmailId" text="Correo electrónico" translationStatus="7" />
+        <Label id="EmailId" text="Correo electrónico *" translationStatus="7" />
         <Label id="PhoneId" text="Teléfono" translationStatus="7" />
         <Label id="retailStoreFaxId" text="Fax" translationStatus="7" />
         <Label id="CommunicationId" text="Detalles de contacto" translationStatus="7" />

@@ -138,7 +138,7 @@
               </Bindings>
             </InputArea>
 
-            <InputArea name="Apellido Paterno">
+            <!-- <InputArea name="Apellido Paterno">
               <Bindings>
                 <Resource target="Label" type="Label" defaultLabel="Apellido Paterno *" id="apellido_paterno" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.apellido_paterno" bindingMode="TWO_WAY" />
@@ -149,7 +149,7 @@
                 <Resource target="Label" type="Label" defaultLabel="Apellido Materno *" id="apellido_materno" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.apellido_materno" bindingMode="TWO_WAY" />
               </Bindings>
-            </InputArea>
+            </InputArea> -->
             <!-- <InputArea name="Fecha Nacimiento">
               <Bindings>
                 <Resource target="Label" type="Label" defaultLabel="Fecha Nacimiento" id="fecha_nacimiento" />
@@ -391,7 +391,7 @@
               </Items>
             </SelectionBox>
 
-            <SelectionBox name="MotivoDeBaja">
+            <!-- <SelectionBox name="MotivoDeBaja">
               <Bindings>
                 <Resource target="Label" type="Label" id="MotivoDeBaja" defaultLabel="Motivo de baja" />
                 <Binding target="DataSource" toggleId="DomCusMotivoBaja" bindingMode="TWO_WAY" />
@@ -403,7 +403,7 @@
                   <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
                 </Bindings>
               </Items>
-            </SelectionBox>
+            </SelectionBox> -->
 
             <InputArea name="Folio de tienda" disabled="true">
               <Bindings>
