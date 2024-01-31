@@ -138,18 +138,6 @@
               </Bindings>
             </InputArea>
 
-            <!-- <InputArea name="Apellido Paterno">
-              <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="Apellido Paterno *" id="apellido_paterno" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.apellido_paterno" bindingMode="TWO_WAY" />
-              </Bindings>
-            </InputArea>
-            <InputArea name="Apellido Materno">
-              <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="Apellido Materno *" id="apellido_materno" />
-                <Binding target="Value" binding="ProcessContext::CustomerDetail.apellido_materno" bindingMode="TWO_WAY" />
-              </Bindings>
-            </InputArea> -->
             <!-- <InputArea name="Fecha Nacimiento">
               <Bindings>
                 <Resource target="Label" type="Label" defaultLabel="Fecha Nacimiento" id="fecha_nacimiento" />

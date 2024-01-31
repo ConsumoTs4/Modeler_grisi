@@ -31,10 +31,7 @@
     <SimpleProperty name="operatingHoursId" type="DomPKey" dataSourceProperty="operatingHoursId" />
     <SimpleProperty name="emailEditable" type="DomBool" storable="false" dataSourceProperty="emailEditable" />
 
-    <SimpleProperty name="motivo" type="DomCusMotivoBaja" storable="true" dataSourceProperty="motivo" />
 
-    <SimpleProperty name="apellido_paterno" type="DomString" storable="true" dataSourceProperty="apellido_paterno"/>
-    <SimpleProperty name="apellido_materno" type="DomString" storable="true" dataSourceProperty="apellido_materno"/>
     <SimpleProperty name="fecha_nacimiento" type="DomDate" storable="true" dataSourceProperty="fecha_nacimiento" />
     <SimpleProperty name="cedulaProfesional" type="DomBpaName" storable="true" dataSourceProperty="cedulaProfesional" />
     <SimpleProperty name="honorarios" type="DomString" storable="true" dataSourceProperty="honorarios" />

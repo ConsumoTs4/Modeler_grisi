@@ -55,7 +55,6 @@ The customer Name must not be empty.
 The Id must be unique within the sales organization.
 */
 if (me.getBoBpaMeta().getId() == "Médico") {
-  var apellidoPaterno = me.apellido_paterno != undefined ? Utils.isEmptyString(me.getApellido_paterno().trim()) : true;
   var nombre = me.name != undefined ? Utils.isEmptyString(me.getName().trim()) : true;
   var especialidad = me.especialidad != undefined ? Utils.isEmptyString(me.getEspecialidad().trim()) : true;
   var pacientesPorSemana = me.pacientes_por_semana != undefined ? Utils.isEmptyString(me.getPacientes_por_semana().trim()) : true;
@@ -63,7 +62,7 @@ if (me.getBoBpaMeta().getId() == "Médico") {
   var cedulaProfesional = me.cedulaProfesional != undefined ? Utils.isEmptyString(me.getCedulaProfesional().trim()) : true;
   var rfcfd = me.rfc != undefined ? Utils.isEmptyString(me.getRfc().trim()) : true;
   var email1fd = me.email1 != undefined ? Utils.isEmptyString(me.getEmail1().trim()) : true;
-  if (apellidoPaterno || nombre || especialidad || pacientesPorSemana || honorarios || cedulaProfesional || rfcfd) {
+  if (nombre || especialidad || pacientesPorSemana || honorarios || cedulaProfesional || rfcfd ||email1fd) {
     messageCollector.add({
       "level": "error",
       "objectClass": "BoCustomer",
