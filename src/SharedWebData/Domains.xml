@@ -7857,12 +7857,6 @@
     </Initializer>
   </Domain>
 
-  <Domain name="DomCusGrupoCadena" baseType="String" length="15">
-    <Initializer>
-      <Default value="' '" />
-      <Empty value="" />
-    </Initializer>
-  </Domain>
   <Domain name="DomCusSex" baseType="String" length="15">
     <Initializer>
       <Default value="' '" />
@@ -7875,12 +7869,6 @@
       <Empty value="" />
     </Initializer>
   </Domain>
-  <!-- <Domain name="DomCusMotivoBaja" baseType="String" length="255">
-    <Initializer>
-      <Default value="' '" />
-      <Empty value="" />
-    </Initializer>
-  </Domain> -->
   <Domain name="DomCusHonorarios" baseType="String" length="255">
     <Initializer>
       <Default value="' '" />
@@ -8013,12 +8001,12 @@
       <Empty value="" />
     </Initializer>
   </Domain>
-  <Domain name="DomCusPhaseCustomerTask" baseType="String" length="255">
+  <!-- <Domain name="DomCusPhaseCustomerTask" baseType="String" length="255">
     <Initializer>
       <Default value="' '" />
       <Empty value="" />
     </Initializer>
-  </Domain>
+  </Domain> -->
   <Domain name="DomCusMotivoBajaTask" baseType="String" length="255">
     <Initializer>
       <Default value="' '" />

@@ -21,7 +21,7 @@
     <SimpleProperty name="salesOrg" type="DomSalesOrg" storable="true" dataSourceProperty="salesOrg" />
     <SimpleProperty name="clbMainPKey" type="DomPKey" dataSourceProperty="clbMainPKey" />
     <SimpleProperty name="fromClbMainPKey" type="DomPKey" dataSourceProperty="fromClbMainPKey" />
-    <SimpleProperty name="phaseCustomerTask" type="DomCusPhaseCustomerTask" storable="true" dataSourceProperty="phaseCustomerTask" />
+    <!-- <SimpleProperty name="phaseCustomerTask" type="DomCusPhaseCustomerTask" storable="true" dataSourceProperty="phaseCustomerTask" /> -->
     <SimpleProperty name="motivoBaja" type="DomCusMotivoBajaTask" storable="true" dataSourceProperty="motivoBaja" />
   </SimpleProperties>
   <NestedObjects>

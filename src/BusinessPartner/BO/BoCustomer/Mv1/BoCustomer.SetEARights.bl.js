@@ -81,8 +81,6 @@ if(me.getBoBpaMeta().getId() == "Hospital") {
   acl.removeRight(AclObjectType.PROPERTY, "razonsocial", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "subtipoFarmacia", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "tipo_de_persona", AclPermission.VISIBLE);
-  acl.removeRight(AclObjectType.PROPERTY, "apellido_paterno", AclPermission.VISIBLE);
-  acl.removeRight(AclObjectType.PROPERTY, "apellido_materno", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "nombre", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "numero_interior", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "latitud", AclPermission.VISIBLE);
@@ -158,8 +156,6 @@ if(me.getBoBpaMeta().getId() == "Hospital") {
   acl.removeRight(AclObjectType.PROPERTY, "requiereFactura", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "razonsocial", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "tipo_de_persona", AclPermission.VISIBLE);
-  acl.removeRight(AclObjectType.PROPERTY, "apellido_paterno", AclPermission.VISIBLE);
-  acl.removeRight(AclObjectType.PROPERTY, "apellido_materno", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "numero_interior", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "brick", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "latitud", AclPermission.VISIBLE);
@@ -210,8 +206,6 @@ if(me.getBoBpaMeta().getId() == "Hospital") {
   acl.removeRight(AclObjectType.PROPERTY, "brick", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "tipo_de_institucion", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "tipo_de_persona", AclPermission.VISIBLE);
-  acl.removeRight(AclObjectType.PROPERTY, "apellido_paterno", AclPermission.VISIBLE);
-  acl.removeRight(AclObjectType.PROPERTY, "apellido_materno", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "brick", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "latitud", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "longitud", AclPermission.VISIBLE);
@@ -261,8 +255,6 @@ if(me.getBoBpaMeta().getId() == "Hospital") {
   acl.removeRight(AclObjectType.PROPERTY, "brick", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "tipo_de_institucion", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "tipo_de_persona", AclPermission.VISIBLE);
-  acl.removeRight(AclObjectType.PROPERTY, "apellido_paterno", AclPermission.VISIBLE);
-  acl.removeRight(AclObjectType.PROPERTY, "apellido_materno", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "brick", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "latitud", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "longitud", AclPermission.VISIBLE);

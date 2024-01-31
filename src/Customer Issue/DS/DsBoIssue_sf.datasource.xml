@@ -13,7 +13,7 @@
     <Attribute name="issuePhase" table="Account_Task__c" column="Phase__c" />
     <Attribute name="issueId" table="Account_Task__c" column="Name" />
     <Attribute name="svcRequestMetaPKey" table="Account_Task__c" column="Account_Task_Template__c" />
-    <Attribute name="phaseCustomerTask" table="Account_Task__c" column="Phase__c" />
+    <!-- <Attribute name="phaseCustomerTask" table="Account_Task__c" column="Phase__c" /> -->
     <Attribute name="motivoBaja" table="Account_Task__c" column="GCG_MotivoDEBaja__c" />
     <DerivedAttribute name="actualStatePKey" value="#toggleMapping('Account_Task__c', 'Phase__c')#" />
     <DerivedAttribute name="nextStatePKey" value="' '" />
