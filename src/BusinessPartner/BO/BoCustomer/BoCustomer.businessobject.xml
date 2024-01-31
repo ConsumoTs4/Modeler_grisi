@@ -15,7 +15,8 @@
     <SimpleProperty name="companyType" type="DomBpaCompanyType" storable="true" dataSourceProperty="companyType" />
     <SimpleProperty name="orgLevel" type="DomBpaOrgLevel" storable="true" dataSourceProperty="orgLevel" />
     <SimpleProperty name="phase" type="DomBpaPhase" storable="true" dataSourceProperty="phase" />
-    <SimpleProperty name="salesRelevant" type="DomBpaSalesRelevant" storable="true" dataSourceProperty="salesRelevant" />
+    <!-- <SimpleProperty name="salesRelevant" type="DomBpaSalesRelevant" storable="true" dataSourceProperty="salesRelevant" /> -->
+    <SimpleProperty name="salesRelevant" type="DomBool" storable="true" dataSourceProperty="salesRelevant" />
     <SimpleProperty name="state" type="DomBpaState" storable="true" dataSourceProperty="state" />
     <SimpleProperty name="bpaMetaPKey" type="DomPKey" storable="true" dataSourceProperty="bpaMetaPKey" />
     <SimpleProperty name="dateClosure" type="DomDate" storable="true" dataSourceProperty="dateClosure" />
