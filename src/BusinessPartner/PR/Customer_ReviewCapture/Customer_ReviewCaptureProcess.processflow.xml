@@ -73,6 +73,25 @@
   </Entry>
   <Body>
     <Actions>
+      <Action name="ShowUI" actionType="VIEW">
+        <UIDescription>Call::AttachmentTabUI</UIDescription>
+        <Events>
+          <Event name="takePicture" action="TakePicture" />
+          <Event name="selectPicture" action="SelectPicture" />
+        </Events>
+      </Action>
+      <Action name="TakePicture" actionType="PROCESS" process="Call::CapturePictureProcess">
+        <Parameters>
+          <Input name="MainBO" value="ProcessContext::MainBO" />
+        </Parameters>
+      </Action>
+      <Action name="SelectPicture" actionType="PROCESS" process="Call::CapturePictureProcess">
+        <Parameters>
+          <Input name="MainBO" value="ProcessContext::MainBO" />
+          <Input name="openGallery" value="1" type="Literal" />
+        </Parameters>
+      </Action>
+
       <Action name="ShowCustomerList_Decision_From_InputParam" actionType="DECISION" parameter="ProcessContext::CustomerPKey">
         <CaseElse action="SetCurrentByPKey" />
         <CaseEmpty action="ShowCustomerList" />
@@ -138,6 +157,10 @@
           <Event name="acceptTimeSlotChanges" action="ValidateTimeSlot" />
           <Event name="timeSlotContextMenuOpened" action="LoadTimeSlotContextMenu" />
           <Event name="timeSlotContextMenuItemSelected" action="ContextMenuResultDecision" />
+          <!-- Customer Attachments -->
+          <Event name="newAttachment" action="ValidateContactBeforeComplete" />
+          <Event name="addAttachment" action="AddExistingContactPartner_LU" />
+          <Event name="acceptAttachmentChanges" action="ValidateContactPartner" />
         </Events>
       </Action>
       <!-- ContextMenu Decision -->
