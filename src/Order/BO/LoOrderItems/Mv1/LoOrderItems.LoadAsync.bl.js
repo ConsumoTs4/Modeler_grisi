@@ -49,7 +49,7 @@ function loadAsync(jsonParams){
     //               Add your customizing javaScript code below.                                 //
     //                                                                                           //
     ///////////////////////////////////////////////////////////////////////////////////////////////
-    
+
 var loadPromise;
 var useMergeEngine = jsonParams.useMergeEngine;
 
@@ -60,6 +60,7 @@ if (Utils.isCasBackend() || !useMergeEngine) {
       // Add items to list "LoOrderItems"
       me.addItems(items, jsonParams);
       me.postLoadItemUpdates(me.getAllItems(), jsonParams);
+      me.myLoadInventario(me.getAllItems(), jsonParams);
       if (me['setObjectStatus']) {
         me.setObjectStatus(STATE.PERSISTED);
       }
@@ -104,6 +105,7 @@ else {
         { "isOrderUnit" : "DESC" },
         { "sort" : "ASC" }]);
       me.postLoadItemUpdates(me.getItems(), jsonParams);
+      me.myLoadInventario(me.getAllItems(), jsonParams);
     });
 }
 

@@ -41,6 +41,7 @@
     <DerivedAttribute name="sdoItemMeta11" value="'0'" />
     <DerivedAttribute name="sdoItemMeta12" value="'0'" />
     <DerivedAttribute name="basePriceReceipt" value="'0'" />
+    <Attribute name="stockCustom" table="TmpOrderItemMergeResult_T" column="stockCustom" />
   </Attributes>
   <Entities>
     <Entity name="TmpOrderItemMergeResult_T" alias="" idAttribute="PrdMainPKey" />
@@ -102,7 +103,7 @@ if (Utils.isDefined(jsonQuery.category)){
 
 var index = 0;
 for (index in params){
-  switch (params[index].field) {                           
+  switch (params[index].field) {
     case "addCond_ProductPKeys":
       addCond_ProductPKeys = params[index].value;
       break;
@@ -126,9 +127,9 @@ if (!Utils.isEmptyString(addCond_ProductPKeys)) {
 var competitorProductsCondition = "";
 if (filterOutCompetitorProducts == '1') {
   competitorProductsCondition = " AND ForeignProduct = '0' ";
-}			
+}
 
-var sqlParams = {prdId, text1, eAN, prdType, foreignProduct, category}; 
+var sqlParams = {prdId, text1, eAN, prdType, foreignProduct, category};
 var sqlStmt = "";
 sqlStmt += "SELECT ";
 sqlStmt += "DISTINCT PrdMainPKey AS prdMainPKey, ";
@@ -163,14 +164,14 @@ sqlStmt += "FROM TmpOrderItemMergeResult_T ";
 sqlStmt += "WHERE ";
 sqlStmt += queryCondition;
 sqlStmt += closedListingCondition;
-// Add additional conditions for restricting products, e.g. invalid product check (called from LoOrderItems.processInvalidItems());  
+// Add additional conditions for restricting products, e.g. invalid product check (called from LoOrderItems.processInvalidItems());
 if (!Utils.isEmptyString(addCond_ProductPKeys)) {
   sqlStmt += " AND PrdMainPKey IN (" + productCondition.sql + ") ";
 }
 sqlStmt += " AND EXISTS (SELECT NULL FROM Unit_of_Measure__c ";
 sqlStmt += " WHERE Unit_of_Measure__c.Product__c = TmpOrderItemMergeResult_T.PrdMainPKey ";
 sqlStmt += " AND Unit_of_Measure__c.Order_Ability__c = '1') ";
-sqlStmt += competitorProductsCondition; 
+sqlStmt += competitorProductsCondition;
 sqlStmt += " AND FieldState = 'Available' ";
 sqlStmt += addCondSearch;
 sqlStmt += " ORDER BY PrdMainPKey ASC"

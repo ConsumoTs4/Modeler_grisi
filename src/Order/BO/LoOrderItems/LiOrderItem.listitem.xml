@@ -106,5 +106,6 @@
     <SimpleProperty name="maxValue" type="DomDecimal" />
     <SimpleProperty name="percentDiscount" type="DomDecimal" />
     <SimpleProperty name="showInBasket" type="DomBool" />
+    <SimpleProperty name="stockCustom" type="DomDecimal" dataSourceProperty="stockCustom" />
   </SimpleProperties>
 </ListItem>
