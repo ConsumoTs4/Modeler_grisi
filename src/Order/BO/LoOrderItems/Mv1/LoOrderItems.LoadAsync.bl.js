@@ -56,11 +56,11 @@ var useMergeEngine = jsonParams.useMergeEngine;
 if (Utils.isCasBackend() || !useMergeEngine) {
   // Load items from temporary table containing the merge result via "LoOrderItemsPrepopulation"
   loadPromise = Facade.getListAsync("LoOrderItemsPrepopulation", jsonParams).then(
-    function(items) {
+    async function(items) {
       // Add items to list "LoOrderItems"
-      me.addItems(items, jsonParams);
-      me.postLoadItemUpdates(me.getAllItems(), jsonParams);
-      me.myLoadInventario(me.getAllItems(), jsonParams);
+      await me.addItems(items, jsonParams);
+      await me.postLoadItemUpdates(me.getAllItems(), jsonParams);
+      await me.myLoadInventario(me.getAllItems(), jsonParams);
       if (me['setObjectStatus']) {
         me.setObjectStatus(STATE.PERSISTED);
       }
