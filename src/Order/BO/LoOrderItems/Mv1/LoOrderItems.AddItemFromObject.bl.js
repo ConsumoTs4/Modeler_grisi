@@ -56,9 +56,10 @@
  * @param {DomPrdPiecesPerUnit} piecesPerSmallestUnit
  * @param {Object} orderMeta
  * @param {Object} loSuggestedQuantity
+ * @param {DomPkey} ownerPKey
  * @returns promise
  */
-function addItemFromObject(productsForAdd, productPKey, sdoMainPKey, customerPKey, promotionPkey, considerSelectablePromotion, commitDate, itemTemplate, clbMainPKey, criterionAttribute, barcodeScanBehavior, scanIncrementQuantity, mode, uoM, piecesPerSmallestUnit, orderMeta, loSuggestedQuantity){
+function addItemFromObject(productsForAdd, productPKey, sdoMainPKey, customerPKey, promotionPkey, considerSelectablePromotion, commitDate, itemTemplate, clbMainPKey, criterionAttribute, barcodeScanBehavior, scanIncrementQuantity, mode, uoM, piecesPerSmallestUnit, orderMeta, loSuggestedQuantity, ownerPKey){
     var me = this;
     ///////////////////////////////////////////////////////////////////////////////////////////////
     //                                                                                           //
@@ -70,6 +71,7 @@ var productInfoJsonParams = [];
 var productInfoJsonQuery = {};
 var promise;
 var result;
+var stockCustomPrd;
 
 if(Utils.isSfBackend()) {
   commitDate = Utils.convertForDBParam(commitDate, "DomDate");
@@ -135,13 +137,13 @@ promise = Facade.getObjectAsync(productInformationCP, productInfoJsonQuery)
           "prdMainPKey" : productPKey,
           "sdoItemMetaPKey" : itemTemplate.getPKey(),
           "quantityLogisticUnit" : uoM
-        }); 
+        });
     }
 
     var filterCountIncrements = [];
 
     //Check if there exists an item with the same ProductPKey
-    if (existingItems.length === 0) {
+    if (existingItems.length === 0 && orderMeta.getId() === "Muestras médica") {
 
       var product = productsForAdd.getItemsByParam({"prdMainPKey" : productPKey})[0];
 
@@ -184,15 +186,17 @@ promise = Facade.getObjectAsync(productInformationCP, productInfoJsonQuery)
         item.pricingInfo9 = 0;
         item.pricingInfo10 = 0;
 
+        item.stockCustom = stockCustomPrd;
+
         if(Utils.isSfBackend()) {
           if(item.listed == '1' && item.promoted == '1') {
             item.itemState = 'PL';
-          } 
+          }
           else if(item.listed == '0' && item.promoted == '1') {
-            item.itemState = 'P';                
-          } 
+            item.itemState = 'P';
+          }
           else if(item.listed == '1' && item.promoted == '0') {
-            item.itemState = 'L';                
+            item.itemState = 'L';
           }
         }
 
@@ -264,7 +268,7 @@ promise = Facade.getObjectAsync(productInformationCP, productInfoJsonQuery)
                 "value" : 1
               });
             return result;
-          });     
+          });
       }
       else {
         result.filterCountIncrements = filterCountIncrements;
@@ -275,12 +279,19 @@ promise = Facade.getObjectAsync(productInformationCP, productInfoJsonQuery)
           return result;
         });
       }
-    } 
-    else {
-      var existingItem = existingItems[0];  
+    } else if (orderMeta.getId() === "Muestras médica") {
+      var existingItem = existingItems[0];
       result = {};
       result.selectPKey = existingItem.getPKey();
-      result.filterCountIncrements = filterCountIncrements;	
+      result.filterCountIncrements = filterCountIncrements;
+      result.unitOfMeasureItem = existingItem;
+      result.stockCustomPrd = stockCustomPrd;
+      return result;
+    } else {
+      var existingItem = existingItems[0];
+      result = {};
+      result.selectPKey = existingItem.getPKey();
+      result.filterCountIncrements = filterCountIncrements;
       result.unitOfMeasureItem = existingItem;
       return result;
     }
@@ -290,7 +301,7 @@ promise = Facade.getObjectAsync(productInformationCP, productInfoJsonQuery)
     return me.incrementQuantityByScan(result.unitOfMeasureItem, scanIncrementQuantity);
   }
 }).then(function(){
-  return result;  
+  return result;
 });
     ///////////////////////////////////////////////////////////////////////////////////////////////
     //                                                                                           //

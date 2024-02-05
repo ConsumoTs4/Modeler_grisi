@@ -56,5 +56,6 @@
     <SimpleProperty name="sort" type="DomBool" storable="false" dataSourceProperty="sort" />
     <SimpleProperty name="category" type="DomPrdCategory" dataSourceProperty="category" />
     <SimpleProperty name="refPKey" type="DomId" dataSourceProperty="refPKey" />
+    <SimpleProperty name="stockCustom" type="DomDecimal" dataSourceProperty="stockCustom" />
   </SimpleProperties>
 </ListItem>

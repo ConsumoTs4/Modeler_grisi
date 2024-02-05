@@ -50,8 +50,8 @@ sql += "historic.history, ";
 sql += "promotion.promoted, ";
 sql += defaultQuantityLogisticUnit + ", " + defaultPiecesPerSmallestUnit + ", " ;
 sql += "product.text1, product.text2, product.prdId, product.shortId, product.taxClassification, product.simplePricingBasePrice, ";
-sql += "product.deliveryState, product.fieldState, product.foreignProduct, product.eAN, product.newState, product.piecesPerSmallestUnitForBasePrice, product.groupId, product.groupText, product.category, product.prdType, "; 
-sql += "null, null, null, null, null, null, null, null, null, null, null, null, 0 ";
+sql += "product.deliveryState, product.fieldState, product.foreignProduct, product.eAN, product.newState, product.piecesPerSmallestUnitForBasePrice, product.groupId, product.groupText, product.category, product.prdType, ";
+sql += "null, null, null, null, null, null, null, null, null, null, null, null, 0, 0 ";
 sql += "FROM ";
 sql += query;
 
