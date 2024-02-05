@@ -46,7 +46,9 @@ function myLoadInventario(orderItems, jsonParams){
 
     var inventarioJsonParams = [];
     var inventarioJsonQuery = {};
+    var promesas = [];
     var promiseLu;
+    var orderItem;
 
     var customerPKey = jsonParams.jsonQuerySelectPromotion.customerPKey;
 
@@ -61,40 +63,25 @@ function myLoadInventario(orderItems, jsonParams){
 
     var contador = 1;
 
-    // for (var i = 0; i < orderItems.length; i++) {
-        inventarioJsonParams[1].value = orderItems[0].prdMainPKey;
+    for (var i = 0; i < orderItems.length - 1; i++) {
+        orderItem = orderItems[i]
+        inventarioJsonParams[1].value = orderItem.prdMainPKey;
         inventarioJsonQuery.params = inventarioJsonParams;
-        try {
-          lookupData = await Facade.getObjectAsync("LuMyInventarioFromObject", inventarioJsonQuery);
-          if (lookupData !== undefined && lookupData.stockCustom !== undefined) {
-            orderItems[0].setStockCustom(lookupData.stockCustom);
-            contador++;
-          } else {
-            orderItems[0].setStockCustom(0);
-            contador++;
-          }
 
-        } catch (error) {
-
-        } finally {
-          if (contador === orderItems.length) {
-            resolve();
-          }
-        }
-        // promiseLu = Facade.getObjectAsync("LuMyInventarioFromObject", inventarioJsonQuery)
-        //   .then(function (lookupData) {
-        //       if (lookupData !== undefined && lookupData.stockCustom !== undefined) {
-        //         orderItems[0].setStockCustom(lookupData.stockCustom);
-        //         contador++;
-        //       } else {
-        //         orderItems[0].setStockCustom(0);
-        //         contador++;
-        //       }
-        //       if (contador === orderItems.length) {
-        //         resolve();
-        //       }
-        //     });
-    // }
+        promiseLu = Facade.getObjectAsync("LuMyInventarioFromObject", inventarioJsonQuery)
+          .then(function (lookupData) {
+              if (lookupData !== undefined && lookupData.stockCustom !== undefined) {
+                orderItem.stockCustom = lookupData.stockCustom;
+                contador++;
+              } else {
+                orderItem.stockCustom = 0;
+                contador++;
+              }
+              if (contador === orderItems.length) {
+                resolve();
+              }
+            });
+    }
 
 });
     ///////////////////////////////////////////////////////////////////////////////////////////////
