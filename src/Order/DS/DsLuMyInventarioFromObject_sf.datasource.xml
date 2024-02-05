@@ -6,20 +6,20 @@
   </Attributes>
   <Entities>
     <Entity name="GCG_Inventario__c" alias="" idAttribute="Id" />
-    <Entity name="Order__c" alias="">
+    <Entity name="Account" alias="">
       <Join Type="left outer">
         <SimpleJoin>
-          <Condition leftSideValue="Order__c.Id" comparator="eq" rightSideType="Literal" rightSideValue="#sdoMainPKey#" />
+          <Condition leftSideValue="Account.Id" comparator="eq" rightSideType="Literal" rightSideValue="#customerPKey#" />
         </SimpleJoin>
       </Join>
     </Entity>
   </Entities>
   <QueryCondition><![CDATA[
     GCG_Inventario__c.GCG_ProductGhost__c = #prdMainPKey#
-    AND GCG_Inventario__c.GCG_Representante__c = Order__c.OwnerId
+    AND GCG_Inventario__c.GCG_Representante__c = Account.OwnerId
   ]]></QueryCondition>
   <Parameters>
     <Parameter name="prdMainPKey" type="TEXT" />
-    <Parameter name="sdoMainPKey" type="TEXT" />
+    <Parameter name="customerPKey" type="TEXT" />
   </Parameters>
 </DataSource>

@@ -57,7 +57,6 @@
     <Attribute name="pricingInfo10" table="Order_Item__c" column="Pricing_Info_10__c" />
 
     <Attribute name="stockCustom" table="GCG_Inventario__c" column="GCG_InventarioReal__c" />
-    <Attribute name="stockCustom" table="GCG_Inventario__c" column="GCG_InventarioReal__c" />
   </Attributes>
   <Entities>
     <Entity name="Order_Item__c" alias="" idAttribute="Id" />
@@ -75,10 +74,17 @@
         </SimpleJoin>
       </Join>
     </Entity>
+    <Entity name="Account" alias="">
+      <Join Type="left outer">
+        <SimpleJoin>
+          <Condition leftSideValue="Account.Id" comparator="eq" rightSideType="Literal" rightSideValue="#customerPKey#" />
+        </SimpleJoin>
+      </Join>
+    </Entity>
     <Entity name="GCG_Inventario__c" alias="">
       <Join Type="left outer">
         <SimpleJoin>
-          <Condition leftSideValue="GCG_Inventario__c.GCG_Representante__c" comparator="eq" rightSideType="Attribute" rightSideValue="Order__c.OwnerId" />
+          <Condition leftSideValue="GCG_Inventario__c.GCG_Representante__c" comparator="eq" rightSideType="Attribute" rightSideValue="Account.OwnerId" />
           <Condition leftSideValue="GCG_Inventario__c.GCG_ProductGhost__c" comparator="eq" rightSideType="Attribute" rightSideValue="Order_Item__c.Product__c" />
         </SimpleJoin>
       </Join>
@@ -101,6 +107,7 @@
   </OrderCriteria>
   <Parameters>
     <Parameter name="sdoMainPKey" type="TEXT" />
+    <Parameter name="customerPKey" type="TEXT" />
     <Parameter name="addCond" treatAs="sqlSnippet" />
   </Parameters>
 </DataSource>

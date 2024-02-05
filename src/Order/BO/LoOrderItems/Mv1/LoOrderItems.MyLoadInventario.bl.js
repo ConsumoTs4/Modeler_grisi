@@ -28,9 +28,11 @@
  * @function myLoadInventario
  * @this LoOrderItems
  * @kind listobject
+ * @async
  * @namespace CUSTOM
  * @param {Object} orderItems
  * @param {Object} jsonParams
+ * @returns promise
  */
 function myLoadInventario(orderItems, jsonParams){
     var me = this;
@@ -40,51 +42,59 @@ function myLoadInventario(orderItems, jsonParams){
     //                                                                                           //
     ///////////////////////////////////////////////////////////////////////////////////////////////
 
-    var promise1 = new Promise((resolve, reject) => {
+    var promise = new Promise((resolve, reject) => {
 
     var inventarioJsonParams = [];
     var inventarioJsonQuery = {};
-    var sdoMainPKey;
-    var index = 0;
-    var promesas = [];
     var promiseLu;
-    for (index in jsonParams.params) {
-        switch (jsonParams.params[index].field) {
-        case "sdoMainPKey":
-            sdoMainPKey = jsonParams.params[index].value;
-            break;
-        }
-    }
+
+    var customerPKey = jsonParams.jsonQuerySelectPromotion.customerPKey;
 
     inventarioJsonParams.push({
-        "field": "sdoMainPKey",
-        "value": sdoMainPKey
+        "field": "customerPKey",
+        "value": customerPKey
     });
     inventarioJsonParams.push({
         "field": "prdMainPKey",
         "value": " "
     });
 
-    var contador = 0;
+    var contador = 1;
 
-    for (var i = 0; i < orderItems.length; i++) {
-        orderItem = orderItems[i];
-        inventarioJsonParams[1].value = orderItem.prdMainPKey;
+    // for (var i = 0; i < orderItems.length; i++) {
+        inventarioJsonParams[1].value = orderItems[0].prdMainPKey;
         inventarioJsonQuery.params = inventarioJsonParams;
+        try {
+          lookupData = await Facade.getObjectAsync("LuMyInventarioFromObject", inventarioJsonQuery);
+          if (lookupData !== undefined && lookupData.stockCustom !== undefined) {
+            orderItems[0].setStockCustom(lookupData.stockCustom);
+            contador++;
+          } else {
+            orderItems[0].setStockCustom(0);
+            contador++;
+          }
 
-        promiseLu = Facade.getObjectAsync("LuMyInventarioFromObject", inventarioJsonQuery)
-          .then(function (lookupData) {
-              if (lookupData !== undefined && lookupData.stockCustom !== undefined) {
-                orderItem.setStockCustom(lookupData.stockCustom);
-              } else {
-                orderItem.setStockCustom(0);
-              }
-              contador++;
-              if (contador === orderItems.length) {
-                resolve();
-              }
-            });
-    }
+        } catch (error) {
+
+        } finally {
+          if (contador === orderItems.length) {
+            resolve();
+          }
+        }
+        // promiseLu = Facade.getObjectAsync("LuMyInventarioFromObject", inventarioJsonQuery)
+        //   .then(function (lookupData) {
+        //       if (lookupData !== undefined && lookupData.stockCustom !== undefined) {
+        //         orderItems[0].setStockCustom(lookupData.stockCustom);
+        //         contador++;
+        //       } else {
+        //         orderItems[0].setStockCustom(0);
+        //         contador++;
+        //       }
+        //       if (contador === orderItems.length) {
+        //         resolve();
+        //       }
+        //     });
+    // }
 
 });
     ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -92,4 +102,6 @@ function myLoadInventario(orderItems, jsonParams){
     //               Add your customizing javaScript code above.                                 //
     //                                                                                           //
     ///////////////////////////////////////////////////////////////////////////////////////////////
+
+    return promise;
 }

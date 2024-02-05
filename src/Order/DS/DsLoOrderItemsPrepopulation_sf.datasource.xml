@@ -109,6 +109,7 @@ if (Utils.isDefined(jsonQuery.jsonQuerySelectPromotion)) {
 }
 if (Utils.isDefined(jsonQuery.jsonQueryPersisted)) {
  jsonQueryPersisted = jsonQuery.jsonQueryPersisted;
+ jsonQueryPersisted.params.push(jsonQuerySelectPromotion.params[4]);
 }
 if (Utils.isDefined(jsonQuery.isNone)) {
  isNone = Utils.convertForDBParam(jsonQuery.isNone, "DomText");
@@ -141,6 +142,7 @@ var sqlParams = {isCollection, isHit,sdoMetaPosition,presentDefault,criterionFil
                  sdoItemMetaPKey,type,shortType,priceEffect,saveZeroQuantity,calculationGroup,movementDirection};
 var persistedSqlQuery = Facade.myProxy.getLoadStatement("LoMeOrderItems", jsonQueryPersisted);
 var selectPromotionSqlQuery = Facade.myProxy.getLoadStatement("LoMeSelectablePromotions", jsonQuerySelectPromotion);
+
 
 //Select Order Items
 selectAttributes += " persistedProduct.pKey AS pKey ";
@@ -243,6 +245,7 @@ selectAttributes += "	,persistedProduct.pricingInfo7 AS pricingInfo7 ";
 selectAttributes += "	,persistedProduct.pricingInfo8 AS pricingInfo8 ";
 selectAttributes += "	,persistedProduct.pricingInfo9 AS pricingInfo9 ";
 selectAttributes += "	,persistedProduct.pricingInfo10 AS pricingInfo10 ";
+selectAttributes += "	,persistedProduct.stockCustom AS stockCustom ";
 selectAttributes += "	,IFNULL(persistedProduct.refPKey, proposedProduct.prdMainPKey || #sdoItemMetaPKey# || proposedProduct.promotionPKey || ' ') AS refPKey ";
 
 //Select relevant data from UoM table
