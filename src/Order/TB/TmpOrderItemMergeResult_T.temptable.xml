@@ -35,13 +35,14 @@
     <column name="SpecialQuantity" defaultValue="0" nullable="true" domain="DomDecimal" migrationDefault=" " />
     <column name="SuggestedQuantity" defaultValue="0" nullable="true" domain="DomDecimal" migrationDefault=" " />
     <column name="GroupName" defaultValue="' '" nullable="true" domain="DomText" migrationDefault=" " />
-    <column name="GroupSort" defaultValue="' '" nullable="true" domain="DomDecimal" migrationDefault=" " />    
+    <column name="GroupSort" defaultValue="' '" nullable="true" domain="DomDecimal" migrationDefault=" " />
     <column name="GroupIdSort" defaultValue="' '" nullable="true" domain="DomDecimal" migrationDefault=" " />
     <column name="TacticProductPKey" defaultValue="" nullable="true" domain="DomPKey" migrationDefault=" " />
     <column name="PromotedPrice" defaultValue="' '" nullable="true" domain="DomMoney" migrationDefault=" " />
     <column name="DefaultValue" defaultValue="' '" nullable="true" domain="DomDecimal" migrationDefault=" " />
     <column name="MaxValue" defaultValue="" nullable="true" domain="DomDecimal" migrationDefault=" " />
     <column name="IsDeleted" defaultValue="" nullable="true" domain="DomBool" migrationDefault="0" />
+    <column name="stockCustom" defaultValue="' '" nullable="true" domain="DomDecimal" migrationDefault=" " />
   </columns>
   <indexes />
 </TempTable>

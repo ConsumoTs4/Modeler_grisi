@@ -1,0 +1,25 @@
+<DataSource name="DsLuMyInventarioFromObject" backendSystem="sf" businessObjectClass="LuMyInventarioFromObject" external="false" readOnly="true" editableEntity="GCG_Inventario__c" schemaVersion="2.0">
+  <!-- For more information about the supported properties and nodes see corresponding DataSource.md file under ~Workspace/contractSnippets/YourModuel Section/DS/DS_DataSource -->
+  <Attributes>
+    <Attribute name="pKey" table="GCG_Inventario__c" column="Id" />
+    <Attribute name="stockCustom" table="GCG_Inventario__c" column="GCG_InventarioReal__c" />
+  </Attributes>
+  <Entities>
+    <Entity name="GCG_Inventario__c" alias="" idAttribute="Id" />
+    <Entity name="Account" alias="">
+      <Join Type="left outer">
+        <SimpleJoin>
+          <Condition leftSideValue="Account.Id" comparator="eq" rightSideType="Literal" rightSideValue="#customerPKey#" />
+        </SimpleJoin>
+      </Join>
+    </Entity>
+  </Entities>
+  <QueryCondition><![CDATA[
+    GCG_Inventario__c.GCG_ProductGhost__c = #prdMainPKey#
+    AND GCG_Inventario__c.GCG_Representante__c = Account.OwnerId
+  ]]></QueryCondition>
+  <Parameters>
+    <Parameter name="prdMainPKey" type="TEXT" />
+    <Parameter name="customerPKey" type="TEXT" />
+  </Parameters>
+</DataSource>

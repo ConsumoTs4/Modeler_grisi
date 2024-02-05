@@ -55,6 +55,7 @@
     <DerivedAttribute name="refPKey" value="''" />
     <Attribute name="quantityLogisticUnit" table="Unit_Of_Measure__c" column="Unit_Type__c" />
     <Attribute name="piecesPerSmallestUnit" table="Unit_Of_Measure__c" column="Pieces_Per_Smallest_Unit__c" />
+    <Attribute name="stockCustom" table="TmpOrderItemMergeResult_T" column="stockCustom" />
   </Attributes>
   <Entities>
     <Entity name="TmpOrderItemMergeResult_T" alias="" idAttribute="PrdMainPKey" />
@@ -74,13 +75,13 @@ var criterionFilterAttribute = "";
 var criterionFilterValue = "";
 var jsonQuerySelectPromotion = {};
 var jsonQueryPersisted = {};
-var sdoItemMetaPKey = ""; 
-var type = ""; 
-var shortType = ""; 
-var priceEffect = ""; 
-var saveZeroQuantity = ""; 
-var calculationGroup = ""; 
-var movementDirection = ""; 
+var sdoItemMetaPKey = "";
+var type = "";
+var shortType = "";
+var priceEffect = "";
+var saveZeroQuantity = "";
+var calculationGroup = "";
+var movementDirection = "";
 
 if (Utils.isDefined(jsonQuery.queryCondition)) {
  queryCondition = Utils.convertForDBParam(jsonQuery.queryCondition, "DomText");
@@ -108,6 +109,7 @@ if (Utils.isDefined(jsonQuery.jsonQuerySelectPromotion)) {
 }
 if (Utils.isDefined(jsonQuery.jsonQueryPersisted)) {
  jsonQueryPersisted = jsonQuery.jsonQueryPersisted;
+ jsonQueryPersisted.params.push(jsonQuerySelectPromotion.params[4]);
 }
 if (Utils.isDefined(jsonQuery.isNone)) {
  isNone = Utils.convertForDBParam(jsonQuery.isNone, "DomText");
@@ -140,6 +142,7 @@ var sqlParams = {isCollection, isHit,sdoMetaPosition,presentDefault,criterionFil
                  sdoItemMetaPKey,type,shortType,priceEffect,saveZeroQuantity,calculationGroup,movementDirection};
 var persistedSqlQuery = Facade.myProxy.getLoadStatement("LoMeOrderItems", jsonQueryPersisted);
 var selectPromotionSqlQuery = Facade.myProxy.getLoadStatement("LoMeSelectablePromotions", jsonQuerySelectPromotion);
+
 
 //Select Order Items
 selectAttributes += " persistedProduct.pKey AS pKey ";
@@ -242,6 +245,7 @@ selectAttributes += "	,persistedProduct.pricingInfo7 AS pricingInfo7 ";
 selectAttributes += "	,persistedProduct.pricingInfo8 AS pricingInfo8 ";
 selectAttributes += "	,persistedProduct.pricingInfo9 AS pricingInfo9 ";
 selectAttributes += "	,persistedProduct.pricingInfo10 AS pricingInfo10 ";
+selectAttributes += "	,persistedProduct.stockCustom AS stockCustom ";
 selectAttributes += "	,IFNULL(persistedProduct.refPKey, proposedProduct.prdMainPKey || #sdoItemMetaPKey# || proposedProduct.promotionPKey || ' ') AS refPKey ";
 
 //Select relevant data from UoM table
@@ -429,9 +433,9 @@ sqlstmt += " isOrderUnit DESC, ";
 sqlstmt += " sort ASC ";
 
 			var sqlStmtResult = Utils.replaceMacrosParam(sqlstmt, sqlParams);
-			//var finalParams = persistedSqlQuery.params.concat(sqlStmtResult.params);
+			var finalParams = persistedSqlQuery.params.concat(sqlStmtResult.params);
 
-			var finalParams; 
+			var finalParams;
 			if(jsonQuerySelectPromotion.considerSelectablePromotion == "1"){
 				finalParams=selectPromotionSqlQuery.params.concat(persistedSqlQuery.params).concat(sqlStmtResult.params);
 			}else{

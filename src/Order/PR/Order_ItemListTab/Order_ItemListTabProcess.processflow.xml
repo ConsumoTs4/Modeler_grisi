@@ -779,6 +779,7 @@
           <Input name="piecesPerSmallestUnit" value="ProcessContext::AddProduct_PiecesPerSmallestUnit" />
           <Input name="orderMeta" value="ProcessContext::MainBO.boOrderMeta" />
           <Input name="loSuggestedQuantity" value="ProcessContext::MainBO.loSuggestedQuantity" />
+          <Input name="ownerPKey" value="ProcessContext::MainBO.luOwner.pKey" />
         </Parameters>
       </Action>
       <Action name="FilterProductsAfterAdd" actionType="LOGIC" call="ProcessContext::MainBO.LoItems.setItemFilter">
