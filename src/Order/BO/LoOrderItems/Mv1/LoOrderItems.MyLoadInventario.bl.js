@@ -44,11 +44,12 @@ function myLoadInventario(orderItems, jsonParams){
 
     var promise = new Promise((resolve, reject) => {
 
+    if(orderItems.length == 0) {
+      resolve();
+    }
+
     var inventarioJsonParams = [];
     var inventarioJsonQuery = {};
-    var promesas = [];
-    var promiseLu;
-    var orderItem;
 
     var customerPKey = jsonParams.jsonQuerySelectPromotion.customerPKey;
 
@@ -61,22 +62,24 @@ function myLoadInventario(orderItems, jsonParams){
         "value": " "
     });
 
-    var contador = 1;
+    var contador = 0;
 
-    for (var i = 0; i < orderItems.length - 1; i++) {
-        orderItem = orderItems[i]
-        inventarioJsonParams[1].value = orderItem.prdMainPKey;
+    for (var i = 0; i < orderItems.length; i++) {
+        const orderItem = orderItems[i];
+        inventarioJsonParams[1].value = orderItems[i].prdMainPKey;
         inventarioJsonQuery.params = inventarioJsonParams;
 
-        promiseLu = Facade.getObjectAsync("LuMyInventarioFromObject", inventarioJsonQuery)
+        Facade.getObjectAsync("LuMyInventarioFromObject", inventarioJsonQuery)
           .then(function (lookupData) {
               if (lookupData !== undefined && lookupData.stockCustom !== undefined) {
-                orderItem.stockCustom = lookupData.stockCustom;
-                contador++;
+                const currentStock = lookupData.stockCustom;
+                orderItem.setStockCustom(currentStock);
               } else {
-                orderItem.stockCustom = 0;
-                contador++;
+                orderItem.setStockCustom(0);
               }
+
+              contador++;
+
               if (contador === orderItems.length) {
                 resolve();
               }
