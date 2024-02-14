@@ -428,12 +428,12 @@
           <Bindings>
             <Binding type="Visible" target="Visible" call="ProcessContext::CardController.isCardVisible">
               <Parameters>
-                <Input name="cardName" type="Literal" value="CardUserWelcome" />
+                <Input name="cardName" type="Literal" value="RelevantInfoCardUiPluginV2" />
               </Parameters>
             </Binding>
             <Binding type="Text" target="IsCollapsible" call="ProcessContext::CardController.isCardCollapsible" bindingMode="ONE_WAY">
               <Parameters>
-                <Input name="cardName" type="Literal" value="CardUserWelcome" />
+                <Input name="cardName" type="Literal" value="RelevantInfoCardUiPluginV2" />
               </Parameters>
             </Binding>
             <Resource target="Title" type="Label" id="UserRelevantCardTitle" defaultLabel="Relevant" />

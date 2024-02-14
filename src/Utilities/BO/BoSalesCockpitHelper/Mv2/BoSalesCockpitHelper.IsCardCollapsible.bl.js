@@ -52,31 +52,31 @@ function isCardCollapsible(cardName){
 
 switch (cardName){
 
-  case "CardUserWelcome": 
+  case "CardUserWelcome":
     collapsible = true;
     break;
 
-  case "CardSync": 
+  case "CardSync":
     collapsible = true;
     break;
 
-  case "CardVisits": 
+  case "CardVisits":
     collapsible = true;
     break;
 
-  case "CardReporting": 
+  case "CardReporting":
     collapsible = true;
     break;
 
-  case "CardUserNotifications": 
+  case "CardUserNotifications":
     collapsible = true;
     break;
 
-  case "CardTasks": 
+  case "CardTasks":
     collapsible = true;
     break;
 
-  case "CardCustomerTasks": 
+  case "CardCustomerTasks":
     collapsible = true;
     break;
 
@@ -94,6 +94,10 @@ switch (cardName){
     break;
 
   case "CardCustomersOverdue":
+    collapsible = true;
+    break;
+
+  case "RelevantInfoCardUiPluginV2":
     collapsible = true;
     break;
 }

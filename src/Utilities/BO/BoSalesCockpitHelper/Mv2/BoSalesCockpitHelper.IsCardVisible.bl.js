@@ -52,33 +52,33 @@ function isCardVisible(cardName){
 
 switch (cardName){
 
-  case "CardUserWelcome": 
+  case "CardUserWelcome":
     visible = true;
     break;
 
-  case "CardSync": 
+  case "CardSync":
     visible = true;
     break;
 
-  case "CardVisits": 
+  case "CardVisits":
     visible = true;
     break;
 
-  case "CardReporting": 
+  case "CardReporting":
     visible = true;
     break;
 
-  case "CardUserNotifications": 
+  case "CardUserNotifications":
     visible = true;
     break;
 
-  case "CardTasks": 
+  case "CardTasks":
     if(!ApplicationContext.get('user').hasRole('TourUser')){
       visible = true;
     }
     break;
 
-  case "CardCustomerTasks": 
+  case "CardCustomerTasks":
     if(!ApplicationContext.get('user').hasRole('TourUser')){
       visible = true;
     }
@@ -101,6 +101,12 @@ switch (cardName){
 
   case "CardCustomersOverdue":
     visible = true;
+    break;
+
+  case "RelevantInfoCardUiPluginV2":
+    if(ApplicationContext.get('user').getSalesOrg() !== "0002"){
+      visible = true;
+    }
     break;
 }
     ///////////////////////////////////////////////////////////////////////////////////////////////
