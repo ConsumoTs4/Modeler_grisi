@@ -121,10 +121,10 @@
             <filter fieldName="movementDirection" value="In" operator="NE" />
           </filters>
           <orderCriteria>
-            <orderCriterion fieldName="eAN" direction="ASC" compareMode="NUMBER" />
+            <orderCriterion fieldName="prdId" direction="ASC" compareMode="NUMBER" />
           </orderCriteria>
           <tr>
-            <td>{{.eAN}}</td>
+            <td>{{.prdId}}</td>
             <td>{{.text1}}</td>
             <td alignment="center">{{.quantityLogisticUnit; toggleId=DomPrdLogisticUnit; toggleField=shortText}}</td>
             <td alignment="right">{{.quantity}}</td>

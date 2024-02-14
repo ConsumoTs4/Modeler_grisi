@@ -658,7 +658,7 @@
             </Bindings>
 
 
-            <SelectionBox name="Quintil del medico">
+            <SelectionBox name="Quintil del medico" editable="false">
               <Bindings>
                 <Resource target="Label" type="Label" id="quintil_del_medicoID" defaultLabel="Quintil del médico" />
                 <Binding target="DataSource" toggleId="DomCusQuintilMedico" bindingMode="TWO_WAY" />
@@ -679,7 +679,7 @@
               </Bindings>
             </InputArea> -->
 
-            <SelectionBox name="Prescripcion_1">
+            <SelectionBox name="Prescripcion_1" editable="false">
               <Bindings>
                 <Resource target="Label" type="Label" id="prescripcion_1ID" defaultLabel="Prescripción 1" />
                 <Binding target="DataSource" toggleId="DomCusPrescripcion1" bindingMode="TWO_WAY" />
@@ -777,7 +777,7 @@
             </CheckBox>
             <InputArea name="RFC">
               <Bindings>
-                <Resource target="Label" type="Label" defaultLabel="RFC *" id="rfc" />
+                <Resource target="Label" type="Label" defaultLabel="RFC" id="rfc" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.rfc" bindingMode="TWO_WAY" />
               </Bindings>
             </InputArea>
