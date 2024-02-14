@@ -244,6 +244,7 @@ if(me.getBoBpaMeta().getId() == "Hospital") {
 
 }else if(me.getBoBpaMeta().getId() == "Farmacia Independiente") {
   // acl.removeRight(AclObjectType.PROPERTY, "folio_tienda", AclPermission.EDIT);
+  acl.removeRight(AclObjectType.PROPERTY, "grupo_Cadena", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "tipo", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "subtipoFarmacia", AclPermission.VISIBLE);
   acl.removeRight(AclObjectType.PROPERTY, "medicoGaleno", AclPermission.VISIBLE);

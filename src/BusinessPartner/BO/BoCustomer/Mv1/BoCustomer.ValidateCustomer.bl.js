@@ -60,9 +60,8 @@ if (me.getBoBpaMeta().getId() == "Médico") {
   var pacientesPorSemana = me.pacientes_por_semana != undefined ? Utils.isEmptyString(me.getPacientes_por_semana().trim()) : true;
   var honorarios = me.honorarios != undefined ? Utils.isEmptyString(me.getHonorarios().trim()) : true;
   var cedulaProfesional = me.cedulaProfesional != undefined ? Utils.isEmptyString(me.getCedulaProfesional().trim()) : true;
-  var rfcfd = me.rfc != undefined ? Utils.isEmptyString(me.getRfc().trim()) : true;
   var email1fd = me.email1 != undefined ? Utils.isEmptyString(me.getEmail1().trim()) : true;
-  if (nombre || especialidad || pacientesPorSemana || honorarios || cedulaProfesional || rfcfd ||email1fd) {
+  if (nombre || especialidad || pacientesPorSemana || honorarios || cedulaProfesional ||email1fd) {
     messageCollector.add({
       "level": "error",
       "objectClass": "BoCustomer",
@@ -94,7 +93,18 @@ if (me.getBoBpaMeta().getId() == "Médico") {
       "messageParams": {}
     });
   }
-} else if (me.getBoBpaMeta().getId() == "Farmacia Indepentiente" || me.getBoBpaMeta().getId() == "Farmacia Farma") {
+} else if (me.getBoBpaMeta().getId() == "Farmacia Independiente") {
+  var nombreFarInd= me.name != undefined ? Utils.isEmptyString(me.getName().trim()) : true;
+  var territorioF1D = me.territorio != undefined ? Utils.isEmptyString(me.getTerritorio().trim()) : true;
+  if (nombreFarInd || territorioF1D) {
+    messageCollector.add({
+      "level": "error",
+      "objectClass": "BoCustomer",
+      "messageID": "CasCustomerCamposRequeridos",
+      "messageParams": {}
+    });
+  }
+} else if (me.getBoBpaMeta().getId() == "Farmacia Farma") {
   var nombreFIF= me.name != undefined ? Utils.isEmptyString(me.getName().trim()) : true;
   var cadenaF1 = me.grupo_Cadena != undefined ? Utils.isEmptyString(me.getGrupo_Cadena().trim()) : true;
   var territorioF1 = me.territorio != undefined ? Utils.isEmptyString(me.getTerritorio().trim()) : true;
