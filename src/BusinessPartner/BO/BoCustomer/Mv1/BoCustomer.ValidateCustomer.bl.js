@@ -116,7 +116,8 @@ if (me.getBoBpaMeta().getId() == "Médico") {
       "messageParams": {}
     });
   }
-} else if (!Utils.isEmptyString(me.getName().trim())) {
+} 
+if (!Utils.isEmptyString(me.getName().trim())) {
   var street01 = me.loCustomerAddress.current.street != undefined ? Utils.isEmptyString(me.getLoCustomerAddress().getCurrent().getStreet().trim()) : true;
   var zipCode01 = me.loCustomerAddress.current.zipCode != undefined ? Utils.isEmptyString(me.getLoCustomerAddress().getCurrent().getZipCode().trim()) : true;
   var city01 = me.loCustomerAddress.current.city != undefined ? Utils.isEmptyString(me.getLoCustomerAddress().getCurrent().getCity().trim()) : true;
