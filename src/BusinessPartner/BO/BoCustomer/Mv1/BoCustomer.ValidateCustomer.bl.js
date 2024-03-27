@@ -54,6 +54,18 @@ The system saves and validates the customer data.
 The customer Name must not be empty.
 The Id must be unique within the sales organization.
 */
+
+var emailvalidate = me.getEmail1();
+if (me.getEmailEditable() == '1' && !Utils.isEmptyString(emailvalidate) && !SalesforceTools.isValidEmail(emailvalidate))
+{
+  messageCollector.add({
+    "level": "error", 
+    "objectClass": "BoContactPartner", 
+    "messageID": "CasBpaMainContactPartnerEmailInvalid",
+    "messageParams": {}
+  });
+}
+
 if (me.getBoBpaMeta().getId() == "Médico") {
   var nombre = me.name != undefined ? Utils.isEmptyString(me.getName().trim()) : true;
   var especialidad = me.especialidad != undefined ? Utils.isEmptyString(me.getEspecialidad().trim()) : true;
