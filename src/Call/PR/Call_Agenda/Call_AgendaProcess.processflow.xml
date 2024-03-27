@@ -575,7 +575,7 @@
       <Action name="CallDataCheck_Decision" actionType="DECISION" parameter="ProcessContext::CallDataAvailable">
         <Case value="1" action="LoadCallFinal" />
         <Case value="2" action="LoadingCallData" />
-        <CaseElse action="AskForDataRequest" />
+        <CaseElse action="LoadCallFinal" />
       </Action>
       <Action name="AskForDataRequest" actionType="CONFIRM" confirmType="YesNo">
         <Message messageId="CasConfirmLoadCallOnDemandData" />

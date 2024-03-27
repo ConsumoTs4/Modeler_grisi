@@ -620,12 +620,12 @@
                 <Resource target="Label" type="Label" defaultLabel="Colonia *" id="colonia" />
                 <Binding target="Value" binding="ProcessContext::CustomerDetail.colonia" bindingMode="TWO_WAY" />
               </Bindings>
-            </InputArea> -->
+            </InputArea> --> 
 
             <InputArea name="ZIP">
                 <Bindings>
                   <Resource target="Label" type="Label" defaultLabel="Código postal" id="ZipCodeId" />
-                  <Binding target="Value" binding="ProcessContext::CustomerDetail.LoCustomerAddress.MainAddress.zipCode" bindingMode="TWO_WAY" />
+                  <Binding target="Value" type="Number"  binding="ProcessContext::CustomerDetail.LoCustomerAddress.MainAddress.zipCode" bindingMode="TWO_WAY" />
                 </Bindings>
               </InputArea>
               <InputArea name="City">
